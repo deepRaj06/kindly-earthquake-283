@@ -1,7 +1,8 @@
+import AllRoutes from "./Routes/AllRoutes"
 function App() {
   return (
     <>
-    <h1>Tripvillas Project</h1>
+    <AllRoutes />
     </>
   );
 }
