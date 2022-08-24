@@ -13,6 +13,7 @@ import {
   BreadcrumbLink,
 } from "@chakra-ui/react";
 import { useParams, useSearchParams } from "react-router-dom";
+import Navbar from "../../Components/Navbar";
 import statesData from "../../utils/states.json";
 import types from "../../utils/types.json";
 import { Link } from "react-router-dom";
@@ -32,14 +33,14 @@ const ProductList = () => {
   return (
     <Box>
       {/* navbar  */}
-      <Box textAlign="center" border="1px solid" mt="5px">
-        <Heading>Navbar component</Heading>
+      <Box>
+        <Navbar />
       </Box>
       {/* search  */}
       <Box textAlign="center" border="1px solid" mt="5px">
         <Heading>Search bar component</Heading>
       </Box>
-      <Box margin="auto 1rem">
+      <Box margin="3rem" padding="1rem" boxShadow="md">
         {/* tabs  */}
         <Box>
           <Tabs>
@@ -52,7 +53,7 @@ const ProductList = () => {
                 <SimpleGrid
                   minChildWidth="100px"
                   fontSize="12px"
-                  fontWeight="bold"
+                  fontWeight="light"
                   textAlign="center"
                   spacing=".5rem"
                   width="80%"
@@ -61,7 +62,7 @@ const ProductList = () => {
                     <div key={city.state_id}>
                       <Link
                         style={{
-                          boxShadow: "1px 1px 1px 1px rgba(0,0,0,0.1)",
+                          boxShadow: "0px 0px 1px 0px rgba(0,0,0,0.1)",
                           height: "40px",
                           display: "flex",
                           alignItems: "center",
@@ -82,7 +83,7 @@ const ProductList = () => {
                 <SimpleGrid
                   minChildWidth="100px"
                   fontSize="12px"
-                  fontWeight="bold"
+                  fontWeight="light"
                   textAlign="center"
                   spacing=".5rem"
                   width="70%"
@@ -90,7 +91,7 @@ const ProductList = () => {
                   {types?.map((type) => (
                     <Link
                       style={{
-                        boxShadow: "1px 1px 1px 1px rgba(0,0,0,0.1)",
+                        boxShadow: "0px 0px 1px 0px rgba(0,0,0,0.1)",
                         height: "40px",
                         display: "flex",
                         alignItems: "center",
@@ -128,6 +129,10 @@ const ProductList = () => {
         {/* carousel */}
         <Box mt="1rem">
           <CarousalComponent />
+        </Box>
+        {/* explore on map  */}
+        <Box height={"100vh"} width={"100vw"}>
+        
         </Box>
       </Box>
     </Box>
