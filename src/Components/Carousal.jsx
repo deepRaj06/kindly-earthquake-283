@@ -14,15 +14,26 @@ const CarousalComponent = () => {
     const nextItem = Math.max(1, items.length + 1);
     setItems([...items, nextItem]);
   };
-  const removeItem = ()=>{
-    const endRange = Math.max(0,items.length-1);
-    setItems(items.slice(0,endRange));
-  }
+  const removeItem = () => {
+    const endRange = Math.max(0, items.length - 1);
+    setItems(items.slice(0, endRange));
+  };
   return (
     <>
-      <Carousel breakPoints={breakPoints} >
+      <Carousel breakPoints={breakPoints}>
         {items.map((item) => (
-          <div key={item}>{item}</div>
+          <div
+            style={{
+              border: "2px solid",
+              width: "40px",
+              height: "40px",
+              background: "lightblue",
+              margin: "10px",
+            }}
+            key={item}
+          >
+            {item}
+          </div>
         ))}
       </Carousel>
     </>
