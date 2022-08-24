@@ -17,11 +17,18 @@ import statesData from "../../utils/states.json";
 import types from "../../utils/types.json";
 import { Link } from "react-router-dom";
 import CarousalComponent from "../../Components/Carousal";
-
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import { getCities } from "../../Redux/AppReducer/action";
 const ProductList = () => {
+  const dispatch = useDispatch();
   const country_id = "101";
   const cities = statesData.filter((state) => state.country_id === country_id);
   const [searchParams, setSearchParams] = useSearchParams();
+  const allProducts = useSelector((store) => store.appReducer.allProducts);
+  useEffect(() => {
+    dispatch(getCities());
+  }, []);
   return (
     <Box>
       {/* navbar  */}
@@ -119,7 +126,7 @@ const ProductList = () => {
         </Box>
         <Heading as="h3">City Holiday Homes</Heading>
         {/* carousel */}
-        <Box mt="1rem" >
+        <Box mt="1rem">
           <CarousalComponent />
         </Box>
       </Box>

@@ -21,7 +21,7 @@ const CarousalComponent = () => {
   return (
     <>
       <Carousel breakPoints={breakPoints}>
-        {items.map((item) => (
+        {items.map((item,index) => (
           <div
             style={{
               border: "2px solid",
@@ -30,7 +30,7 @@ const CarousalComponent = () => {
               background: "lightblue",
               margin: "10px",
             }}
-            key={item}
+            key={index}
           >
             {item}
           </div>
