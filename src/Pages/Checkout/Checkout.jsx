@@ -1,14 +1,3 @@
-<<<<<<< Updated upstream
-import React from 'react'
-
-const Checkout = () => {
-  return (
-    <div>Checkout</div>
-  )
-}
-
-export default Checkout;
-=======
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import React from "react";
@@ -36,4 +25,3 @@ const Checkout = () => {
 };
 
 export default Checkout;
->>>>>>> Stashed changes
