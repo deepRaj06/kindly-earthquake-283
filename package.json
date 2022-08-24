@@ -29,7 +29,12 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+<<<<<<< Updated upstream
     "eject": "react-scripts eject"
+=======
+    "eject": "react-scripts eject",
+    "server": "json-server --watch db.json --port 8080"
+>>>>>>> Stashed changes
   },
   "eslintConfig": {
     "extends": [
