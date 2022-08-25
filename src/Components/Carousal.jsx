@@ -10,8 +10,7 @@ const breakPoints = [
   { width: 768, itemsToShow: 3 },
   { width: 1200, itemsToShow: 4 },
 ];
-const CarousalComponent = () => {
-  const allProducts = useSelector((store) => store.appReducer.allProducts);
+const CarousalComponent = ({allProducts}) => {
   //   console.log(allProducts)
 
   //   const addItem = () => {
@@ -35,7 +34,6 @@ const CarousalComponent = () => {
 };
 
 const CarousalCard = ({ item }) => {
-  console.log(item);
   return (
     <Box
       width="300px"

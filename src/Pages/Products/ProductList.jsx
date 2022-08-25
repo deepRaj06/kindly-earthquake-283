@@ -12,7 +12,7 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
 } from "@chakra-ui/react";
-import { useParams, useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import statesData from "../../utils/states.json";
 import types from "../../utils/types.json";
@@ -128,7 +128,7 @@ const ProductList = () => {
         <Heading as="h3">City Holiday Homes</Heading>
         {/* carousel */}
         <Box mt="1rem">
-          <CarousalComponent />
+          <CarousalComponent allProducts={allProducts} />
         </Box>
         {/* explore on map  */}
         <Box height={"100vh"} width={"100vw"}>
