@@ -10,8 +10,7 @@ const breakPoints = [
   { width: 768, itemsToShow: 3 },
   { width: 1200, itemsToShow: 4 },
 ];
-const CarousalComponent = () => {
-  const allProducts = useSelector((store) => store.appReducer.allProducts);
+const CarousalComponent = ({allProducts}) => {
   //   console.log(allProducts)
 
   //   const addItem = () => {
@@ -35,7 +34,6 @@ const CarousalComponent = () => {
 };
 
 const CarousalCard = ({ item }) => {
-  console.log(item);
   return (
     <Box
       width="300px"
@@ -59,7 +57,7 @@ const CarousalCard = ({ item }) => {
         <Flex alignItems="center" margin="5px 10px">
           <GoLocation />
           {`__`}
-          {`${item.city}/${item.country}`}
+          {`${item.city}/${item.state}/${item.country}`}
         </Flex>
         <Box>
           Room {`${item.television ? "| TV" : ""}`} {`${item.ac ? "| AC" : ""}`} { `${item.pets?"| PETS ALLOWED":"| PETS NOT ALLOWED"}`}

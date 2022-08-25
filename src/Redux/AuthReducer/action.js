@@ -1,14 +1,33 @@
 import * as types from './actionType'
-/*
+
 import axios from 'axios'
-const setSignup=(payload)=>(dispatch)=>{
-    
-    dispatch({type:types.SIGNUP_REQUEST})
-    return axios.post(`http://localhost:8080/signup`,payload).then((r)=>{
-        dispatch({type:types.SIGNUP_SUCCESS,payload:r.data})
+
+const registerData=(payload)=>(dispatch)=>{
+    dispatch({type:types.GET_SIGNUP_REQUEST})
+    axios.get(`http://localhost:8080/signupData`).then((r)=>{
+        dispatch({type:types.GET_SIGNUP_SUCCESS,payload: r.data})
     })
     .catch((e)=>{
-        dispatch({type:types.SIGNUP_FAILURE,payload: e})
+        dispatch({type:types.GET_SIGNUP_FAILURE})
     })
 }
-export {setSignup} */
+
+const postData=(payload)=>(dispatch)=>{
+    dispatch({type:types.POST_SIGNUP_REQUEST})
+    axios.post(`http://localhost:8080/signupData`,payload).then((r)=>{
+        dispatch({type:types.POST_SIGNUP_SUCCESS,payload: r.data}).then(()=>{
+            // console.log("act",r.data)
+        })
+    })
+    .catch((e)=>{
+        dispatch({type:types.POST_SIGNUP_FAILURE})
+    })
+}
+
+
+
+
+export {registerData,postData}
+
+
+

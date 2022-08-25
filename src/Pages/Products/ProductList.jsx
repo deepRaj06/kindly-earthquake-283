@@ -8,11 +8,11 @@ import {
   TabPanels,
   Tabs,
   SimpleGrid,
+  Text,
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
 } from "@chakra-ui/react";
-import { useParams, useSearchParams } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import statesData from "../../utils/states.json";
 import types from "../../utils/types.json";
@@ -25,7 +25,6 @@ const ProductList = () => {
   const dispatch = useDispatch();
   const country_id = "101";
   const cities = statesData.filter((state) => state.country_id === country_id);
-  const [searchParams, setSearchParams] = useSearchParams();
   const allProducts = useSelector((store) => store.appReducer.allProducts);
   useEffect(() => {
     dispatch(getCities());
@@ -128,11 +127,70 @@ const ProductList = () => {
         <Heading as="h3">City Holiday Homes</Heading>
         {/* carousel */}
         <Box mt="1rem">
-          <CarousalComponent />
+          <CarousalComponent allProducts={allProducts} />
         </Box>
-        {/* explore on map  */}
-        <Box height={"100vh"} width={"100vw"}>
-        
+        {/* faq  */}
+        <Box>
+          <Heading as="h2" size="1xl" m="1rem auto">
+            FAQs
+          </Heading>
+          <Box color="gray" fontSize="14px">
+            <Text m="1rem auto">
+              <b>
+                {" "}
+                Can I get a holiday with swimminig pool in Central Province?
+              </b>
+            </Text>
+            <Text>
+              Yes. We have close to 15 holiday homes with swimming pool in
+              Central Province. You can also choose a villa or bungalow with a
+              swimming pool. Each vacation rental will have its own swimming
+              pool policies & timings though. Make sure you talk to the property
+              manager or the owner when you make a reservation.
+            </Text>
+          </Box>
+          <Box color="gray" fontSize="14px">
+            <Text m="1rem auto">
+              <b>
+                {" "}
+                What are the most popular destinations in Central Province?{" "}
+              </b>
+            </Text>
+            <Text>
+              Tripvillas has around 138 of vacation rentals in Central Province.
+              Some of the most popular destinations are Kandy (88 vacation
+              rentals), Nuwara Eliya (54 vacation rentals), Dambulla (9 vacation
+              rentals).
+            </Text>
+          </Box>
+          <Box color="gray" fontSize="14px">
+            <Text m="1rem auto">
+              <b>
+                {" "}
+                Can I get any accommodation in Central Province if I am
+                travelling with my family or a group of friends?{" "}
+              </b>
+            </Text>
+            <Text>
+              You will have to choose number of bedrooms depending on the group
+              size. You can go for any of the 18 Bungalows, 13 Villas. You can
+              go for 5 2BHKS, 9 3BHKS, 7 4BHKS holiday homes
+            </Text>
+          </Box>
+          <Box color="gray" fontSize="14px">
+            <Text m="1rem auto">
+              <b>
+                {" "}
+                What are the different types of holiday homes I can get in
+                Central Province?
+              </b>
+            </Text>
+            <Text>
+              Tripvillas has different types of holiday homes you can choose
+              from in Central Province. We have 18 Bungalows, 6 Guesthouses, 8
+              Homestays, 82 Rooms, 13 Villas
+            </Text>
+          </Box>
         </Box>
       </Box>
     </Box>
