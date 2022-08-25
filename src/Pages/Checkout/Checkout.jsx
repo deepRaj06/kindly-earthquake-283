@@ -1,4 +1,5 @@
 
+
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import style from'./chekout.module.css'
 import { Stack, Textarea, Heading } from "@chakra-ui/react";
@@ -226,5 +227,4 @@ const Checkout = () => {
     </>
   );
 };
-
 export default Checkout;
