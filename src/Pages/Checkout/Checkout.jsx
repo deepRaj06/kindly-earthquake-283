@@ -1,5 +1,4 @@
 
-
 import { Stack, Textarea, Image, Box, Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import React from "react";
@@ -226,6 +225,8 @@ const Checkout = () => {
     </>
   );
 };
-
 export default Checkout;
-// >>>>>>> d089772c894e513f0d87fd34dbfac4647092e219
+// <<<<<<< HEAD
+// // >>>>>>> d089772c894e513f0d87fd34dbfac4647092e219
+// =======
+// >>>>>>> adc4e1bf5cba29a75ddc06dcf2ef3940ddf44c95
