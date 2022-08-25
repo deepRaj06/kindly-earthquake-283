@@ -1,6 +1,6 @@
 import { Center } from "@chakra-ui/react";
 import React from "react";
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+// import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./singlePage.css";
 const SingleProduct = () => {
   return (

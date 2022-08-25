@@ -1,8 +1,11 @@
-import { Stack, Textarea, Image, Box, Heading } from "@chakra-ui/react";
+
+
+import { Box, Flex, Text, Image } from "@chakra-ui/react";
+import style from'./chekout.module.css'
+import { Stack, Textarea, Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import React from "react";
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import style from "./checkout.module.css";
+// import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../../Components/Navbar";
 import { Alert, AlertIcon, Select } from "@chakra-ui/react";
 import { FormControl, FormLabel, Input } from "@chakra-ui/react";
