@@ -1,32 +1,26 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux/es/exports'
-import { Link } from 'react-router-dom'
+import { Link} from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux/es/exports';
 import {Box, Button, Flex, FormControl, FormErrorMessage, Heading, Input, InputGroup,Modal, ModalBody,ModalContent, ModalFooter, ModalOverlay,Text, useDisclosure} from "@chakra-ui/react"
-import { setSignup } from '../../Redux/AuthReducer/action'
+import axios from 'axios';
+
 const Login = () => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const { isOpen, onOpen, onClose } = useDisclosure()
-  const dispatch=useDispatch();
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const emailError=email===""
-  const passwordError=password===""
-  const [otp,setOtp]=useState(0)
-
-
-  const seSignupData=()=>{
-    let otptemp=Math.floor(Math.random()*5000)
-    setOtp(otptemp)
-    let id;
-    const payload={email,password}
-    // dispatch(setSignup(payload))
-    if(id){
-      clearTimeout(id)
-    }
-    id=setTimeout(()=>{
-      alert("OTP:- ",otp)
-    },3000)
-  }
+  const signupStoredData=useSelector((store)=>store.authReducer.signup)
+  const emailError=email==="";
+  const passwordError=password==="";
+  const [otp,setOtp]=useState(0);
+  
+  const dispatch=useDispatch()
+  
+ 
+ 
+useEffect(()=>{
+  console.log(signupStoredData)
+},[])
   return (
     <Box>
         <Button onClick={onOpen}>Open Modal</Button>
@@ -38,7 +32,7 @@ const Login = () => {
               <Heading fontSize="lg">Signup</Heading>
               <Text><Link to="">Sign In Instead </Link></Text>
             </Flex>
-              <hr style={{width:"90%",margin:"auto"}}/>
+              <hr style={{ width:"90%",margin:"auto"}}/>
             <ModalBody>
                
                 <InputGroup>
@@ -51,7 +45,7 @@ const Login = () => {
 
                 </InputGroup>
                 <InputGroup>
-                <FormControl isInvalid={emailError} >
+                <FormControl isInvalid={passwordError} >
                       <Input mt="20px" type='password' placeholder='Password' onChange={(e)=>setPassword(e.target.value)} />
                       {!passwordError ? "" : (
                           <FormErrorMessage>Password is required.</FormErrorMessage>
@@ -66,7 +60,7 @@ const Login = () => {
               <Button variant="outline" mr={3} onClick={onClose}>
                 CANCEL
               </Button>
-              <Button colorScheme='blue' mr={3} onClick={seSignupData}>
+              <Button colorScheme='blue' mr={3} >
                 VERIFY WITH OTP
               </Button>
              

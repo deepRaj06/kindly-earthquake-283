@@ -1,33 +1,46 @@
+import { getLocalData, saveLocalData } from "../../utils/localStorage"
 import * as types from "./actionType"
 const init={
     signup:[],
+    isAuth:getLocalData("login") ? true:false,
+    login:getLocalData("login")||[],
     isLoading:false,
     isError:false
 }
 
 const reducer=(state=init,{type,payload})=>{
     switch(type){
-        case types.SIGNUP_REQUEST:{
+        case types.GET_SIGNUP_REQUEST:{
             return{
                 ...state,
                 isLoading:true,
-
             }
         }
 
-        case types.SIGNUP_SUCCESS:{
+        case types.GET_SIGNUP_SUCCESS:{
             return{
                 ...state,
                 isLoading:false,
-                signup:payload
+                signup: payload
             }
         }
 
-        case types.SIGNUP_FAILURE:{
+        case types.GET_SIGNUP_FAILURE:{
             return{
                 ...state,
                 isLoading:false,
                 isError:true
+
+            }
+        }
+        case types.GET_LOGIN_SUCCESS:{
+            saveLocalData("login",payload)
+            return{
+                ...state,
+                isLoading:false,
+                isError:false,
+                isAuth:true,
+                login:payload
 
             }
         }
