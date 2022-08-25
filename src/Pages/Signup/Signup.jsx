@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux/es/exports'
 import { Link } from 'react-router-dom'
-import {Box, Button, Flex, FormControl, FormErrorMessage, Heading, Input, InputGroup,Modal, ModalBody,ModalContent, ModalFooter, ModalOverlay,Text, useDisclosure} from "@chakra-ui/react"
+import {Box, Button, Flex, FormControl, FormErrorMessage, Heading, Input, InputGroup,Modal, ModalBody,ModalContent, ModalFooter, ModalOverlay,Text, useDisclosure, useToast} from "@chakra-ui/react"
 import { useSelector } from 'react-redux/es/hooks/useSelector'
 import * as types from '../../Redux/AuthReducer/actionType'
 import { postData, registerData } from '../../Redux/AuthReducer/action'
@@ -15,6 +15,7 @@ const Signup = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const dispatch=useDispatch();
 
+  const toast=useToast()
 
   const phoneError=phone===""
   const emailError=email===""
@@ -26,6 +27,21 @@ const Signup = () => {
   const handlePostData=()=>{
     let payload={selectValue,phone,email,password,firstName,lastName}
     dispatch(postData(payload))
+    setPhone("")
+    setEmail("")
+    setFirstName("")
+    setLastName("")
+    setPassword("")
+
+
+    toast({
+      title: 'Account created.',
+      position:'top',
+      description: "We've created your account for you.",
+      status: 'success',
+      duration: 9000,
+      isClosable: true,
+    })
     
   }
   useEffect(()=>{
@@ -86,7 +102,7 @@ const Signup = () => {
 
                 </InputGroup>
                 <InputGroup>
-                <FormControl isInvalid={emailError} >
+                <FormControl isInvalid={passwordError} >
                       <Input mt="20px" type='password' placeholder='Password' onChange={(e)=>setPassword(e.target.value)} />
                       {!passwordError ? "" : (
                           <FormErrorMessage>Password is required.</FormErrorMessage>
@@ -118,7 +134,7 @@ const Signup = () => {
               <Button variant="outline" mr={3} onClick={onClose}>
                 CANCEL
               </Button>
-              <Button colorScheme='blue' mr={3} onClick={handlePostData}>
+              <Button colorScheme='blue' mr={3} onClick={handlePostData} disabled={!phone || !password || !email || !firstName || !lastName}>
                 VERIFY WITH OTP
               </Button>
              

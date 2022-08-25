@@ -25,9 +25,14 @@ const postData=(payload)=>(dispatch)=>{
 }
 
 
+const loginSuccess=(payload)=>(dispatch)=>{
+    dispatch({type:types.GET_LOGIN_REQUEST})
+    return dispatch({type:types.GET_LOGIN_SUCCESS,payload})
+}
 
 
-export {registerData,postData}
+
+export {registerData,postData, loginSuccess}
 
 
 
