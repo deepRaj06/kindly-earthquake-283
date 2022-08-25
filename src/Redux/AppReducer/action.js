@@ -3,7 +3,7 @@ import axios from "axios";
 export const getCities = (params) => async (dispatch) => {
   dispatch({ type: types.GET_ALL_PRODUCTS_REQUEST });
   try {
-    let res = await axios.get(`http://localhost:8080/results?q=goa`, {
+    let res = await axios.get(`http://localhost:8080/results?q=india`, {
       params: params,
     });
     return dispatch({
