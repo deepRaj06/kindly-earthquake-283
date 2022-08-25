@@ -57,7 +57,7 @@ const CarousalCard = ({ item }) => {
         <Flex alignItems="center" margin="5px 10px">
           <GoLocation />
           {`__`}
-          {`${item.city}/${item.country}`}
+          {`${item.city}/${item.state}/${item.country}`}
         </Flex>
         <Box>
           Room {`${item.television ? "| TV" : ""}`} {`${item.ac ? "| AC" : ""}`} { `${item.pets?"| PETS ALLOWED":"| PETS NOT ALLOWED"}`}

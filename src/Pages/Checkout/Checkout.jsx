@@ -1,34 +1,10 @@
 
 import { Box, Flex, Text, Image } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import React from "react";
 import style from'./chekout.module.css'
-
-const Checkout = () => {
-  return (
-    <div>
-      <div className="main">
-        <div>
-          <div className={style.one}>
-          <div className="card text-white bg-primary mb-3" style="max-width: 18rem;">
-  <div className="card-header">Header</div>
-  <div className="card-body">
-    <h5 className="card-title">Primary card title</h5>
-    <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  </div>
-          </div>
-          <div className="two"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  );
-};
-import { Stack, Textarea, Image, Box, Heading } from "@chakra-ui/react";
+import { Stack, Textarea, Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import React from "react";
-import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import style from "./checkout.module.css";
+// import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../../Components/Navbar";
 import { Alert, AlertIcon, Select } from "@chakra-ui/react";
 import { FormControl, FormLabel, Input } from "@chakra-ui/react";

@@ -13,6 +13,7 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
+  Button,
 } from "@chakra-ui/react";
 import { useSearchParams } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
@@ -23,24 +24,34 @@ import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getCities } from "../../Redux/AppReducer/action";
 const ProductListByCity = () => {
-  const {sortBy} = useParams();
-  
+  const { sortBy } = useParams();
+  console.log(types);
+
+  let res = types.find((item) => item.type === sortBy);
+  console.log(res);
+
   const dispatch = useDispatch();
-  const country_id = "101";
-  const cities = statesData.filter((state) => state.country_id === country_id);
+  const [sorted, setSorted] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [selectedType, setSelectedType] = useState(
+    searchParams.get("type") || []
+  );
   const products = useSelector((store) => store.appReducer.allProducts);
-  console.log(products)
-  const allProducts = products.filter((item)=>{
-    console.log(sortBy.toLowerCase()=="andhar pradesh",item.state==="andhar pradesh");
-    if(sortBy.toLowerCase()==item.state){
-      console.log("yes")
-    }
-    return item.state===sortBy.toLocaleLowerCase()
-  });
-  console.log(allProducts);
+
+  const handleTypeSort = (type) => {
+    console.log(type)
+  };
+  // ===============
   useEffect(() => {
-    dispatch(getCities());
+    dispatch(getCities()).then((res) => {
+      let result = res.payload.filter(
+        (item) => item.state === sortBy.toLowerCase()
+      );
+      setSorted(result);
+      // setSorted(
+      //   res.payload.filter((item) => item.state === sortBy.toLowerCase())
+      // );
+    });
   }, []);
   return (
     <Box>
@@ -70,22 +81,14 @@ const ProductListByCity = () => {
                   width="70%"
                 >
                   {types?.map((type) => (
-                    <Link
-                      style={{
-                        boxShadow: "0px 0px 1px 0px rgba(0,0,0,0.1)",
-                        height: "40px",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                      }}
-                      to={{
-                        pathname: `/products/${type.type}`,
-                        state: type.type,
-                      }}
+                    <Button
+                      variant="ghost"
+                      fontWeight="light"
+                      onClick={() => handleTypeSort(type.type)}
                       key={type.id}
                     >
                       {type.type}
-                    </Link>
+                    </Button>
                   ))}
                 </SimpleGrid>
               </TabPanel>
@@ -109,7 +112,7 @@ const ProductListByCity = () => {
         <Heading as="h3">City Holiday Homes</Heading>
         {/* carousel */}
         <Box mt="1rem">
-          <CarousalComponent allProducts={allProducts} />
+          <CarousalComponent allProducts={sorted} />
         </Box>
         {/* explore on map  */}
         <Box height={"100vh"} width={"100vw"}></Box>
