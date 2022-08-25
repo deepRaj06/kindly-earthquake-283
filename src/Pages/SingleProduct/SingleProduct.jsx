@@ -1,129 +1,114 @@
-import { Center } from "@chakra-ui/react";
+import { Center,Image,Box,Badge,Alert,AlertIcon,Select,Tab,TabList,TabPanels,Tabs,TabPanel } from "@chakra-ui/react";
 import React from "react";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import Navbar from "../../Components/Navbar";
+import style from './singlePage.module.css';
+import { IoMdLocate } from "react-icons/io";
 // import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "./singlePage.css";
 const SingleProduct = () => {
   return (
     <>
-      <p></p>
-      <br></br> {/* Navbar Import Here.... */}
-      <div className="singlepage">
-        <h6>Home/India/Goa/Calangute/Property/#22476138</h6>
-        <div className="main">
-          <div className="part-1">
-            <div style={{ width: "100%" }}>
-              <br></br>
-              <div>
-                <img
-                  src="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_watermarked_1024/22476138/13d3cf81f20b11e790160a8e1b1ce4da_watermarked_image_1024.jpeg"
-                  className="image-"
-                  width={"100%"}
-                  height="30%"
-                ></img>
-              </div>
-              <div style={{ display: "flex" }}>
-                <img
-                  src="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_watermarked_1024/22476138/422ac8dff20b11e790160a8e1b1ce4da_watermarked_image_1024.jpeg"
-                  width={"50%"}
-                />
-                <img
-                  src="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_watermarked_1024/22476138/146e632ff20b11e790160a8e1b1ce4da_watermarked_image_1024.jpeg"
-                  width={"50%"}
-                />
-              </div>
-            </div>
-            <div style={{ border: "1px solid green", width: "100%" }}>
-              <h2>
-                4 Bhk Private Villa With Swimming <br></br> Pool
-              </h2>
-              <h6>Location Calangute, Goa, India | Saligao</h6>
-              <hr></hr>
-              <div
-                style={{ textAlign: "center", display: "flex", gap: "30px" }}
-                className="feture"
-              >
-                <div>Resort</div>
-                <div>4 BEDROOMS</div>
-                <div>4 BATHROOM</div>
-                <div>12 Max Gate</div>
-              </div>
-              <br></br>
-              <div
-                style={{ textAlign: "center", display: "flex", gap: "30px" }}
-                className="feture"
-              >
-                <div>Kitchen</div>
-                <div>Swiming pool</div>
-              </div>
-            </div>
-          </div>{" "}
-          {/* Part-1 */}
-          <div className="part-2">
-            <div>
-              <h2>Starting</h2>
-              <div style={{ display: "flex" }}>
-                <h1>₹40000</h1>
-                <div>
-                  <h4>Per Night</h4>
-                </div>
-              </div>
-            </div>
-            <div class="alert alert-success" role="alert">
-              Your dates are available to book
-            </div>
-            <div
-              style={{
-                display: "flex",
-                gap: "10px",
-                padding: "5px 10px 5px 10px",
-              }}
-              className="date"
-            >
-              <div>
-                <input type="date" />
-              </div>
-              <div>
-                <input type="date" />
-              </div>
-            </div>
-            <br></br>
-            <div
-              style={{
-                border: "1px solid gray",
-                padding: "10px 20px 10px 20px",
-              }}
-            >
-              <select>
-                <option value="Select Guests">Select Guests</option>
-                <option value="">1</option>
-                <option value="">2</option>
-                <option value="">3</option>
-                <option value="">4</option>
-                <option value="">5</option>
-              </select>
-            </div>
-            Rateplan: Morning Breakfast (Continental Plan)
-            <br></br>
-            <div>
-              <Center>
-                <button
-                  style={{
-                    padding: "15px 100px 15px 100px",
-                    textAlign: "center",
-                    backgroundColor: "rgb(84, 84, 252)",
-                    color: "white",
-                  }}
-                >
-                  INSTANT BOOK
-                </button>
-              </Center>
-            </div>
-          </div>{" "}
-          {/* Part-2 div */}
+    <Navbar/>
+    <br></br>
+    <div className={style.main}>
+      <div className={style.one}>
+       
+        <div>
+           <hr></hr>
+        <br></br>
+          <div><Image src="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_watermarked_1024/21459385/zebra-room-4_watermarked_image_1024.jpeg" width="80%"/></div>
+          <div className={style.image}><Image src="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_watermarked_1024/21459385/zebra-room-2_watermarked_image_1024.jpeg"/>
+          <Image src="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_watermarked_1024/21459385/sitting-area-11_watermarked_image_1024.jpeg"/>
+          </div>
         </div>
+        <div  className={style.details}>
+        <div style={{fontSize:"25px"}}>Amezing Specious Guests House-Porvoriom</div>
+        <br></br>
+        <div  className={style.repflex}><h3><IoMdLocate/></h3><h3> Porvoriom Goa INDIA</h3></div>
+        <br></br>
+        <div className={style.extra1}>
+          <div  className={style.repflex}>Rated<b style={{backgroundColor:"blue",color:"white",borderRadius:"4px"}}>5.5/5</b>By One Travelers</div>
+        <div><b style={{backgroundColor:"blue",color:"white"}}>See More Review</b></div>
+        </div>
+        <br/>
+        <hr></hr>
+        <br></br>
+        <div className={style.feture}>
+          <b>Resort</b><b>4 Bedroom</b><b>4 Bathroom</b>
+        </div>
+        <br></br>
+        <div className={style.feture}>
+          <b>20 Max GUESTS</b><b>WIFI</b><b>Kitchen</b><b>AC</b>
+        </div>
+        <br></br>
+        <div className={style.feture}>
+          <b>Pet Not Allowed</b>
+        </div>
+
+    </div>
+        
+
+
       </div>
 
-      
+        <div className={style.two}>
+          <div>
+           Starting
+            <div className={style.repflex}><p style={{fontSize:"50px"}}>₹2000</p>Per Night</div>
+            <div>
+              <Alert status="warning">
+                <AlertIcon />
+                Select dates
+              </Alert>
+            </div>
+            <br></br>
+            <div className={style.repflex} style={{border:"1px solid black"}}>
+          <input type='date' placeholder="Check In" />
+          <input type='date' placeholder="Check Out" />
+            </div>
+            <br></br>
+            <div><Select placeholder='Select Guests'>
+  <option value='option1'>1</option>
+  <option value='option2'>2</option>
+  <option value='option3'>3</option>
+</Select><br/>
+<p>Rateplan: Cooked Breakfast</p>
+</div>
+
+
+          </div>
+          
+        </div> {/*two div  */}
+
+
+    </div> {/* Main */}
+    <br/>
+    <div>
+<Tabs isFitted variant='enclosed'>
+  <TabList mb='1em'>
+    <Tab>One</Tab>
+    <Tab>Two</Tab>
+    <Tab>One</Tab>
+    <Tab>Two</Tab>
+    
+  </TabList>
+  <TabPanels>
+    <TabPanel>
+      <p>one!</p>
+    </TabPanel>
+    <TabPanel>
+      <p>two!</p>
+    </TabPanel>
+    <TabPanel>
+      <p>one!</p>
+    </TabPanel>
+    <TabPanel>
+      <p>one!</p>
+    </TabPanel>
+  </TabPanels>
+</Tabs>
+</div>
     </>
   );
 };
