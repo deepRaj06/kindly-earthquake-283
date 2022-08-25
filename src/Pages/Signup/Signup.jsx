@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux/es/exports'
 import { Link } from 'react-router-dom'
 import {Box, Button, Flex, FormControl, FormErrorMessage, Heading, Input, InputGroup,Modal, ModalBody,ModalContent, ModalFooter, ModalOverlay,Text, useDisclosure} from "@chakra-ui/react"
-import { setSignup } from '../../Redux/AuthReducer/action'
+import { useSelector } from 'react-redux/es/hooks/useSelector'
+import * as types from '../../Redux/AuthReducer/actionType'
+import { postData, registerData } from '../../Redux/AuthReducer/action'
 const Signup = () => {
   const [selectValue,setSelectValue]=useState("91")
   const [phone,setPhone]=useState("");
@@ -13,27 +15,23 @@ const Signup = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const dispatch=useDispatch();
 
+
   const phoneError=phone===""
   const emailError=email===""
   const passwordError=password===""
   const firstNameError=firstName===""
   const lasNameError=lastName===""
-  const [otp,setOtp]=useState(0)
+  const [otp,setOtp]=useState(Math.floor(Math.random()* 5000))
 
-
-  const seSignupData=()=>{
-    let otptemp=Math.floor(Math.random()*5000)
-    setOtp(otptemp)
-    let id;
-    const payload={selectValue,phone,email,password,firstName,lastName}
-    // dispatch(setSignup(payload))
-    if(id){
-      clearTimeout(id)
-    }
-    id=setTimeout(()=>{
-      alert("OTP:- ",otp)
-    },3000)
+  const handlePostData=()=>{
+    let payload={selectValue,phone,email,password,firstName,lastName}
+    dispatch(postData(payload))
+    
   }
+  useEffect(()=>{
+    dispatch(registerData())
+
+  },[])
   return (
     <Box>
         <Button onClick={onOpen}>Open Modal</Button>
@@ -98,15 +96,15 @@ const Signup = () => {
                 <InputGroup>
                     <Flex justifyContent="space-between" gap="10px">
 
-                    <FormControl isInvalid={emailError} >
+                    <FormControl isInvalid={firstNameError} >
                     <Input mt="20px" type='text' placeholder='First name' onChange={(e)=>setFirstName(e.target.value)} />
-                      {!emailError ? "" : (
+                      {!firstNameError? "" : (
                           <FormErrorMessage>First is required.</FormErrorMessage>
                         )}
                     </FormControl>
-                    <FormControl isInvalid={emailError} >
+                    <FormControl isInvalid={lasNameError} >
                     <Input mt="20px" type='text' placeholder='Last name' onChange={(e)=>setLastName(e.target.value)} />
-                      {!emailError ? "" : (
+                      {!lasNameError ? "" : (
                           <FormErrorMessage>Last is required.</FormErrorMessage>
                         )}
                     </FormControl>
@@ -120,7 +118,7 @@ const Signup = () => {
               <Button variant="outline" mr={3} onClick={onClose}>
                 CANCEL
               </Button>
-              <Button colorScheme='blue' mr={3} onClick={seSignupData}>
+              <Button colorScheme='blue' mr={3} onClick={handlePostData}>
                 VERIFY WITH OTP
               </Button>
              

@@ -8,23 +8,36 @@ import {
   InputLeftElement,
   InputRightElement,
   Select,
+  SkeletonText,
   Text,
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { SearchIcon } from "@chakra-ui/icons";
 
-import PlacesAutocomplete, {
-    geocodeByAddress,
-  } from "react-places-autocomplete";
+import {
+  useJsApiLoader,
+  GoogleMap,
+  Marker,
+  Autocomplete,
+  DirectionsRenderer,
+} from "@react-google-maps/api";
+
+// import PlacesAutocomplete, {
+//     geocodeByAddress,
+//   } from "react-places-autocomplete";
 
 const Searchbar_HomePage = () => {
+  const { isLoaded } = useJsApiLoader({
+    googleMapsApiKey: "",
+    libraries: ["places"],
+  });
 
-  const [address, setAddress] = useState("");
+  // const [address, setAddress] = useState("");
 
-  const handleSelect = async value => {
-    const results = await geocodeByAddress(value);
-    setAddress(value);
-  };
+  // const handleSelect = async value => {
+  //   const results = await geocodeByAddress(value);
+  //   setAddress(value);
+  // };
 
   const bgImg = {
     filter: "blur(0.1px)",
@@ -47,6 +60,10 @@ const Searchbar_HomePage = () => {
   const dropDown = {
     WebkitFilter: "none",
   };
+
+  if (!isLoaded) {
+    return <SkeletonText />;
+  }
 
   return (
     <Box>
@@ -95,45 +112,24 @@ const Searchbar_HomePage = () => {
               >
                 {/* <Box> */}
                 {/* Location Input */}
-                <PlacesAutocomplete
-                 value={address}
-                 onChange={setAddress}
-                 onSelect={handleSelect}
-                >
-                {({ getInputProps, suggestions, getSuggestionItemProps }) => (
-                <>
-                <Flex direction='column'>
                 <InputGroup w="140%">
                   <InputLeftElement
+                  
                     pointerEvents="none"
                     children={<SearchIcon color="gray.400" />}
                   />
-                  <Input
-                    borderRadius="none"
-                    // w="200%"
-                    type="text"
-                    {...getInputProps({ placeholder: "Location" })}
-                    // placeholder="Location"
-                  ></Input>
+                  <Autocomplete>
+                    <Input
+                     
+                      borderRadius="none"
+                      // w="200%"
+                      pl='2rem'
+                      type="text"
+                      placeholder="Location"
+                    ></Input>
+                  </Autocomplete>
                 </InputGroup>
-                <Box bg='white' color='blackAlpha.700' border='1px solid red' w='260px' h='300px'>
-                {suggestions.map(suggestion => {
-                const style = {
-                  backgroundColor: suggestion.active ? "#41b6e6" : "#fff",
-                  color: 'black'
-                };
 
-                return (
-                  <Box {...getSuggestionItemProps(suggestion, { style })}>
-                    {suggestion.description}
-                  </Box>
-                );
-              })}
-                </Box>
-                </Flex>
-                </>
-                )}
-                </PlacesAutocomplete>
                 <InputGroup>
                   <InputLeftElement
                     pointerEvents="none"
@@ -194,12 +190,14 @@ const Searchbar_HomePage = () => {
                     placeholder="Check Out"
                   ></Input>
                 </InputGroup>
-                <InputGroup>
+                {/* <InputGroup> */}
                   <Select
                     placeholder="Select Guests"
                     borderRadius="none"
                     w="100%"
                     color="gray.600"
+                    p='0'
+                    // pb='1rem'
                     //   backgroundImage='url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A)'
                   >
                     <option value="option1">1 guest</option>
@@ -261,7 +259,7 @@ const Searchbar_HomePage = () => {
                     backgroundRepeat="no-repeat"
                     backgroundImage="url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A)"
                   ></InputRightElement> */}
-                </InputGroup>
+                {/* </InputGroup> */}
 
                 <Button borderRadius="none" w="60%" colorScheme="blue">
                   Search

@@ -54,7 +54,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "arunachal pradesh",
       "score": 45,
       "lng": 73.7700337172,
       "lat": 15.5169558574,
@@ -70,7 +70,14 @@
       "dish_washer": false,
       "availability_pct": 39.44,
       "slug": "15323035-1-double-ac-bedroom-with-bath-lounge-kitchen-in-candolim",
-      "prop_tags": ["Apartment", "1 BR", "1 Bath", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Apartment",
+        "1 BR",
+        "1 Bath",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/15323035-1-double-ac-bedroom-with-bath-lounge-kitchen-in-candolim/",
       "currency": "NOK"
     },
@@ -128,7 +135,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": false,
-      "state": "goa",
+      "state": "arunachal pradesh",
       "score": 100,
       "lng": 74.123996,
       "lat": 15.2993265,
@@ -142,9 +149,14 @@
       ],
       "units": 1,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "30870847-master-bedroom-stay",
-      "prop_tags": ["Room", "Wifi", "TV", "AC"],
+      "prop_tags": [
+        "Room",
+        "Wifi",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/30870847-master-bedroom-stay/",
       "currency": "NOK"
     },
@@ -187,7 +199,7 @@
       "property_type": "Room",
       "review_count": 0,
       "housekeeping": true,
-      "title": "Room stay - The Gar\u00e7a Branca B&B",
+      "title": "Room stay - The Garça Branca B&B",
       "country": "india",
       "number_of_bathrooms": 1,
       "country_slug": "india",
@@ -202,7 +214,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "arunachal pradesh",
       "score": 85,
       "lng": 73.9962029457092,
       "lat": 15.3445669907765,
@@ -216,9 +228,15 @@
       ],
       "units": 2,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "29341065-room-stay-the-garca-branca-bb",
-      "prop_tags": ["Room", "Swimming Pool", "Wifi", "TV", "AC"],
+      "prop_tags": [
+        "Room",
+        "Swimming Pool",
+        "Wifi",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/29341065-room-stay-the-garca-branca-bb/",
       "currency": "NOK"
     },
@@ -276,7 +294,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "arunachal pradesh",
       "score": 85,
       "lng": 73.8129019734,
       "lat": 15.5409468817,
@@ -290,9 +308,14 @@
       ],
       "units": 4,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "54684606-room-stay-the-verda-villa-porvorim",
-      "prop_tags": ["Room", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Room",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/54684606-room-stay-the-verda-villa-porvorim/",
       "currency": "NOK"
     },
@@ -350,7 +373,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "arunachal pradesh",
       "score": 115,
       "lng": 73.937805891,
       "lat": 15.2235679282,
@@ -446,7 +469,7 @@
       ],
       "units": 1,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "13879959-a-stunning-vacation-home-in-candolim",
       "prop_tags": [
         "Villa",
@@ -528,9 +551,14 @@
       ],
       "units": 1,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "26980043-executive-suite-room-stay-relax-holiday-home-1bhk-apartment",
-      "prop_tags": ["Room", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Room",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/26980043-executive-suite-room-stay-relax-holiday-home-1bhk-apartment/",
       "currency": "NOK"
     },
@@ -541,7 +569,7 @@
       "premium": false,
       "city": "dabolim",
       "city_slug": "dabolim-37173",
-      "state": "goa",
+      "state": "himachal ",
       "state_slug": "goa-11",
       "country": "india",
       "country_slug": "india",
@@ -604,7 +632,11 @@
       "created_on": "2021-11-19 20:32:01",
       "availability_pct": 97.22,
       "check_in": null,
-      "prop_tags": ["Apartment", "2 BR", "2 Bath"],
+      "prop_tags": [
+        "Apartment",
+        "2 BR",
+        "2 Bath"
+      ],
       "url": "/holiday-home/10055185-spacious-2-bhk-apartment-in-tata-rio-de-goa/",
       "currency": "NOK"
     },
@@ -662,7 +694,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": false,
-      "state": "goa",
+      "state": "himachal ",
       "score": 135,
       "lng": 73.8124984,
       "lat": 15.6002273,
@@ -678,7 +710,14 @@
       "dish_washer": false,
       "availability_pct": 88.89,
       "slug": "48556786-3-bhk-bungalow-at-mapusa-goa",
-      "prop_tags": ["Villa", "3 BR", "3 Bath", "Wifi", "TV", "AC"],
+      "prop_tags": [
+        "Villa",
+        "3 BR",
+        "3 Bath",
+        "Wifi",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/48556786-3-bhk-bungalow-at-mapusa-goa/",
       "currency": "NOK"
     },
@@ -736,7 +775,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "himachal ",
       "score": 95,
       "lng": 73.7398636434,
       "lat": 15.6396427143,
@@ -750,9 +789,15 @@
       ],
       "units": 15,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "22669682-a-boutique-house",
-      "prop_tags": ["Room", "Swimming Pool", "Wifi", "TV", "AC"],
+      "prop_tags": [
+        "Room",
+        "Swimming Pool",
+        "Wifi",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/22669682-a-boutique-house/",
       "currency": "NOK"
     },
@@ -810,7 +855,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "himachal ",
       "score": 110,
       "lng": 73.7566114,
       "lat": 15.5647669,
@@ -824,9 +869,16 @@
       ],
       "units": 1,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "21984838-serviced-apartments2",
-      "prop_tags": ["Apartment", "1 BR", "1 Bath", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Apartment",
+        "1 BR",
+        "1 Bath",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/21984838-serviced-apartments2/",
       "currency": "NOK"
     },
@@ -884,7 +936,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "himachal ",
       "score": 100,
       "lng": 73.7531518936,
       "lat": 15.6043704064,
@@ -898,9 +950,16 @@
       ],
       "units": 1,
       "dish_washer": true,
-      "availability_pct": 95.0,
+      "availability_pct": 95,
       "slug": "14521627-4-bhk-villa-with-a-pool-in-anjuna",
-      "prop_tags": ["Villa", "4 BR", "5 Bath", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Villa",
+        "4 BR",
+        "5 Bath",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/14521627-4-bhk-villa-with-a-pool-in-anjuna/",
       "currency": "NOK"
     },
@@ -915,7 +974,7 @@
       "gym": false,
       "internet": true,
       "television": true,
-      "review_rating": 4.0,
+      "review_rating": 4,
       "created_on": "2016-06-02 15:34:52",
       "max_price_in_usd": 35,
       "check_in": null,
@@ -958,7 +1017,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": false,
-      "state": "goa",
+      "state": "himachal ",
       "score": 120,
       "lng": 73.7604974954,
       "lat": 15.5469858494,
@@ -974,7 +1033,11 @@
       "dish_washer": false,
       "availability_pct": 93.33,
       "slug": "92969019-room-standard-non-ac-stay",
-      "prop_tags": ["Room", "Wifi", "TV"],
+      "prop_tags": [
+        "Room",
+        "Wifi",
+        "TV"
+      ],
       "url": "/holiday-home/92969019-room-standard-non-ac-stay/",
       "currency": "NOK"
     },
@@ -1032,7 +1095,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "himachal ",
       "score": 110,
       "lng": 73.7633013725,
       "lat": 15.5332436856,
@@ -1046,9 +1109,14 @@
       ],
       "units": 40,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "86680834-supreme-ac-stay-at-resort-in-calangute",
-      "prop_tags": ["Room", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Room",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/86680834-supreme-ac-stay-at-resort-in-calangute/",
       "currency": "NOK"
     },
@@ -1106,7 +1174,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "himachal ",
       "score": 160,
       "lng": 73.7678021192623,
       "lat": 15.5347632143575,
@@ -1120,7 +1188,7 @@
       ],
       "units": 1,
       "dish_washer": false,
-      "availability_pct": 85.0,
+      "availability_pct": 85,
       "slug": "27528556-9-bedroom-luxury-beach-villa-with-a-private-swimming-pool",
       "prop_tags": [
         "Villa",
@@ -1139,7 +1207,7 @@
       "starting_price_in_usd": "NOK157",
       "review_rating": null,
       "property_type": "Room",
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "city": "mandrem",
       "title": "Beach side Tree Huts with Yoga classes and Spa in Mandrem, Goa",
       "country_slug": "india",
@@ -1169,7 +1237,7 @@
         "https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_640x960/58181278/1903c296f40a11e9924e0a8e1b1ce4da_mob_thumbnail.jpeg"
       ],
       "number_of_bathrooms": 1,
-      "state": "goa",
+      "state": "haryana",
       "score": 100,
       "pets": true,
       "internet": false,
@@ -1204,7 +1272,10 @@
       "country": "india",
       "swimming_pool": false,
       "washing_machine": false,
-      "prop_tags": ["Room", "Spa"],
+      "prop_tags": [
+        "Room",
+        "Spa"
+      ],
       "url": "/holiday-home/58181278-beach-side-tree-huts-with-yoga-classes-and-spa-in-mandrem-goa/",
       "currency": "NOK"
     },
@@ -1262,7 +1333,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "haryana",
       "score": 125,
       "lng": 73.912410736084,
       "lat": 15.2961072371028,
@@ -1278,7 +1349,14 @@
       "dish_washer": false,
       "availability_pct": 49.35,
       "slug": "10519707-classic-room",
-      "prop_tags": ["Room", "Swimming Pool", "Wifi", "TV", "AC", "Spa"],
+      "prop_tags": [
+        "Room",
+        "Swimming Pool",
+        "Wifi",
+        "TV",
+        "AC",
+        "Spa"
+      ],
       "url": "/holiday-home/10519707-classic-room/",
       "currency": "NOK"
     },
@@ -1289,7 +1367,7 @@
       "premium": false,
       "city": "dabolim",
       "city_slug": "dabolim-37173",
-      "state": "goa",
+      "state": "haryana",
       "state_slug": "goa-11",
       "country": "india",
       "country_slug": "india",
@@ -1352,7 +1430,14 @@
       "created_on": "2020-12-07 19:42:31",
       "availability_pct": 89.44,
       "check_in": null,
-      "prop_tags": ["Apartment", "1 BR", "1 Bath", "Wifi", "TV", "AC"],
+      "prop_tags": [
+        "Apartment",
+        "1 BR",
+        "1 Bath",
+        "Wifi",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/12250859-ac-1-bedroom-apartment-apartment-in-dabolim-goa/",
       "currency": "NOK"
     },
@@ -1410,7 +1495,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "haryana",
       "score": 100,
       "lng": 73.7566114,
       "lat": 15.5647669,
@@ -1424,9 +1509,16 @@
       ],
       "units": 1,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "22252175-serviced-apartments3",
-      "prop_tags": ["Apartment", "1 BR", "1 Bath", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Apartment",
+        "1 BR",
+        "1 Bath",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/22252175-serviced-apartments3/",
       "currency": "NOK"
     },
@@ -1484,7 +1576,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": false,
-      "state": "goa",
+      "state": "haryana",
       "score": 115,
       "lng": 73.7688331601,
       "lat": 15.5143189302,
@@ -1498,9 +1590,11 @@
       ],
       "units": 3,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "10491804-premium-room-stay-goa-1265-crescent-villa",
-      "prop_tags": ["Room"],
+      "prop_tags": [
+        "Room"
+      ],
       "url": "/holiday-home/10491804-premium-room-stay-goa-1265-crescent-villa/",
       "currency": "NOK"
     },
@@ -1558,7 +1652,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "haryana",
       "score": 95,
       "lng": 73.8095574,
       "lat": 15.4608099,
@@ -1574,7 +1668,14 @@
       "dish_washer": false,
       "availability_pct": 96.67,
       "slug": "17206592-4-bedroom4-bath-luxury-apartment-with-ocean-and-valley-views-dona-paula-apartment",
-      "prop_tags": ["Apartment", "4 BR", "4 Bath", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Apartment",
+        "4 BR",
+        "4 Bath",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/17206592-4-bedroom4-bath-luxury-apartment-with-ocean-and-valley-views-dona-paula-apartment/",
       "currency": "NOK"
     },
@@ -1632,7 +1733,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "haryana",
       "score": 95,
       "lng": 73.7633013725,
       "lat": 15.5332591911,
@@ -1646,9 +1747,16 @@
       ],
       "units": 3,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "30910222-suite-room-stay-in-goa",
-      "prop_tags": ["Resort", "1 BR", "1 Bath", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Resort",
+        "1 BR",
+        "1 Bath",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/30910222-suite-room-stay-in-goa/",
       "currency": "NOK"
     },
@@ -1706,7 +1814,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": false,
-      "state": "goa",
+      "state": "haryana",
       "score": 105,
       "lng": 73.9389411509,
       "lat": 15.2442727612,
@@ -1722,7 +1830,11 @@
       "dish_washer": false,
       "availability_pct": 58.89,
       "slug": "14243950-benaulim-house",
-      "prop_tags": ["Homestay", "6 BR", "5 Bath"],
+      "prop_tags": [
+        "Homestay",
+        "6 BR",
+        "5 Bath"
+      ],
       "url": "/holiday-home/14243950-benaulim-house/",
       "currency": "NOK"
     },
@@ -1733,7 +1845,7 @@
       "premium": false,
       "city": "goa",
       "city_slug": "goa-642",
-      "state": "goa",
+      "state": "andaman and nicobar islands",
       "state_slug": "goa-11",
       "country": "india",
       "country_slug": "india",
@@ -1794,7 +1906,7 @@
       "starting_price_in_usd": "NOK4131",
       "max_price_in_usd": 1115,
       "created_on": "2015-12-27 14:00:29",
-      "availability_pct": 85.0,
+      "availability_pct": 85,
       "check_in": null,
       "prop_tags": [
         "Villa",
@@ -1862,7 +1974,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "andaman and nicobar islands",
       "score": 100,
       "lng": 73.721081391,
       "lat": 15.6380932444,
@@ -1876,7 +1988,7 @@
       ],
       "units": 6,
       "dish_washer": false,
-      "availability_pct": 95.0,
+      "availability_pct": 95,
       "slug": "11483019-spanish-villa-stay",
       "prop_tags": [
         "Villa",
@@ -1896,7 +2008,7 @@
       "starting_price_in_usd": "NOK230",
       "review_rating": null,
       "property_type": "Room",
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "city": "mandrem",
       "title": "Spacious Cottages amidst the nature in Mandrem, Goa",
       "country_slug": "india",
@@ -1926,7 +2038,7 @@
         "https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_640x960/30353157/75a7af57f66411e9924f0a8e1b1ce4da_mob_thumbnail.jpeg"
       ],
       "number_of_bathrooms": 1,
-      "state": "goa",
+      "state": "andaman and nicobar islands",
       "score": 105,
       "pets": true,
       "internet": false,
@@ -1961,7 +2073,11 @@
       "country": "india",
       "swimming_pool": false,
       "washing_machine": false,
-      "prop_tags": ["Room", "AC", "Spa"],
+      "prop_tags": [
+        "Room",
+        "AC",
+        "Spa"
+      ],
       "url": "/holiday-home/30353157-1-bedroom-cottage-cottage-in-mandrem-goa/",
       "currency": "NOK"
     },
@@ -2019,7 +2135,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "andaman and nicobar islands",
       "score": 90,
       "lng": 73.7654367,
       "lat": 15.5512277,
@@ -2035,7 +2151,13 @@
       "dish_washer": false,
       "availability_pct": 94.44,
       "slug": "25773982-2bhk-apartment-to-rent-facing-pool-in-calangute",
-      "prop_tags": ["Apartment", "2 BR", "2 Bath", "Swimming Pool", "AC"],
+      "prop_tags": [
+        "Apartment",
+        "2 BR",
+        "2 Bath",
+        "Swimming Pool",
+        "AC"
+      ],
       "url": "/holiday-home/25773982-2bhk-apartment-to-rent-facing-pool-in-calangute/",
       "currency": "NOK"
     },
@@ -2093,7 +2215,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": false,
-      "state": "goa",
+      "state": "andaman and nicobar islands",
       "score": 85,
       "lng": 73.7567353249,
       "lat": 15.6319845399,
@@ -2109,7 +2231,13 @@
       "dish_washer": false,
       "availability_pct": 96.67,
       "slug": "12252049-our-luxury-villa-a-four-bedroom-luxury-house",
-      "prop_tags": ["Resort", "4 BR", "4 Bath", "TV", "AC"],
+      "prop_tags": [
+        "Resort",
+        "4 BR",
+        "4 Bath",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/12252049-our-luxury-villa-a-four-bedroom-luxury-house/",
       "currency": "NOK"
     },
@@ -2167,7 +2295,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": false,
-      "state": "goa",
+      "state": "andaman and nicobar islands",
       "score": 110,
       "lng": 73.7604974954,
       "lat": 15.5469858494,
@@ -2183,7 +2311,12 @@
       "dish_washer": false,
       "availability_pct": 92.78,
       "slug": "15352539-room-family-ac-stay",
-      "prop_tags": ["Room", "Wifi", "TV", "AC"],
+      "prop_tags": [
+        "Room",
+        "Wifi",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/15352539-room-family-ac-stay/",
       "currency": "NOK"
     },
@@ -2241,7 +2374,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": false,
-      "state": "goa",
+      "state": "andhar pradesh",
       "score": 125,
       "lng": 73.7048667669,
       "lat": 15.6896289808,
@@ -2255,9 +2388,13 @@
       ],
       "units": 4,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "71989661-deluxe-non-ac-room-stay-with-homely-atmosphere-near-beach",
-      "prop_tags": ["Studio", "Wifi", "TV"],
+      "prop_tags": [
+        "Studio",
+        "Wifi",
+        "TV"
+      ],
       "url": "/holiday-home/71989661-deluxe-non-ac-room-stay-with-homely-atmosphere-near-beach/",
       "currency": "NOK"
     },
@@ -2266,7 +2403,7 @@
       "starting_price_in_usd": "NOK3846",
       "review_rating": null,
       "property_type": "Villa",
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "city": "nerul",
       "title": " Sunrise Sunset Villa in Reis Magos",
       "country_slug": "india",
@@ -2296,7 +2433,7 @@
         "https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/image_640x960/21738269/f8c3cfe1037b11ea92530a8e1b1ce4da_mob_thumbnail.jpeg"
       ],
       "number_of_bathrooms": 5,
-      "state": "goa",
+      "state": "andhar pradesh",
       "score": 110,
       "pets": true,
       "internet": false,
@@ -2331,7 +2468,14 @@
       "country": "india",
       "swimming_pool": true,
       "washing_machine": true,
-      "prop_tags": ["Villa", "4 BR", "5 Bath", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Villa",
+        "4 BR",
+        "5 Bath",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/21738269-sunrise-sunset-villa-in-reis-magos-nerul-goa/",
       "currency": "NOK"
     },
@@ -2342,7 +2486,7 @@
       "premium": false,
       "city": "dabolim",
       "city_slug": "dabolim-37173",
-      "state": "goa",
+      "state": "andhar pradesh",
       "state_slug": "goa-11",
       "country": "india",
       "country_slug": "india",
@@ -2405,7 +2549,13 @@
       "created_on": "2020-12-07 19:35:45",
       "availability_pct": 97.78,
       "check_in": null,
-      "prop_tags": ["Apartment", "2 BR", "2 Bath", "TV", "AC"],
+      "prop_tags": [
+        "Apartment",
+        "2 BR",
+        "2 Bath",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/18542127-ac-2-bedroom-apartment-apartment-in-dabolim-goa/",
       "currency": "NOK"
     },
@@ -2463,7 +2613,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": false,
-      "state": "goa",
+      "state": "andhar pradesh",
       "score": 90,
       "lng": 73.7569820881,
       "lat": 15.5820542307,
@@ -2477,9 +2627,15 @@
       ],
       "units": 1,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "20591297-single-bedroom-villa",
-      "prop_tags": ["Villa", "1 BR", "1 Bath", "TV", "AC"],
+      "prop_tags": [
+        "Villa",
+        "1 BR",
+        "1 Bath",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/20591297-single-bedroom-villa/",
       "currency": "NOK"
     },
@@ -2537,7 +2693,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": false,
-      "state": "goa",
+      "state": "andhar pradesh",
       "score": 105,
       "lng": 73.7358333,
       "lat": 15.6294444,
@@ -2551,9 +2707,14 @@
       ],
       "units": 3,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "23791298-deluxe-non-ac-bhk-stay-lobos-paradise",
-      "prop_tags": ["Room", "Wifi", "TV", "AC"],
+      "prop_tags": [
+        "Room",
+        "Wifi",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/23791298-deluxe-non-ac-bhk-stay-lobos-paradise/",
       "currency": "NOK"
     },
@@ -2611,7 +2772,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "andhar pradesh",
       "score": 105,
       "lng": 73.8890916109,
       "lat": 15.4908629338,
@@ -2625,7 +2786,7 @@
       ],
       "units": 1,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "30929457-cosy-2-bhk-villa-in-a-beautiful-gated-society-by-the-highway",
       "prop_tags": [
         "Serviced Apartment",
@@ -2693,7 +2854,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "andhar pradesh",
       "score": 50,
       "lng": 73.9338559872,
       "lat": 15.2596185788,
@@ -2707,9 +2868,16 @@
       ],
       "units": 1,
       "dish_washer": false,
-      "availability_pct": 0.0,
+      "availability_pct": 0,
       "slug": "22151384-mesquita-portugues-8bhk-villa",
-      "prop_tags": ["Homestay", "8 BR", "8 Bath", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Homestay",
+        "8 BR",
+        "8 Bath",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/22151384-mesquita-portugues-8bhk-villa/",
       "currency": "NOK"
     },
@@ -2767,7 +2935,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "andhar pradesh",
       "score": 110,
       "lng": 73.8288354392,
       "lat": 15.456239235,
@@ -2781,7 +2949,7 @@
       ],
       "units": 4,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "88575773-sea-view-apartments-2bhk-e3",
       "prop_tags": [
         "Apartment",
@@ -2849,7 +3017,7 @@
       ],
       "functional_kitchen": true,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "arunachal pradesh",
       "score": 115,
       "lng": 73.7462210655,
       "lat": 15.5967728106,
@@ -2863,9 +3031,16 @@
       ],
       "units": 1,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "46723695-3bhk-penthouse-close-to-beach",
-      "prop_tags": ["Apartment", "3 BR", "3 Bath", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Apartment",
+        "3 BR",
+        "3 Bath",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/46723695-3bhk-penthouse-close-to-beach/",
       "currency": "NOK"
     },
@@ -2923,7 +3098,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": false,
-      "state": "goa",
+      "state": "arunachal pradesh",
       "score": 100,
       "lng": 73.7713748217,
       "lat": 15.4977176369,
@@ -2937,9 +3112,13 @@
       ],
       "units": 5,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "29968385-ac-room-accommodation-near-candolim-victoria-villa-guesthouse",
-      "prop_tags": ["Room", "TV", "AC"],
+      "prop_tags": [
+        "Room",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/29968385-ac-room-accommodation-near-candolim-victoria-villa-guesthouse/",
       "currency": "NOK"
     },
@@ -2997,7 +3176,7 @@
       ],
       "functional_kitchen": false,
       "swimming_pool": true,
-      "state": "goa",
+      "state": "arunachal pradesh",
       "score": 100,
       "lng": 73.7934494019,
       "lat": 15.5693341061,
@@ -3011,11 +3190,56 @@
       ],
       "units": 1,
       "dish_washer": false,
-      "availability_pct": 100.0,
+      "availability_pct": 100,
       "slug": "19620665-holiday-villas-in-goa",
-      "prop_tags": ["Villa", "3 BR", "3 Bath", "Swimming Pool", "TV", "AC"],
+      "prop_tags": [
+        "Villa",
+        "3 BR",
+        "3 Bath",
+        "Swimming Pool",
+        "TV",
+        "AC"
+      ],
       "url": "/holiday-home/19620665-holiday-villas-in-goa/",
       "currency": "NOK"
+    }
+  ],
+  "signupData": [
+    {
+      "selectValue": "91",
+      "phone": "8526356066",
+      "email": "abc@gmail.com",
+      "password": "Abc@123",
+      "firstName": "Ashish",
+      "lastName": "Kumar",
+      "id": 1
+    },
+    {
+      "selectValue": "91",
+      "phone": "123456789",
+      "email": "john@gmail.com",
+      "password": "John@123",
+      "firstName": "John",
+      "lastName": "son",
+      "id": 2
+    },
+    {
+      "selectValue": "91",
+      "phone": "987654321",
+      "email": "peter@gmail.com",
+      "password": "Peter@123",
+      "firstName": "Peter",
+      "lastName": "son",
+      "id": 3
+    },
+    {
+      "selectValue": "91",
+      "phone": "121212",
+      "email": "asd@123gmail.com",
+      "password": "121212",
+      "firstName": "ak",
+      "lastName": "bk",
+      "id": 4
     }
   ]
 }
