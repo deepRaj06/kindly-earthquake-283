@@ -37,6 +37,7 @@ import {
   DrawerCloseButton,
 } from "@chakra-ui/react";
 import { RiContactsFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
