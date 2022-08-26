@@ -8,6 +8,7 @@ import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
 import Error from "../Pages/Error/Error";
 import ProductListByCity from "../Pages/Products/ProductListByCity";
+import PropertyPageOne from "../Pages/AddProperty/PropertyPageOne";
 const AllRoutes = () => {
   return (
     <Routes>
@@ -15,6 +16,7 @@ const AllRoutes = () => {
       <Route path="/products" element={<ProductList />} />
       <Route path="/products/:sortBy" element={<ProductListByCity />} />
       <Route path="/products/:id" element={<SingleProduct />} />
+      <Route path="/addproperty-form-1" element={<PropertyPageOne />} />
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />

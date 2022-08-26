@@ -3,8 +3,9 @@ const initState = {
   allProducts: [],
   isLoading: false,
   isError: false,
-  byCity:[],
-  byType:[]
+  byCity: [],
+  byType: [],
+  addPropertyForm: {},
 };
 export const reducer = (state = initState, { type, payload }) => {
   switch (type) {
