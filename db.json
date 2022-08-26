@@ -3366,5 +3366,51 @@
       "lastName": "bk",
       "id": 4
     }
+  ],
+  "form": [
+    {
+      "id": 1,
+      "country": "India",
+      "state": "Himachal Pradesh",
+      "city": "Shimla"
+    },
+    {
+      "country": "American Samoa",
+      "city": "Bilaspur",
+      "id": 2,
+      "type": "Apartment",
+      "brandname": "Hill Homestay",
+      "cabinfeatures": {
+        "cabins": 1,
+        "guestsAllowed": 1,
+        "beds": 1,
+        "bathrooms": 1,
+        "facilities": [
+          "Balcony"
+        ]
+      },
+      "cabinFacilities": {
+        "cabins": 1,
+        "guestsAllowed": 1,
+        "beds": 1,
+        "bathrooms": 1,
+        "facilities": [
+          "Housekeeping",
+          "Linen Provided"
+        ]
+      },
+      "images": {
+        "outer": [
+          "blob:http://localhost:3000/77d80832-f054-4b1a-9798-ac0b931c6e11",
+          "blob:http://localhost:3000/53dcb05f-d643-495c-abb3-79657aab2187",
+          "blob:http://localhost:3000/7841f7b1-94d3-42ad-9bfe-6c70ea2e9400"
+        ],
+        "inner": [
+          "blob:http://localhost:3000/2c0e9dd8-aae5-4408-b4bf-8caddbf197d0",
+          "blob:http://localhost:3000/a96d63c8-4691-4d58-8577-4d0f089e7d83",
+          "blob:http://localhost:3000/1d127577-56d4-4292-8d68-8434553a9cba"
+        ]
+      }
+    }
   ]
 }
