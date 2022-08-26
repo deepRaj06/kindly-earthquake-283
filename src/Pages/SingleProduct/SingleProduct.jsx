@@ -5,7 +5,7 @@ import Navbar from "../../Components/Navbar";
 import style from './singlePage.module.css';
 import { IoMdLocate } from "react-icons/io";
 // import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "./singlePage.css";
+// import "./singlePage.css";
 const SingleProduct = () => {
   return (
     <>

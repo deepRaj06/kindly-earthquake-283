@@ -1,22 +1,94 @@
-import { Box, Flex, HStack, IconButton, Spacer, Text } from "@chakra-ui/react";
-import React from "react";
+import {
+  Box,
+  Flex,
+  HStack,
+  IconButton,
+  Image,
+  Spacer,
+  Text,
+} from "@chakra-ui/react";
+import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import axios from "axios";
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        left: "-36px",
+        opacity: 1,
+        background: "grey",
+        borderRadius: "50%",
+        borderColor: "white",
+        border: "none",
+        borderLeftColor: "white",
+        borderRightColor: "white",
+      }}
+      onClick={onClick}
+    />
+  );
+}
+
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+        display: "block",
+        right: "-8px",
+        opacity: 1,
+        backgroundColor: "grey",
+        borderRadius: "50%",
+        borderColor: "white",
+        border: "none",
+        borderLeftColor: "white",
+        borderRightColor: "white",
+      }}
+      onClick={onClick}
+    />
+  );
+}
 
 const Carousal_HomePage = () => {
+  const [topDest, setTopDest] = useState([]);
+
+  const basicBoxStyles = {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    boxSize: "250px",
+    color: "white",
+    textShadow: "0 0 20px black",
+    fontWeight: "bold",
+    fontSize: "20px",
+    color: "white",
+  };
+
   var settings = {
-    dots: true,
-    infinite: false,
+    // dots: true,
+    infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToScroll: 1,
     initialSlide: 0,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -25,7 +97,7 @@ const Carousal_HomePage = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
@@ -38,86 +110,57 @@ const Carousal_HomePage = () => {
       },
     ],
   };
+
+  useEffect(() => {
+    axios.get("http://localhost:8000/topDestinations").then((res) => {
+      setTopDest(res.data);
+    });
+  }, []);
+
   return (
-    <Box w="100%" 
-    // border="1px solid blue" 
+    <Box
+      w="94%"
+      // border="1px solid black"
+      m="auto"
+      pl="2rem"
+      justifyContent="space-between"
+      gap="40px"
+      mb="6rem"
     >
-      <Flex direction="row" >
-        <Box 
-        // border="1px solid red"
-         maxW='4%'>
-          <IconButton
-            pl='1rem'
-            mt='3.6rem'
-            bg="none"
-            borderRadius="50%"
-            icon={<BsChevronLeft color="gray" fontSize="26px" />}
-          />
-        </Box>
-     
-
-      <Box
-        w="94%"
-        // border="1px solid black"
-        m="auto"
-        pl="2rem"
-        // pr="auto"
-        // alignContent="center"
-        // alignItems="center"
-        justifyContent="space-between"
-        gap='40px'
-      >
-        {/* <h2> Responsive </h2> */}
-        <Slider {...settings} >
-          <Box maxW="250px" h="150px" 
-          border="1px solid red"
-          >
-            <h3>1</h3>
-          </Box>
-          <Box maxW="250px" h="150px"
-           border="1px solid red"
-           >
-            <h3>2</h3>
-          </Box>
-          <Box maxW="250px" h="150px" 
-          border="1px solid red"
-          >
-            <h3>3</h3>
-          </Box>
-          <Box maxW="250px" h="150px" 
-          border="1px solid red"
-          >
-            <h3>4</h3>
-          </Box>
-          <Box maxW="250px" h="150px" 
-          border="1px solid red"
-          >
-            <h3>5</h3>
-          </Box>
-          {/* <Box maxW="240px" h="150px" border="1px solid red">
-            <h3>6</h3>
-          </Box>
-          <Box maxW="240px" h="150px" border="1px solid red">
-            <h3>7</h3>
-          </Box>
-          <Box maxW="240px" h="150px" border="1px solid red">
-            <h3>8</h3>
-          </Box> */}
-        </Slider>
-      </Box>
-
-      {/* <Flex direction="row-reverse" justifyContent="center" alignContent="center"> */}
-        <Box>
-          <IconButton
-            pr='1rem'       
-            mt='3.6rem'
-            bg="none"
-            borderRadius="50%"
-            icon={<BsChevronRight color="gray" fontSize="26px" />}
-          />
-        </Box>
-      {/* </Flex> */}
-      </Flex>
+      {/* <h2> Responsive </h2> */}
+      <Slider {...settings}>
+        {topDest.map((dest) => {
+          return (
+            <Box
+              maxW="250px"
+              maxH="150px"
+              // border="1px solid red"
+              sx={basicBoxStyles}
+            >
+              <Image
+                filter="auto"
+                brightness="70%"
+                w="100%"
+                h="150px"
+                src={dest.img}
+                alt="img"
+              ></Image>
+              {/* {dest.text} */}
+              <Text
+                fontWeight="400"
+                position="relative"
+                color="whitesmoke"
+                mt="-6rem"
+              >
+                {dest.location}
+              </Text>
+              <Text fontWeight="400" position="relative" color="whitesmoke">
+                {dest.text}
+              </Text>
+            </Box>
+          );
+        })}
+      </Slider>
     </Box>
   );
 };
