@@ -1,11 +1,11 @@
 
 
-import { Box, Flex, Text, Image } from "@chakra-ui/react";
-import style from'./chekout.module.css'
-import { Stack, Textarea, Heading } from "@chakra-ui/react";
+import { Stack, Textarea, Image, Box, Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import React from "react";
 // import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import style from "./checkout.module.css";
+
 import Navbar from "../../Components/Navbar";
 import { Alert, AlertIcon, Select } from "@chakra-ui/react";
 import { FormControl, FormLabel, Input } from "@chakra-ui/react";
@@ -214,9 +214,9 @@ const Checkout = () => {
                   </div>
                 </div>
                 <br></br><br></br>
-<div style={{backgroundColor:"lightgray"}}>By clicking 'Agree & Continue', you are agreeing to our Terms & Conditions, Privacy Policy, Booking policies like cancellation policies, house rules.</div>
-<br></br>
-<div className={style.agree1}><button>Agree {"&"} Continue</button></div>
+                <div style={{backgroundColor:"lightgray"}}>By clicking 'Agree & Continue', you are agreeing to our Terms & Conditions, Privacy Policy, Booking policies like cancellation policies, house rules.</div>
+                <br></br>
+                <div className={style.agree1}><button>Agree {"&"} Continue</button></div>
               </FormControl>
               <br></br>
             </div>
@@ -228,3 +228,7 @@ const Checkout = () => {
   );
 };
 export default Checkout;
+// <<<<<<< HEAD
+// // >>>>>>> d089772c894e513f0d87fd34dbfac4647092e219
+// =======
+// >>>>>>> adc4e1bf5cba29a75ddc06dcf2ef3940ddf44c95

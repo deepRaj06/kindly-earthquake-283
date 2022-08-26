@@ -1,10 +1,12 @@
 import { Center,Image,Box,Badge,Alert,AlertIcon,Select,Tab,TabList,TabPanels,Tabs,TabPanel } from "@chakra-ui/react";
 import React from "react";
+
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../../Components/Navbar";
 import style from './singlePage.module.css';
 import { IoMdLocate } from "react-icons/io";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+
 const SingleProduct = () => {
   return (
     <>
