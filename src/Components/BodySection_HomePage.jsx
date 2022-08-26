@@ -1,4 +1,12 @@
-import { Box, Flex, Grid, GridItem, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  GridItem,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
@@ -24,22 +32,25 @@ const BodySection_HomePage = () => {
   }, []);
 
   return (
-    <Box w="90%" h="auto" border="1px solid black" mt="4rem" m="auto">
+    <Box w="90%" h="auto" 
+    // border="1px solid black" 
+    mt="6rem" m="auto">
       <Flex>
         <Box boxShadow="lg" w="35%" h="380px">
           <Text
             mt="2rem"
-            fontWeight="300"
-            color="black"
+            fontWeight="100"
+            // color="black"
             fontSize="24px"
             textAlign="center"
+            color='gray'
           >
             Fully Managed Communities By
           </Text>
           <Text
             mt="0.4rem"
-            fontWeight="300"
-            color="black"
+            fontWeight="100"
+            color="gray"
             fontSize="24px"
             textAlign="center"
           >
@@ -183,6 +194,192 @@ const BodySection_HomePage = () => {
               );
             })}
           </Grid>
+        </Box>
+      </Flex>
+
+      <Flex mt="4rem" mb="2rem" justifyContent="space-between">
+        <Box
+          boxShadow="lg"
+          w="48%"
+          h="280px"
+          // border="1px solid red"
+        >
+          <Text fontSize="24px" fontWeight="200" textAlign="center">
+            Holiday Home Investment Opportunities
+          </Text>
+          <Flex
+            w="90%"
+            mt="2rem"
+            mb="2rem"
+            ml="auto"
+            mr="auto"
+            justifyContent="space-around"
+          >
+            <Box>
+              <Flex direction="column">
+                <Image
+                  w="40px"
+                  h="40px"
+                  mb="1rem"
+                  src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/growth.svg"
+                  display="block"
+                  m="auto"
+                ></Image>
+                <Text fontWeight="360" textAlign="center" mt="1rem">
+                  Low Cost High Appreciation
+                </Text>
+              </Flex>
+            </Box>
+            <Box>
+              <Flex direction="column">
+                <Image
+                  w="40px"
+                  h="40px"
+                  mb="1rem"
+                  src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/maids.svg"
+                  display="block"
+                  m="auto"
+                ></Image>
+                <Text fontWeight="360" textAlign="center" mt="1rem">
+                  Professionally Managed
+                </Text>
+              </Flex>
+            </Box>
+            <Box>
+              <Flex direction="column" w="80%">
+                <Image
+                  w="40px"
+                  h="40px"
+                  mb="1rem"
+                  src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/give-money.svg"
+                  display="block"
+                  m="auto"
+                ></Image>
+                <Text fontWeight="360" textAlign="center" mt="1rem">
+                  Guaranteed To Produce Income
+                </Text>
+              </Flex>
+            </Box>
+            <Box>
+              <Flex direction="column">
+                <Image
+                  w="40px"
+                  h="40px"
+                  mb="1rem"
+                  src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/plan.svg"
+                  display="block"
+                  m="auto"
+                ></Image>
+                <Text fontWeight="360" textAlign="center" mt="1rem">
+                  We Designed Floor Plans
+                </Text>
+              </Flex>
+            </Box>
+          </Flex>
+          <Button
+            pl="2rem"
+            pr="2rem"
+            fontSize="13px"
+            display="block"
+            m="auto"
+            borderRadius="none"
+            colorScheme="blue"
+            fontWeight="400"
+          >
+            EXPLORE INVESTMENT OPPORTUNITIES
+          </Button>
+        </Box>
+
+        <Box
+          boxShadow="lg"
+          w="48%"
+          h="280px"
+          // border="1px solid red"
+        >
+          <Text fontSize="24px" fontWeight="200" textAlign="center">
+            Are You A Holiday Home Owner/Manager?
+          </Text>
+          <Flex
+            w="90%"
+            mt="2rem"
+            mb="2rem"
+            ml="auto"
+            mr="auto"
+            justifyContent="space-around"
+          >
+            <Box>
+              <Flex direction="column">
+                <Image
+                  w="40px"
+                  h="40px"
+                  mb="1rem"
+                  src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/network.svg"
+                  display="block"
+                  m="auto"
+                ></Image>
+                <Text fontWeight="360" textAlign="center" mt="1rem">
+                  Get Bookings From 100+ Websites
+                </Text>
+              </Flex>
+            </Box>
+            <Box>
+              <Flex direction="column">
+                <Image
+                  w="40px"
+                  h="40px"
+                  mb="1rem"
+                  src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/layout.svg"
+                  display="block"
+                  m="auto"
+                ></Image>
+                <Text fontWeight="360" textAlign="center" mt="1rem">
+                  One Dashboard - Total Control
+                </Text>
+              </Flex>
+            </Box>
+            <Box>
+              <Flex direction="column">
+                <Image
+                  w="40px"
+                  h="40px"
+                  mb="1rem"
+                  src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/flash.svg"
+                  display="block"
+                  m="auto"
+                ></Image>
+                <Text fontWeight="360" textAlign="center" mt="1rem">
+                  Instant Book Or Request To Book
+                </Text>
+              </Flex>
+            </Box>
+            <Box>
+              <Flex direction="column">
+                <Image
+                  w="40px"
+                  h="40px"
+                  mb="1rem"
+                  src="https://d2vcelvjdj7n25.cloudfront.net/newhome/icons/smartphone-call.svg"
+                  display="block"
+                  m="auto"
+                ></Image>
+                <Text fontWeight="360" textAlign="center" mt="1rem">
+                  Both iOS & Android App Available.
+                </Text>
+              </Flex>
+            </Box>
+          </Flex>
+          <Button
+            pl="2rem"
+            pr="2rem"
+            fontSize="13px"
+            display="block"
+            m="auto"
+            borderRadius="none"
+            colorScheme="blue"
+            fontWeight="400"
+          >
+            LIST YOUR PROPERTY
+          </Button>
         </Box>
       </Flex>
     </Box>

@@ -37,7 +37,7 @@ import {
   DrawerCloseButton,
 } from "@chakra-ui/react";
 import { RiContactsFill } from "react-icons/ri";
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -58,6 +58,10 @@ const Navbar = () => {
   const handleActiveBtn = () => {
     setIsActive(true);
   };
+
+  const handleSignUp = () => {
+
+  }
 
   const hover = {
     textDecoration: "underline",
@@ -95,7 +99,46 @@ const Navbar = () => {
         >
           <Flex justifyContent="center" alignItems="center" h="60px">
             {/* <Image w="20%" h="80px" src={contact_icon}></Image> */}
-            <Icon color="white" w={6} h={10} as={RiContactsFill}></Icon>
+
+            <Popover placement="bottom">
+              <PopoverTrigger>
+                <Button _hover={{background: 'none'}} bg='none' p='4px'>
+                  <Box onClick={handleSignUp} _hover={{ cursor: "pointer" }}>
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                data-svg="user"
+              >
+                <circle
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="1.1"
+                  cx="9.9"
+                  cy="6.4"
+                  r="4.4"
+                ></circle>
+                <path
+                  fill="none"
+                  stroke="#fff"
+                  stroke-width="1.1"
+                  d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"
+                ></path>
+              </svg>
+                  </Box>
+                </Button>
+              </PopoverTrigger>
+              <PopoverContent borderRadius='none' w='200px' mr='8rem' p='1rem' pl='1rem'>
+                {/* <PopoverCloseButton /> */}
+                <PopoverBody w='100px'>
+                  <Text fontSize='14px' color='gray' _hover={{cursor: 'pointer',color: 'black'}} mb='1rem'>SIGN IN</Text>
+                  <Text fontSize='14px' color='gray' _hover={{cursor: 'pointer',color: 'black'}}>SIGN UP</Text>
+                </PopoverBody>
+              </PopoverContent>
+            </Popover>
+
+            {/* <Icon color="white" w={6} h={10} as={RiContactsFill}></Icon> */}
             <Menu>
               <Popover placement="bottom">
                 <PopoverTrigger>
@@ -317,7 +360,12 @@ const Navbar = () => {
                 <DrawerBody color="white" fontSize="14px" textAlign="center">
                   <Box mt="2rem">
                     <Text>ARE YOU A PROPERTY OWNER/MANAGER?</Text>
-                    <Link to="/addproperty-form-1" color="whiteAlpha.700" mt="0.6rem" mb="0.6rem">
+                    <Link
+                      to="/addproperty-form-1"
+                      color="whiteAlpha.700"
+                      mt="0.6rem"
+                      mb="0.6rem"
+                    >
                       List New Property
                     </Link>
                     <Text color="whiteAlpha.700">
@@ -343,11 +391,21 @@ const Navbar = () => {
                   </Box>
                   <Divider color="whiteAlpha.800" h="6" mb="1rem" />
                   <Box>
-                    <Text mb='0.4rem' color='whiteAlpha.700'>About Us</Text>
-                    <Text mb='0.4rem' color='whiteAlpha.700'>Privacy Policy</Text>
-                    <Text mb='0.4rem' color='whiteAlpha.700'>Terms of Use</Text>
-                    <Text mb='0.4rem' color='whiteAlpha.700'>FAQs</Text>
-                    <Text mb='0.4rem' color='whiteAlpha.700'>Contact Us</Text>
+                    <Text mb="0.4rem" color="whiteAlpha.700">
+                      About Us
+                    </Text>
+                    <Text mb="0.4rem" color="whiteAlpha.700">
+                      Privacy Policy
+                    </Text>
+                    <Text mb="0.4rem" color="whiteAlpha.700">
+                      Terms of Use
+                    </Text>
+                    <Text mb="0.4rem" color="whiteAlpha.700">
+                      FAQs
+                    </Text>
+                    <Text mb="0.4rem" color="whiteAlpha.700">
+                      Contact Us
+                    </Text>
                   </Box>
                   <Divider color="whiteAlpha.800" h="6" mb="1rem" />
                   <Text color="whiteAlpha.800">© Tripvillas Pte Ltd</Text>

@@ -1,4 +1,56 @@
 {
+  "vacationIdeas":[
+    {
+      "id": 1,
+      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/goa-11.f1c86735cec4.jpg",
+      "text":"Luxury Vacation in Goa"
+    },
+    {
+      "id": 2,
+      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/galle-27739.4e9874b7f375.jpg",
+      "text":"Top Homestays and resorts in Chikmagalur"
+    },
+    {
+      "id": 3,
+      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/phuket-72.9d6f9e3883be.jpg",
+      "text":"Phuket's Best Pool Villas"
+    },
+    {
+      "id": 4,
+      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/kandy-5144.2adb0839ea6a.jpg",
+      "text":"Coorg Homestays"
+    },
+    {
+      "id": 5,
+      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/koh-samui-5119.82e8a6c9cf8b.jpg",
+      "text":"Family Bungalow in Lonavala"
+    },
+    {
+      "id": 6,
+      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/lonavala-2293.ab3b797cddf6.jpg",
+      "text":"Lonavala Family Villas"
+    },
+    {
+      "id": 7,
+      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/kerala-18.c082ce41a521.jpg",
+      "text":"Kerala Homestays"
+    },
+    {
+      "id": 8,
+      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/himachal-pradesh-14.4910c5bade68.jpg",
+      "text":"Cottages in Himachal Pradesh"
+    },
+    {
+      "id": 9,
+      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/coorg-5464.83497c6367a3.jpg",
+      "text":"Bali Family Villas"
+    },
+    {
+      "id": 10,
+      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/alibag-2129.fde4732b8d72.jpg",
+      "text":"Alibag - Rural Solitude and luxury combined"
+    }
+  ],
   "bodySection":[
     {
       "id": 1,
