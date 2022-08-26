@@ -10,18 +10,18 @@ import {
 import states from "../../utils/states.json";
 import countries from "../../utils/countries.json";
 import { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addForm, tempFormFn } from "../../Redux/AppReducer/action";
 const PropertyPageOne = () => {
-  const [countryCode, setCountryCode] = useState("");
-  const [details, setDetails] = useState({
-    country:addPropertyForm.country||"",
-    state:addPropertyForm.state||"",
-    city:addPropertyForm.city||"",
-
-  });
   const addPropertyForm = useSelector(
     (store) => store.appReducer.addPropertyForm
   );
+  // console.log(addPropertyForm)
+  const dispatch = useDispatch();
+  const [countryCode, setCountryCode] = useState("");
+  const [details, setDetails] = useState({});
+  const forms = useSelector((store)=>store.appReducer);
+  console.log(forms)
   const handleInput = (e) => {
     const { value, name } = e.target;
     setDetails({ ...details, [name]: value });
@@ -29,6 +29,7 @@ const PropertyPageOne = () => {
   const handleFormOne = (e) => {
     e.preventDefault();
     console.log(details);
+    dispatch(tempFormFn(details));
   };
   return (
     <Box position="relative" height={"100vh"}>

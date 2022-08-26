@@ -70,14 +70,7 @@
       "dish_washer": false,
       "availability_pct": 39.44,
       "slug": "15323035-1-double-ac-bedroom-with-bath-lounge-kitchen-in-candolim",
-      "prop_tags": [
-        "Apartment",
-        "1 BR",
-        "1 Bath",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Apartment", "1 BR", "1 Bath", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/15323035-1-double-ac-bedroom-with-bath-lounge-kitchen-in-candolim/",
       "currency": "NOK"
     },
@@ -151,12 +144,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "30870847-master-bedroom-stay",
-      "prop_tags": [
-        "Room",
-        "Wifi",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Room", "Wifi", "TV", "AC"],
       "url": "/holiday-home/30870847-master-bedroom-stay/",
       "currency": "NOK"
     },
@@ -230,13 +218,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "29341065-room-stay-the-garca-branca-bb",
-      "prop_tags": [
-        "Room",
-        "Swimming Pool",
-        "Wifi",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Room", "Swimming Pool", "Wifi", "TV", "AC"],
       "url": "/holiday-home/29341065-room-stay-the-garca-branca-bb/",
       "currency": "NOK"
     },
@@ -310,12 +292,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "54684606-room-stay-the-verda-villa-porvorim",
-      "prop_tags": [
-        "Room",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Room", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/54684606-room-stay-the-verda-villa-porvorim/",
       "currency": "NOK"
     },
@@ -553,12 +530,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "26980043-executive-suite-room-stay-relax-holiday-home-1bhk-apartment",
-      "prop_tags": [
-        "Room",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Room", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/26980043-executive-suite-room-stay-relax-holiday-home-1bhk-apartment/",
       "currency": "NOK"
     },
@@ -632,11 +604,7 @@
       "created_on": "2021-11-19 20:32:01",
       "availability_pct": 97.22,
       "check_in": null,
-      "prop_tags": [
-        "Apartment",
-        "2 BR",
-        "2 Bath"
-      ],
+      "prop_tags": ["Apartment", "2 BR", "2 Bath"],
       "url": "/holiday-home/10055185-spacious-2-bhk-apartment-in-tata-rio-de-goa/",
       "currency": "NOK"
     },
@@ -710,14 +678,7 @@
       "dish_washer": false,
       "availability_pct": 88.89,
       "slug": "48556786-3-bhk-bungalow-at-mapusa-goa",
-      "prop_tags": [
-        "Villa",
-        "3 BR",
-        "3 Bath",
-        "Wifi",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Villa", "3 BR", "3 Bath", "Wifi", "TV", "AC"],
       "url": "/holiday-home/48556786-3-bhk-bungalow-at-mapusa-goa/",
       "currency": "NOK"
     },
@@ -791,13 +752,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "22669682-a-boutique-house",
-      "prop_tags": [
-        "Room",
-        "Swimming Pool",
-        "Wifi",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Room", "Swimming Pool", "Wifi", "TV", "AC"],
       "url": "/holiday-home/22669682-a-boutique-house/",
       "currency": "NOK"
     },
@@ -871,14 +826,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "21984838-serviced-apartments2",
-      "prop_tags": [
-        "Apartment",
-        "1 BR",
-        "1 Bath",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Apartment", "1 BR", "1 Bath", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/21984838-serviced-apartments2/",
       "currency": "NOK"
     },
@@ -952,14 +900,7 @@
       "dish_washer": true,
       "availability_pct": 95,
       "slug": "14521627-4-bhk-villa-with-a-pool-in-anjuna",
-      "prop_tags": [
-        "Villa",
-        "4 BR",
-        "5 Bath",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Villa", "4 BR", "5 Bath", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/14521627-4-bhk-villa-with-a-pool-in-anjuna/",
       "currency": "NOK"
     },
@@ -1033,11 +974,7 @@
       "dish_washer": false,
       "availability_pct": 93.33,
       "slug": "92969019-room-standard-non-ac-stay",
-      "prop_tags": [
-        "Room",
-        "Wifi",
-        "TV"
-      ],
+      "prop_tags": ["Room", "Wifi", "TV"],
       "url": "/holiday-home/92969019-room-standard-non-ac-stay/",
       "currency": "NOK"
     },
@@ -1111,12 +1048,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "86680834-supreme-ac-stay-at-resort-in-calangute",
-      "prop_tags": [
-        "Room",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Room", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/86680834-supreme-ac-stay-at-resort-in-calangute/",
       "currency": "NOK"
     },
@@ -1272,10 +1204,7 @@
       "country": "india",
       "swimming_pool": false,
       "washing_machine": false,
-      "prop_tags": [
-        "Room",
-        "Spa"
-      ],
+      "prop_tags": ["Room", "Spa"],
       "url": "/holiday-home/58181278-beach-side-tree-huts-with-yoga-classes-and-spa-in-mandrem-goa/",
       "currency": "NOK"
     },
@@ -1349,14 +1278,7 @@
       "dish_washer": false,
       "availability_pct": 49.35,
       "slug": "10519707-classic-room",
-      "prop_tags": [
-        "Room",
-        "Swimming Pool",
-        "Wifi",
-        "TV",
-        "AC",
-        "Spa"
-      ],
+      "prop_tags": ["Room", "Swimming Pool", "Wifi", "TV", "AC", "Spa"],
       "url": "/holiday-home/10519707-classic-room/",
       "currency": "NOK"
     },
@@ -1430,14 +1352,7 @@
       "created_on": "2020-12-07 19:42:31",
       "availability_pct": 89.44,
       "check_in": null,
-      "prop_tags": [
-        "Apartment",
-        "1 BR",
-        "1 Bath",
-        "Wifi",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Apartment", "1 BR", "1 Bath", "Wifi", "TV", "AC"],
       "url": "/holiday-home/12250859-ac-1-bedroom-apartment-apartment-in-dabolim-goa/",
       "currency": "NOK"
     },
@@ -1511,14 +1426,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "22252175-serviced-apartments3",
-      "prop_tags": [
-        "Apartment",
-        "1 BR",
-        "1 Bath",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Apartment", "1 BR", "1 Bath", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/22252175-serviced-apartments3/",
       "currency": "NOK"
     },
@@ -1592,9 +1500,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "10491804-premium-room-stay-goa-1265-crescent-villa",
-      "prop_tags": [
-        "Room"
-      ],
+      "prop_tags": ["Room"],
       "url": "/holiday-home/10491804-premium-room-stay-goa-1265-crescent-villa/",
       "currency": "NOK"
     },
@@ -1668,14 +1574,7 @@
       "dish_washer": false,
       "availability_pct": 96.67,
       "slug": "17206592-4-bedroom4-bath-luxury-apartment-with-ocean-and-valley-views-dona-paula-apartment",
-      "prop_tags": [
-        "Apartment",
-        "4 BR",
-        "4 Bath",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Apartment", "4 BR", "4 Bath", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/17206592-4-bedroom4-bath-luxury-apartment-with-ocean-and-valley-views-dona-paula-apartment/",
       "currency": "NOK"
     },
@@ -1749,14 +1648,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "30910222-suite-room-stay-in-goa",
-      "prop_tags": [
-        "Resort",
-        "1 BR",
-        "1 Bath",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Resort", "1 BR", "1 Bath", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/30910222-suite-room-stay-in-goa/",
       "currency": "NOK"
     },
@@ -1830,11 +1722,7 @@
       "dish_washer": false,
       "availability_pct": 58.89,
       "slug": "14243950-benaulim-house",
-      "prop_tags": [
-        "Homestay",
-        "6 BR",
-        "5 Bath"
-      ],
+      "prop_tags": ["Homestay", "6 BR", "5 Bath"],
       "url": "/holiday-home/14243950-benaulim-house/",
       "currency": "NOK"
     },
@@ -2073,11 +1961,7 @@
       "country": "india",
       "swimming_pool": false,
       "washing_machine": false,
-      "prop_tags": [
-        "Room",
-        "AC",
-        "Spa"
-      ],
+      "prop_tags": ["Room", "AC", "Spa"],
       "url": "/holiday-home/30353157-1-bedroom-cottage-cottage-in-mandrem-goa/",
       "currency": "NOK"
     },
@@ -2151,13 +2035,7 @@
       "dish_washer": false,
       "availability_pct": 94.44,
       "slug": "25773982-2bhk-apartment-to-rent-facing-pool-in-calangute",
-      "prop_tags": [
-        "Apartment",
-        "2 BR",
-        "2 Bath",
-        "Swimming Pool",
-        "AC"
-      ],
+      "prop_tags": ["Apartment", "2 BR", "2 Bath", "Swimming Pool", "AC"],
       "url": "/holiday-home/25773982-2bhk-apartment-to-rent-facing-pool-in-calangute/",
       "currency": "NOK"
     },
@@ -2231,13 +2109,7 @@
       "dish_washer": false,
       "availability_pct": 96.67,
       "slug": "12252049-our-luxury-villa-a-four-bedroom-luxury-house",
-      "prop_tags": [
-        "Resort",
-        "4 BR",
-        "4 Bath",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Resort", "4 BR", "4 Bath", "TV", "AC"],
       "url": "/holiday-home/12252049-our-luxury-villa-a-four-bedroom-luxury-house/",
       "currency": "NOK"
     },
@@ -2311,12 +2183,7 @@
       "dish_washer": false,
       "availability_pct": 92.78,
       "slug": "15352539-room-family-ac-stay",
-      "prop_tags": [
-        "Room",
-        "Wifi",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Room", "Wifi", "TV", "AC"],
       "url": "/holiday-home/15352539-room-family-ac-stay/",
       "currency": "NOK"
     },
@@ -2390,11 +2257,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "71989661-deluxe-non-ac-room-stay-with-homely-atmosphere-near-beach",
-      "prop_tags": [
-        "Studio",
-        "Wifi",
-        "TV"
-      ],
+      "prop_tags": ["Studio", "Wifi", "TV"],
       "url": "/holiday-home/71989661-deluxe-non-ac-room-stay-with-homely-atmosphere-near-beach/",
       "currency": "NOK"
     },
@@ -2468,14 +2331,7 @@
       "country": "india",
       "swimming_pool": true,
       "washing_machine": true,
-      "prop_tags": [
-        "Villa",
-        "4 BR",
-        "5 Bath",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Villa", "4 BR", "5 Bath", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/21738269-sunrise-sunset-villa-in-reis-magos-nerul-goa/",
       "currency": "NOK"
     },
@@ -2549,13 +2405,7 @@
       "created_on": "2020-12-07 19:35:45",
       "availability_pct": 97.78,
       "check_in": null,
-      "prop_tags": [
-        "Apartment",
-        "2 BR",
-        "2 Bath",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Apartment", "2 BR", "2 Bath", "TV", "AC"],
       "url": "/holiday-home/18542127-ac-2-bedroom-apartment-apartment-in-dabolim-goa/",
       "currency": "NOK"
     },
@@ -2629,13 +2479,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "20591297-single-bedroom-villa",
-      "prop_tags": [
-        "Villa",
-        "1 BR",
-        "1 Bath",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Villa", "1 BR", "1 Bath", "TV", "AC"],
       "url": "/holiday-home/20591297-single-bedroom-villa/",
       "currency": "NOK"
     },
@@ -2709,12 +2553,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "23791298-deluxe-non-ac-bhk-stay-lobos-paradise",
-      "prop_tags": [
-        "Room",
-        "Wifi",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Room", "Wifi", "TV", "AC"],
       "url": "/holiday-home/23791298-deluxe-non-ac-bhk-stay-lobos-paradise/",
       "currency": "NOK"
     },
@@ -2870,14 +2709,7 @@
       "dish_washer": false,
       "availability_pct": 0,
       "slug": "22151384-mesquita-portugues-8bhk-villa",
-      "prop_tags": [
-        "Homestay",
-        "8 BR",
-        "8 Bath",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Homestay", "8 BR", "8 Bath", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/22151384-mesquita-portugues-8bhk-villa/",
       "currency": "NOK"
     },
@@ -3033,14 +2865,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "46723695-3bhk-penthouse-close-to-beach",
-      "prop_tags": [
-        "Apartment",
-        "3 BR",
-        "3 Bath",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Apartment", "3 BR", "3 Bath", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/46723695-3bhk-penthouse-close-to-beach/",
       "currency": "NOK"
     },
@@ -3114,11 +2939,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "29968385-ac-room-accommodation-near-candolim-victoria-villa-guesthouse",
-      "prop_tags": [
-        "Room",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Room", "TV", "AC"],
       "url": "/holiday-home/29968385-ac-room-accommodation-near-candolim-victoria-villa-guesthouse/",
       "currency": "NOK"
     },
@@ -3192,14 +3013,7 @@
       "dish_washer": false,
       "availability_pct": 100,
       "slug": "19620665-holiday-villas-in-goa",
-      "prop_tags": [
-        "Villa",
-        "3 BR",
-        "3 Bath",
-        "Swimming Pool",
-        "TV",
-        "AC"
-      ],
+      "prop_tags": ["Villa", "3 BR", "3 Bath", "Swimming Pool", "TV", "AC"],
       "url": "/holiday-home/19620665-holiday-villas-in-goa/",
       "currency": "NOK"
     }
@@ -3240,6 +3054,14 @@
       "firstName": "ak",
       "lastName": "bk",
       "id": 4
+    }
+  ],
+  "form": [
+    {
+      "id": 1,
+      "country": "India",
+      "state": "Himachal Pradesh",
+      "city": "Shimla"
     }
   ]
 }

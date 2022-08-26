@@ -3,7 +3,7 @@ import Carousal_HomePage from "../../Components/Carousal_HomePage";
 import Navbar from "../../Components/Navbar";
 import Searchbar_HomePage from "../../Components/Searchbar_HomePage";
 // Import css files
-import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import BodySection_HomePage from "../../Components/BodySection_HomePage";
 import { Text } from "@chakra-ui/react";
