@@ -10,20 +10,55 @@ import { Text } from "@chakra-ui/react";
 import FooterTabSection_HomePage from "../../Components/FooterTabSection_HomePage";
 
 const HomePage = () => {
-
   return (
     <div>
       <Navbar />
       <Searchbar_HomePage />
-      <Text ml='3rem' fontSize='28px' color='grey' mt='2rem' mb='2rem'>Top Destinations</Text>
-      <Carousal_HomePage/>
-      <BodySection_HomePage/>
-      <Text ml='3rem' fontSize='28px' color='grey' mt='2rem' mb='2rem'>Vacation Ideas</Text>
-      <Carousal_HomePage/>
-      <Text ml='3rem' fontSize='28px' color='grey' mt='1rem' mb='2rem'>Show All Ideas</Text>
+      <Text
+        ml="4.8rem"
+        fontSize="24px"
+        color="black"
+        fontWeight="300"
+        mt="2rem"
+        mb="2rem"
+      >
+        Top Destinations
+      </Text>
+      <Carousal_HomePage />
+      <BodySection_HomePage />
+      <Text
+        ml="4.8rem"
+        fontSize="24px"
+        color="black"
+        fontWeight="300"
+        mt="2rem"
+        mb="2rem"
+      >
+        Vacation Ideas
+      </Text>
+      <Carousal_HomePage />
+      <Text
+        ml="4.8rem"
+        fontSize="24px"
+        color="black"
+        fontWeight="300"
+        mt="1rem"
+        mb="2rem"
+      >
+        Show All Ideas
+      </Text>
 
-      <Text ml='3rem' fontSize='28px' color='grey' mt='1rem' mb='2rem'>Holiday Homes Across The Globe</Text>
-      <FooterTabSection_HomePage/>
+      <Text
+        ml="4.8rem"
+        fontSize="24px"
+        color="black"
+        fontWeight="300"
+        mt="1rem"
+        mb="2rem"
+      >
+        Holiday Homes Across The Globe
+      </Text>
+      <FooterTabSection_HomePage />
     </div>
   );
 };
