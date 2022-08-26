@@ -3,7 +3,7 @@ import axios from "axios";
 export const getCities = (params) => async (dispatch) => {
   dispatch({ type: types.GET_ALL_PRODUCTS_REQUEST });
   try {
-    let res = await axios.get(`http://localhost:8080/results?q=india`, {
+    let res = await axios.get(`http://localhost:8000/results?q=india`, {
       params: params,
     });
     return dispatch({
@@ -16,14 +16,16 @@ export const getCities = (params) => async (dispatch) => {
 };
 
 // ===============ADD PROPERTY FORM ACTIONS=========================\
-export const tempFormFn = (payload)=>dispatch=>{
-  dispatch({type:types.ADD_FORM_SUCCESS,payload})
-}
+export const tempFormFn = (payload) => (dispatch) => {
+  console.log(payload);
+  dispatch({ type: types.ADD_FORM_SUCCESS, payload });
+};
 export const addForm = (payload) => async (dispatch) => {
   dispatch({ type: types.ADD_FORM_REQUEST });
-  console.log(payload)
+
   try {
-    let res = await axios.Axios.post("http://localhost:8080/form", payload);
+    let res = await axios.post("http://localhost:8000/form", payload);
+
     return dispatch({ type: types.ADD_FORM_SUCCESS, payload: res.data });
   } catch (err) {
     dispatch({ type: types.ADD_FORM_FAILURE });
