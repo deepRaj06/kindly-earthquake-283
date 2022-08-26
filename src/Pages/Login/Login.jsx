@@ -6,7 +6,7 @@ import {Box, Button, Flex, FormControl, FormErrorMessage, Heading, Input, InputG
 import { type } from '@testing-library/user-event/dist/type';
 
 const Login = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen, onOpen, onClose } = useDisclosure({isOpen:true});
   const [email, setEmail] = useState("");
   const [storedData,setStoredData]=useState([])
   const [password, setPassword] = useState("");
@@ -64,7 +64,7 @@ useEffect(()=>{
 },[])
   return (
     <Box>
-        <Button onClick={onOpen}>Open Modal</Button>
+        {/* <Button onClick={onOpen}>Open Modal</Button> */}
 
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />

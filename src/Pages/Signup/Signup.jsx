@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux/es/exports'
 import { Link } from 'react-router-dom'
 import {Box, Button, Flex, FormControl, FormErrorMessage, Heading, Input, InputGroup,Modal, ModalBody,ModalContent, ModalFooter, ModalOverlay,Text, useDisclosure, useToast} from "@chakra-ui/react"
-import { useSelector } from 'react-redux/es/hooks/useSelector'
-import * as types from '../../Redux/AuthReducer/actionType'
 import { postData, registerData } from '../../Redux/AuthReducer/action'
 const Signup = () => {
   const [selectValue,setSelectValue]=useState("91")
@@ -12,11 +10,12 @@ const Signup = () => {
   const [password, setPassword] = useState("")
   const [firstName, setFirstName] = useState("")
   const [lastName, setLastName] = useState("")
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure({isOpen: true})
   const dispatch=useDispatch();
 
   const toast=useToast()
 
+  // Empty error
   const phoneError=phone===""
   const emailError=email===""
   const passwordError=password===""
@@ -34,6 +33,7 @@ const Signup = () => {
     setPassword("")
 
 
+    // notification success signup toast
     toast({
       title: 'Account created.',
       position:'top',
@@ -50,7 +50,7 @@ const Signup = () => {
   },[])
   return (
     <Box>
-        <Button onClick={onOpen}>Open Modal</Button>
+        {/* <Button onClick={onOpen}>Open Modal</Button> */}
 
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
@@ -63,6 +63,7 @@ const Signup = () => {
             <ModalBody>
                 <InputGroup>
                     <select style={{border:"1px lightgray"}} onChange={(e)=>setSelectValue(e.target.value)}>
+                      <option value="91" >+91</option>
                       <option value="1">+1</option>
                       <option value="7">+7</option>
                       <option value="20">+20</option>
@@ -83,10 +84,9 @@ const Signup = () => {
                       <option value="47">+47</option>
                       <option value="48">+48</option>
                       <option value="49">+49</option>
-                      <option value="91" selected="91">+91</option>
                     </select>
                     <FormControl isInvalid={phoneError} ml="20px">
-                       <Input  type='tel' placeholder='Phone number' onChange={(e)=>setPhone(e.target.value)} />
+                       <Input  type='tel' placeholder='Phone number' onChange={(e)=>setPhone(e.target.value)} mt="20px"/>
                        {!phoneError ? "" : (
                           <FormErrorMessage>Phone number is required.</FormErrorMessage>
                         )}
