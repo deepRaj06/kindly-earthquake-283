@@ -1,0 +1,46 @@
+.main{
+    display: flex;
+    gap:20px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.image{
+    display: flex;
+    width:40%
+}
+.one{
+    display: flex;
+    width: 100%;
+    
+}
+.details{
+    width: 170%;
+    
+}
+
+.repflex{
+    display: flex;
+    gap:10px
+}
+.extra1{
+    display: flex;
+    justify-content: space-around;
+}
+.boxall>div{
+    border: 1px solid blue;
+}
+.feture{
+display: flex;
+justify-content: space-between;
+}
+.feture>b{
+    border: 1px solid blue;
+    padding: 10px 20px 10px 20px;
+    color: blue;
+}
+.two{
+    display: flex;
+    width: 30%;
+    border-left: 3px solid rgb(124, 124, 124);
+    padding: 15px 35px 15px 35px;
+}
