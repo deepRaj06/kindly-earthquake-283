@@ -37,6 +37,7 @@ import {
   DrawerCloseButton,
 } from "@chakra-ui/react";
 import { RiContactsFill } from "react-icons/ri";
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -316,9 +317,9 @@ const Navbar = () => {
                 <DrawerBody color="white" fontSize="14px" textAlign="center">
                   <Box mt="2rem">
                     <Text>ARE YOU A PROPERTY OWNER/MANAGER?</Text>
-                    <Text color="whiteAlpha.700" mt="0.6rem" mb="0.6rem">
+                    <Link to="/addproperty-form-1" color="whiteAlpha.700" mt="0.6rem" mb="0.6rem">
                       List New Property
-                    </Text>
+                    </Link>
                     <Text color="whiteAlpha.700">
                       Sign in to your Dashboard
                     </Text>
