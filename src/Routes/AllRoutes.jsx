@@ -8,6 +8,9 @@ import Login from "../Pages/Login/Login";
 import Signup from "../Pages/Signup/Signup";
 import Error from "../Pages/Error/Error";
 import ProductListByCity from "../Pages/Products/ProductListByCity";
+import ReqAuth from "../Pages/Login/ReqAuth"
+import PhoneOtp from "../Pages/Signup/PhoneOtp";
+
 import PropertyPageOne from "../Pages/AddProperty/PropertyPageOne";
 import PropertyPageTwo from "../Pages/AddProperty/PropertyPageTwo";
 import PropertyPageThree from "../Pages/AddProperty/PropertyPageThree";
@@ -18,8 +21,9 @@ const AllRoutes = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/products" element={<ProductList />} />
-      {/* <Route path="/products/:sortBy" element={<ProductListByCity />} /> */}
+      <Route path="/products/:sortBy" element={<ProductListByCity />} />
       <Route path="/products/:id" element={<SingleProduct />} />
+      <Route path="/products/:id" element={<ReqAuth><SingleProduct /></ReqAuth>} />
       <Route path="/addproperty-form-1" element={<PropertyPageOne />} />
       <Route path="/addproperty-form-2" element={<PropertyPageTwo />} />
       <Route path="/addproperty-form-3" element={<PropertyPageThree />} />
@@ -28,6 +32,7 @@ const AllRoutes = () => {
       <Route path="/checkout" element={<Checkout />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/phoneOtp" element={<PhoneOtp/>} />
       <Route path="*" element={<Error />} />
     </Routes>
   );

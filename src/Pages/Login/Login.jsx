@@ -32,20 +32,20 @@ const Login = () => {
       dispatch({type:types.GET_LOGIN_SUCCESS,payload:true})
       navigation(commingFrom,{replace:true})
       toast({
-        title: 'Account created.',
+        title: 'Successful.',
         position:'top',
-        description: "We've created your account for you.",
+        description: "Your are loged in successfuly",
         status: 'success',
         duration: 9000,
         isClosable: true,
       })
     }
     else{
-      navigation("/login")
+      dispatch({type:types.GET_LOGIN_FAILURE,payload:false})
       toast({
-        title: 'Account created.',
+        title: 'Wrong email or password',
         position:'top',
-        description: "We've created your account for you.",
+        description: `You enterd wrong email or password try again`,
         status: 'error',
         duration: 9000,
         isClosable: true,
@@ -54,10 +54,14 @@ const Login = () => {
   }
 
   const getData=async()=>{
-    let res= await fetch(`http://localhost:8080/signupData`)
+    let res= await fetch(`http://localhost:8000/signupData`)
     let data = await res.json()
     setStoredData(data)
     
+  }
+
+  const navigateHandle=()=>{
+    navigation("/")
   }
 useEffect(()=>{
   getData()
@@ -98,7 +102,7 @@ useEffect(()=>{
               <hr style={{width:"90%",margin:"auto"}}/>
 
             <ModalFooter>
-              <Button variant="outline" mr={3} onClick={onClose}>
+              <Button variant="outline" mr={3} onClick={navigateHandle}>
                 CANCEL
               </Button>
               <Button disabled={!email || !password} colorScheme='blue' mr={3} onClick={loginHandle}>
