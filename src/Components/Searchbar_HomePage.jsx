@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Divider,
   Flex,
   Image,
   Input,
@@ -11,33 +12,38 @@ import {
   SkeletonText,
   Text,
 } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SearchIcon } from "@chakra-ui/icons";
-
-import {
-  useJsApiLoader,
-  GoogleMap,
-  Marker,
-  Autocomplete,
-  DirectionsRenderer,
-} from "@react-google-maps/api";
-
-// import PlacesAutocomplete, {
-//     geocodeByAddress,
-//   } from "react-places-autocomplete";
+import placeholder from '../Images/placeholder.png'
 
 const Searchbar_HomePage = () => {
-  const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "",
-    libraries: ["places"],
-  });
+  // For search location
+  const [searchText, setSearchText] = useState("");
+  const [listPlace, setListPlace] = useState([]);
 
-  // const [address, setAddress] = useState("");
+  const NOMINATIM_BASE_URL = "https://nominatim.openstreetmap.org/search?";
 
-  // const handleSelect = async value => {
-  //   const results = await geocodeByAddress(value);
-  //   setAddress(value);
-  // };
+  const params = {
+    q: searchText,
+    format: "json",
+    addressdetails: 1,
+    polygon_geojson: 0,
+  };
+  const queryString = new URLSearchParams(params).toString();
+  const requestOptions = {
+    method: "GET",
+    redirect: "follow",
+  };
+
+  useEffect(() => {
+    fetch(`${NOMINATIM_BASE_URL}${queryString}`, requestOptions)
+      .then((response) => response.text())
+      .then((result) => {
+        console.log(JSON.parse(result));
+        setListPlace(JSON.parse(result));
+      })
+      .catch((err) => console.log("err: ", err));
+  }, [queryString]);
 
   const bgImg = {
     filter: "blur(0.1px)",
@@ -55,10 +61,6 @@ const Searchbar_HomePage = () => {
     blurImg:
       "url(https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg) center/cover no-repeat",
   };
-
-  if (!isLoaded) {
-    return <SkeletonText />;
-  }
 
   const basicBoxStyles = {
     color: "white",
@@ -108,7 +110,7 @@ const Searchbar_HomePage = () => {
             </Text>
             <Box
               maxW="100%"
-              display="block"
+              display="flex"
               margin="auto"
               h="60px"
               background="white"
@@ -123,21 +125,57 @@ const Searchbar_HomePage = () => {
               >
                 {/* <Box> */}
                 {/* Location Input */}
-                <InputGroup w="140%">
-                  <InputLeftElement
-                    pointerEvents="none"
-                    children={<SearchIcon color="gray.400" />}
-                  />
-                  <Autocomplete>
+                <Flex 
+                // mb='-8.5rem'
+                direction="column" 
+                h='auto' 
+                overflowY='hidden' 
+                textShadow='none'
+                fontWeight='200'
+                w='100%'
+                >
+                  <InputGroup>
+                    <InputLeftElement
+                      pointerEvents="none"
+                      children={<SearchIcon color="gray.400" />}
+                    />
+
                     <Input
                       borderRadius="none"
-                      // w="200%"
+                      w="200%"
                       pl="2rem"
                       type="text"
                       placeholder="Location"
+                      value={searchText}
+                      onChange={(e) => {
+                        setSearchText(e.target.value);
+                      }}
                     ></Input>
-                  </Autocomplete>
-                </InputGroup>
+                  </InputGroup>
+                  {/* <Box>
+                  {listPlace.slice(0, 4).map((item) => {
+                    return (
+                      <Box 
+                      // mb='1rem'
+                      bg='white' 
+                      key={item?.place_id} 
+                      overflowy='hidden'>
+                        <Flex direction='column'>
+                          <Flex>
+                          <Image
+                            src={placeholder}
+                            alt="Placeholder"
+                            style={{ width: '18px', height: '18px' }}
+                          />
+                          <Text fontSize='13px'>{item?.display_name}</Text>
+                          </Flex>
+                          <Divider/>
+                        </Flex>
+                      </Box>
+                    );
+                  })}
+                  </Box> */}
+                </Flex>
 
                 <InputGroup>
                   <InputLeftElement
@@ -164,7 +202,8 @@ const Searchbar_HomePage = () => {
                   />
                   <Input
                     borderRadius="none"
-                    maxW="100%"
+                    // maxW="100%"
+                    w='100%'
                     type="date"
                     placeholder="Check In"
                   ></Input>
@@ -197,6 +236,8 @@ const Searchbar_HomePage = () => {
                     w="100%"
                     type="date"
                     placeholder="Check Out"
+                    onfocus="(this.type='date')"
+                   
                   ></Input>
                 </InputGroup>
                 {/* <InputGroup> */}
