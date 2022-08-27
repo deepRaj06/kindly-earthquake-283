@@ -51,7 +51,7 @@
       "text": "Alibag - Rural Solitude and luxury combined"
     }
   ],
-  
+
   "bodySection": [
     {
       "id": 1,
@@ -3408,6 +3408,33 @@
       "firstName": "Bhaskar",
       "lastName": "Chaudhary",
       "id": 3
+    },
+    {
+      "selectValue": "91",
+      "phone": "8528356066",
+      "email": "abcd@gmail.com",
+      "password": "Abc@123",
+      "firstName": "AK",
+      "lastName": "Chaudhary",
+      "id": 4
+    },
+    {
+      "selectValue": "91",
+      "phone": "9191999191",
+      "email": "abc@123",
+      "password": "Abc@123",
+      "firstName": "Pintu",
+      "lastName": "Kumar",
+      "id": 5
+    },
+    {
+      "selectValue": "91",
+      "phone": "9121212121",
+      "email": "ashishchaudhary@gmail.com",
+      "password": "Ashish@123",
+      "firstName": "Ashish",
+      "lastName": "Kumar",
+      "id": 6
     }
   ],
   "form": [
