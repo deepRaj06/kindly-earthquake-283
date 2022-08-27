@@ -11,29 +11,41 @@ import FooterTabSection_HomePage from "../../Components/FooterTabSection_HomePag
 import Carousal_Vacation_Homepage from "../../Components/Carousal_Vacation_Homepage";
 
 const HomePage = () => {
+  const breakpoints = {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1100px",
+    "2xl": "1536px",
+  };
+
   return (
     <div>
       <Navbar />
       <Searchbar_HomePage />
       <Text
-        ml="4.8rem"
+        ml={{ base: "0rem", lg: "4.8rem" }}
+        // ml="4.8rem"
         fontSize="24px"
         color="black"
         fontWeight="300"
         mt="2rem"
         mb="2rem"
+        textAlign={{ base: "center", lg: "" }}
       >
         Top Destinations
       </Text>
       <Carousal_HomePage />
       <BodySection_HomePage />
       <Text
-        ml="4.8rem"
+        ml={{ base: "0rem", lg: "4.8rem" }}
+        // ml="4.8rem"
         fontSize="24px"
         color="black"
         fontWeight="300"
         mt="2rem"
         mb="2rem"
+        textAlign={{ base: "center", lg: "" }}
       >
         Vacation Ideas
       </Text>
@@ -44,18 +56,20 @@ const HomePage = () => {
         fontWeight="300"
         // mt="1rem"
         mb="4rem"
-        color='blue'
+        color="blue"
       >
         SHOW ALL IDEAS
       </Text>
 
       <Text
-        ml="4.8rem"
+        // ml="4.8rem"
         fontSize="24px"
         color="black"
         fontWeight="200"
         mt="1rem"
         mb="2rem"
+        ml={{ base: "0rem", lg: "4.8rem" }}
+        textAlign={{ base: "center", lg: "" }}
       >
         Holiday Homes Across The Globe
       </Text>

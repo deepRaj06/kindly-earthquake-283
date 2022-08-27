@@ -17,27 +17,88 @@ const FooterTabSection_HomePage = () => {
     cursor: "pointer",
   };
 
+  const breakpoints = {
+    base: "376px",
+    md: "768px",
+    lg: "960px",
+    xl: "1100px",
+    "2xl": "1536px",
+  };
+
   return (
-    <Box w="90%" h="auto" 
-    // border="1px solid black" 
-    m="auto" mb="4rem">
-      <Tabs>
-        <TabList>
-          <Tab _selected={{borderColor: 'blue'}} color='gray' fontSize='13px' _hover={{color: 'black'}}>ASIA</Tab>
-          <Tab _selected={{borderColor: 'blue'}} color='gray' fontSize='13px' _hover={{color: 'black'}}>EUROPE</Tab>
-          <Tab _selected={{borderColor: 'blue'}} color='gray' fontSize='13px' _hover={{color: 'black'}}>NORTH AMERICA</Tab>
-          <Tab _selected={{borderColor: 'blue'}} color='gray' fontSize='13px' _hover={{color: 'black'}}>SOUTH AMERICA</Tab>
-          <Tab _selected={{borderColor: 'blue'}} color='gray' fontSize='13px' _hover={{color: 'black'}}>AFRICA</Tab>
-          <Tab _selected={{borderColor: 'blue'}} color='gray' fontSize='13px' _hover={{color: 'black'}}>OCEANIA</Tab>
+    <Box
+      w="90%"
+      h="auto"
+      // border="1px solid black"
+      m="auto"
+      mb="4rem"
+    >
+      <Tabs flexDirection={{ base: "column", lg: "row" }}>
+        {/* <Flex direction={{base: "column", lg: 'row'}}> */}
+        <TabList flexDirection={{ base: "column", lg: "row" }}>
+          <Tab
+            _selected={{ borderColor: "blue" }}
+            color="gray"
+            fontSize="13px"
+            _hover={{ color: "black" }}
+          >
+            ASIA
+          </Tab>
+          <Tab
+            _selected={{ borderColor: "blue" }}
+            color="gray"
+            fontSize="13px"
+            _hover={{ color: "black" }}
+          >
+            EUROPE
+          </Tab>
+          <Tab
+            _selected={{ borderColor: "blue" }}
+            color="gray"
+            fontSize="13px"
+            _hover={{ color: "black" }}
+          >
+            NORTH AMERICA
+          </Tab>
+          <Tab
+            _selected={{ borderColor: "blue" }}
+            color="gray"
+            fontSize="13px"
+            _hover={{ color: "black" }}
+          >
+            SOUTH AMERICA
+          </Tab>
+          <Tab
+            _selected={{ borderColor: "blue" }}
+            color="gray"
+            fontSize="13px"
+            _hover={{ color: "black" }}
+          >
+            AFRICA
+          </Tab>
+          <Tab
+            _selected={{ borderColor: "blue" }}
+            color="gray"
+            fontSize="13px"
+            _hover={{ color: "black" }}
+          >
+            OCEANIA
+          </Tab>
         </TabList>
-{/* <Divider/> */}
+        {/* </Flex> */}
+        {/* <Divider/> */}
         <TabPanels>
           <TabPanel p="0px">
-            <Box 
-            // border="1px solid blue"
-             w="100%" mt="3.4rem">
-              <Flex justifyContent="space-between">
-                <Box 
+            <Box
+              // border="1px solid blue"
+              w="100%"
+              mt="3.4rem"
+            >
+              <Flex
+                direction={{ base: "column", lg: "row" }}
+                justifyContent="space-between"
+              >
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -68,7 +129,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -99,7 +160,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -124,7 +185,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -149,7 +210,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -176,7 +237,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -205,11 +266,16 @@ const FooterTabSection_HomePage = () => {
           </TabPanel>
 
           <TabPanel p="0px">
-            <Box 
-            // border="1px solid blue"
-             w="100%" mt="3.4rem">
-              <Flex justifyContent="space-between">
-                <Box 
+            <Box
+              // border="1px solid blue"
+              w="100%"
+              mt="3.4rem"
+            >
+              <Flex
+                direction={{ base: "column", lg: "row" }}
+                justifyContent="space-between"
+              >
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -252,7 +318,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -295,7 +361,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -338,7 +404,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -381,7 +447,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -426,7 +492,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -475,11 +541,16 @@ const FooterTabSection_HomePage = () => {
           </TabPanel>
 
           <TabPanel p="0px">
-            <Box 
-            // border="1px solid blue"
-             w="100%" mt="3.4rem">
-              <Flex justifyContent="space-between">
-                <Box 
+            <Box
+              // border="1px solid blue"
+              w="100%"
+              mt="3.4rem"
+            >
+              <Flex
+                direction={{ base: "column", lg: "row" }}
+                justifyContent="space-between"
+              >
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -504,7 +575,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -529,7 +600,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -548,7 +619,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -567,7 +638,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -586,7 +657,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -609,11 +680,16 @@ const FooterTabSection_HomePage = () => {
           </TabPanel>
 
           <TabPanel p="0px">
-            <Box 
-            // border="1px solid blue"
-             w="100%" mt="3.4rem">
-              <Flex justifyContent="space-between">
-                <Box 
+            <Box
+              // border="1px solid blue"
+              w="100%"
+              mt="3.4rem"
+            >
+              <Flex
+                direction={{ base: "column", lg: "row" }}
+                justifyContent="space-between"
+              >
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -626,7 +702,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -639,7 +715,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -652,7 +728,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -665,7 +741,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -678,7 +754,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -695,11 +771,16 @@ const FooterTabSection_HomePage = () => {
           </TabPanel>
 
           <TabPanel p="0px">
-            <Box 
-            // border="1px solid blue" 
-            w="100%" mt="3.4rem">
-              <Flex justifyContent="space-between">
-                <Box 
+            <Box
+              // border="1px solid blue"
+              w="100%"
+              mt="3.4rem"
+            >
+              <Flex
+                direction={{ base: "column", lg: "row" }}
+                justifyContent="space-between"
+              >
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -718,7 +799,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -737,7 +818,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -756,7 +837,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -775,7 +856,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -794,7 +875,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box 
+                <Box
                 // border="1px solid red"
                 >
                   <Flex direction="column">
@@ -817,10 +898,15 @@ const FooterTabSection_HomePage = () => {
           </TabPanel>
 
           <TabPanel p="0px">
-            <Flex justifyContent='flex-start' mt='3.4rem'>
-              <Box 
-              // border="1px solid red" 
-              mr='8rem'>
+            <Flex
+              direction={{ base: "column", lg: "row" }}
+              justifyContent="flex-start"
+              mt="3.4rem"
+            >
+              <Box
+                // border="1px solid red"
+                mr="8rem"
+              >
                 <Flex direction="column">
                   <Box mb="1rem" _hover={hover}>
                     <Text fontWeight="360">Australia</Text>
@@ -831,9 +917,10 @@ const FooterTabSection_HomePage = () => {
                 </Flex>
               </Box>
 
-              <Box 
-              // border="1px solid red" 
-              mr='8rem'>
+              <Box
+                // border="1px solid red"
+                mr="8rem"
+              >
                 <Flex direction="column">
                   <Box mb="1rem" _hover={hover}>
                     <Text fontWeight="360">New Zealand</Text>
@@ -844,7 +931,7 @@ const FooterTabSection_HomePage = () => {
                 </Flex>
               </Box>
 
-              <Box 
+              <Box
               // border="1px solid red"
               >
                 <Flex direction="column">

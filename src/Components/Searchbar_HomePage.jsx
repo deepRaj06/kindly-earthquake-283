@@ -14,12 +14,20 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { SearchIcon } from "@chakra-ui/icons";
-import placeholder from '../Images/placeholder.png'
+import placeholder from "../Images/placeholder.png";
 
 const Searchbar_HomePage = () => {
   // For search location
   const [searchText, setSearchText] = useState("");
   const [listPlace, setListPlace] = useState([]);
+
+  const breakpoints = {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1100px",
+    "2xl": "1536px",
+  };
 
   const NOMINATIM_BASE_URL = "https://nominatim.openstreetmap.org/search?";
 
@@ -48,7 +56,7 @@ const Searchbar_HomePage = () => {
   const bgImg = {
     filter: "blur(0.1px)",
     WebkitFilter: "blur(0.1px)",
-    height: "520px",
+    height: "auto",
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     backgroundSize: "cover",
@@ -88,10 +96,15 @@ const Searchbar_HomePage = () => {
           filter="auto"
           brightness="40%"
         ></Image>
-        <Flex justifyContent="center" brightness="100%">
+        <Flex 
+          // direction={{ base: "column", xl: "row" }}
+        justifyContent="center" brightness="100%">
           <Box
             // border="1px solid red"
-            minW="884px"
+            minW={{ base: "90%", lg: "884px" }}
+            maxW={{ base: "90%" }}
+            // minW="884px"
+            // pb={{base: '0rem', lg: '2rem'}}
             h="auto"
             color="white"
             fontWeight="600"
@@ -112,27 +125,35 @@ const Searchbar_HomePage = () => {
               maxW="100%"
               display="flex"
               margin="auto"
-              h="60px"
+              h="auto"
               background="white"
+              justifyContent="center"
+              alignItems="center"
+              alignContent="center"
+              pb={{base: '0rem', lg: '1rem'}}
+
             >
               <Flex
                 justifyContent="center"
                 alignItems="center"
+                alignContent="center"
                 pt="0.6rem"
                 pl="0.6rem"
                 pr="0.6rem"
                 color="black"
+                direction={{ base: "column", xl: "row" }}
+
               >
                 {/* <Box> */}
                 {/* Location Input */}
-                <Flex 
-                // mb='-8.5rem'
-                direction="column" 
-                h='auto' 
-                overflowY='hidden' 
-                textShadow='none'
-                fontWeight='200'
-                w='100%'
+                <Flex
+                  // mb='-8.5rem'
+                  direction="column"
+                  h="auto"
+                  overflowY="hidden"
+                  textShadow="none"
+                  fontWeight="200"
+                  w="100%"
                 >
                   <InputGroup>
                     <InputLeftElement
@@ -203,7 +224,7 @@ const Searchbar_HomePage = () => {
                   <Input
                     borderRadius="none"
                     // maxW="100%"
-                    w='100%'
+                    w="100%"
                     type="date"
                     placeholder="Check In"
                   ></Input>
@@ -237,7 +258,6 @@ const Searchbar_HomePage = () => {
                     type="date"
                     placeholder="Check Out"
                     onfocus="(this.type='date')"
-                   
                   ></Input>
                 </InputGroup>
                 {/* <InputGroup> */}
