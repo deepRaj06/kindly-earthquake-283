@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import BodySection_HomePage from "../../Components/BodySection_HomePage";
 import { Text } from "@chakra-ui/react";
 import FooterTabSection_HomePage from "../../Components/FooterTabSection_HomePage";
+import Carousal_Vacation_Homepage from "../../Components/Carousal_Vacation_Homepage";
 
 const HomePage = () => {
   return (
@@ -36,23 +37,23 @@ const HomePage = () => {
       >
         Vacation Ideas
       </Text>
-      <Carousal_HomePage />
+      <Carousal_Vacation_Homepage />
       <Text
         ml="4.8rem"
-        fontSize="24px"
-        color="black"
+        fontSize="14px"
         fontWeight="300"
-        mt="1rem"
-        mb="2rem"
+        // mt="1rem"
+        mb="4rem"
+        color='blue'
       >
-        Show All Ideas
+        SHOW ALL IDEAS
       </Text>
 
       <Text
         ml="4.8rem"
         fontSize="24px"
         color="black"
-        fontWeight="300"
+        fontWeight="200"
         mt="1rem"
         mb="2rem"
       >

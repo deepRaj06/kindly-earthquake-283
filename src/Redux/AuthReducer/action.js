@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const registerData=(payload)=>(dispatch)=>{
     dispatch({type:types.GET_SIGNUP_REQUEST})
-    axios.get(`http://localhost:8080/signupData`).then((r)=>{
+    axios.get(`http://localhost:8000/signupData`).then((r)=>{
         dispatch({type:types.GET_SIGNUP_SUCCESS,payload: r.data})
     })
     .catch((e)=>{
@@ -14,7 +14,7 @@ const registerData=(payload)=>(dispatch)=>{
 
 const postData=(payload)=>(dispatch)=>{
     dispatch({type:types.POST_SIGNUP_REQUEST})
-    axios.post(`http://localhost:8080/signupData`,payload).then((r)=>{
+    axios.post(`http://localhost:8000/signupData`,payload).then((r)=>{
         dispatch({type:types.POST_SIGNUP_SUCCESS,payload: r.data}).then(()=>{
             // console.log("act",r.data)
         })
@@ -25,14 +25,7 @@ const postData=(payload)=>(dispatch)=>{
 }
 
 
-const loginSuccess=(payload)=>(dispatch)=>{
-    dispatch({type:types.GET_LOGIN_REQUEST})
-    return dispatch({type:types.GET_LOGIN_SUCCESS,payload})
-}
-
-
-
-export {registerData,postData, loginSuccess}
+export {registerData,postData}
 
 
 

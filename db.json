@@ -1,4 +1,4 @@
-{
+
   "bodySection": [
     {
       "id": 1,
@@ -3337,60 +3337,6 @@
       "firstName": "Ashish",
       "lastName": "Kumar",
       "id": 1
-    },
-    {
-      "selectValue": "91",
-      "phone": "123456789",
-      "email": "john@gmail.com",
-      "password": "John@123",
-      "firstName": "John",
-      "lastName": "son",
-      "id": 2
-    },
-    {
-      "selectValue": "91",
-      "phone": "987654321",
-      "email": "peter@gmail.com",
-      "password": "Peter@123",
-      "firstName": "Peter",
-      "lastName": "son",
-      "id": 3
-    },
-    {
-      "selectValue": "91",
-      "phone": "121212",
-      "email": "asd@123gmail.com",
-      "password": "121212",
-      "firstName": "ak",
-      "lastName": "bk",
-      "id": 4
-    },
-    {
-      "selectValue": "91",
-      "phone": "8528356066",
-      "email": "bhaskarchaudhary3639@gmail.com",
-      "password": "Bhaskar@123",
-      "firstName": "Bhaskar",
-      "lastName": "Chaudhary",
-      "id": 5
-    },
-    {
-      "selectValue": "91",
-      "phone": "1212121",
-      "email": "sdasdasd",
-      "password": "asdsadasd",
-      "firstName": "asdasda",
-      "lastName": "sdasd",
-      "id": 6
-    },
-    {
-      "selectValue": "91",
-      "phone": "8528358989",
-      "email": "Bhaskar",
-      "password": "Bhaskar@123",
-      "firstName": "Ashish",
-      "lastName": "Chaudhary",
-      "id": 7
     }
   ],
   "form": [
@@ -3431,12 +3377,6 @@
           "blob:http://localhost:3000/1d127577-56d4-4292-8d68-8434553a9cba"
         ]
       }
-    },
-    {
-      "country": "Afghanistan",
-      "state": "Baglan",
-      "city": "Kushair",
-      "id": 3
     }
   ]
 }

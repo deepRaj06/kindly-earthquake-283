@@ -125,7 +125,7 @@ const Carousal_HomePage = () => {
       pl="2rem"
       justifyContent="space-between"
       gap="40px"
-      mb="6rem"
+      mb="5.4rem"
     >
       {/* <h2> Responsive </h2> */}
       <Slider {...settings}>
@@ -149,12 +149,12 @@ const Carousal_HomePage = () => {
               <Text
                 fontWeight="400"
                 position="relative"
-                color="whitesmoke"
+                color="white"
                 mt="-6rem"
               >
                 {dest.location}
               </Text>
-              <Text fontWeight="400" position="relative" color="whitesmoke">
+              <Text fontSize='14px' fontWeight="400" position="relative" color="whitesmoke">
                 {dest.text}
               </Text>
             </Box>
