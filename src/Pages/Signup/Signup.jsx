@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux/es/exports'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {Box, Button, Flex, FormControl, FormErrorMessage, Heading, Input, InputGroup,Modal, ModalBody,ModalContent, ModalFooter, ModalOverlay,Text, useDisclosure, useToast} from "@chakra-ui/react"
 import { postData, registerData } from '../../Redux/AuthReducer/action'
 const Signup = () => {
@@ -12,7 +12,7 @@ const Signup = () => {
   const [lastName, setLastName] = useState("")
   const { isOpen, onOpen, onClose } = useDisclosure({isOpen: true})
   const dispatch=useDispatch();
-
+  const navigation=useNavigate()
   const toast=useToast()
 
   // Empty error
@@ -44,6 +44,9 @@ const Signup = () => {
     })
     
   }
+  const handleClose=()=>{
+    navigation("/")
+  }
   useEffect(()=>{
     dispatch(registerData())
 
@@ -57,7 +60,7 @@ const Signup = () => {
           <ModalContent>
             <Flex justifyContent="space-between" p="20px">
               <Heading fontSize="lg">Signup</Heading>
-              <Text><Link to="">Sign In Instead </Link></Text>
+              <Link to="/login">Already Sign In </Link>
             </Flex>
               <hr style={{width:"90%",margin:"auto"}}/>
             <ModalBody>
@@ -131,12 +134,12 @@ const Signup = () => {
               <hr style={{width:"90%",margin:"auto"}}/>
 
             <ModalFooter>
-              <Button variant="outline" mr={3} onClick={onClose}>
+              <Button variant="outline" mr={3} onClick={handleClose}>
                 CANCEL
               </Button>
                 <Button colorScheme='blue' mr={3} onClick={handlePostData} disabled={!phone || !password || !email || !firstName || !lastName}>
               {/* <Link to="/PhoneOtp"> */}
-                  VERIFY WITH OTP
+                  REGISTER
               {/* </Link> */}
                 </Button>
              

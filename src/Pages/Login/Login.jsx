@@ -20,16 +20,24 @@ const Login = () => {
   // const navigate=useNavigate()
   const location=useLocation()
   const commingFrom=location.state?.from?.pathname || '/'
+
+
   const loginHandle=()=>{
+
+
     // console.log("beore",storedData)
+    let fname="";
     let sEmail=storedData.map((e)=>{
+      fname=e.firstName
       return e.email
     })
     let sPassord=storedData.map((e)=>{
       return e.password
     })
     if(sEmail.includes(email) && sPassord.includes(password)){
+      console.log("firstName",fname)
       dispatch({type:types.GET_LOGIN_SUCCESS,payload:true})
+      dispatch({type:types.GET_FISTNAME_SUCCESS,payload:fname})
       navigation(commingFrom,{replace:true})
       toast({
         title: 'Successful.',
@@ -75,7 +83,7 @@ useEffect(()=>{
           <ModalContent>
             <Flex justifyContent="space-between" p="20px">
               <Heading fontSize="lg">Signup</Heading>
-              <Text><Link to="">Sign In Instead </Link></Text>
+             <Link to="/signup">Sign up first </Link>
             </Flex>
               <hr style={{ width:"90%",margin:"auto"}}/>
             <ModalBody>
