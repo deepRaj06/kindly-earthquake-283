@@ -1,15 +1,12 @@
 import {
   Box,
   Button,
-  Divider,
   Flex,
   Image,
   Input,
   InputGroup,
   InputLeftElement,
-  InputRightElement,
   Select,
-  SkeletonText,
   Text,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
