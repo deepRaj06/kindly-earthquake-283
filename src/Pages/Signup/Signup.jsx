@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch } from 'react-redux/es/exports'
+import { useDispatch, useSelector } from 'react-redux/es/exports'
 import { Link, useNavigate } from 'react-router-dom'
 import {Box, Button, Flex, FormControl, FormErrorMessage, Heading, Input, InputGroup,Modal, ModalBody,ModalContent, ModalFooter, ModalOverlay,Text, useDisclosure, useToast} from "@chakra-ui/react"
 import { postData, registerData } from '../../Redux/AuthReducer/action'
@@ -22,9 +22,21 @@ const Signup = () => {
   const firstNameError=firstName===""
   const lasNameError=lastName===""
   const [otp,setOtp]=useState(Math.floor(Math.random()* 5000))
+  const storedEmail=useSelector((store)=>store.authReducer.signup)
 
   const handlePostData=()=>{
+
+    let checkEmail=storedEmail.map((e)=>{
+      return e.email
+    })
+    if(checkEmail.includes(email)){
+      alert(`${email} Email already registered`)
+      navigation("/signup")
+    }
+    else{
+
     let payload={selectValue,phone,email,password,firstName,lastName}
+      navigation("/")
     dispatch(postData(payload))
     setPhone("")
     setEmail("")
@@ -42,7 +54,8 @@ const Signup = () => {
       duration: 9000,
       isClosable: true,
     })
-    
+
+    }
   }
   const handleClose=()=>{
     navigation("/")
