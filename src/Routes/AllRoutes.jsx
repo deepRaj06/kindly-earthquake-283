@@ -18,7 +18,7 @@ const AllRoutes = () => {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/products" element={<ProductList />} />
-      <Route path="/products/:sortBy" element={<ProductListByCity />} />
+      {/* <Route path="/products/:sortBy" element={<ProductListByCity />} /> */}
       <Route path="/products/:id" element={<SingleProduct />} />
       <Route path="/addproperty-form-1" element={<PropertyPageOne />} />
       <Route path="/addproperty-form-2" element={<PropertyPageTwo />} />
