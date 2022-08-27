@@ -13,6 +13,14 @@ import axios from "axios";
 const BodySection_HomePage = () => {
   const [bodySection, setBodySection] = useState([]);
 
+  const breakpoints = {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1100px",
+    "2xl": "1536px",
+  };
+
   const basicBoxStyles = {
     display: "flex",
     alignItems: "center",
@@ -32,18 +40,31 @@ const BodySection_HomePage = () => {
   }, []);
 
   return (
-    <Box w="90%" h="auto" 
-    // border="1px solid black" 
-    mt="6rem" m="auto">
-      <Flex>
-        <Box boxShadow="lg" w="35%" h="380px">
+    <Box
+      w="90%"
+      h="auto"
+      // border="1px solid black"
+      mt="6rem"
+      m="auto"
+    >
+      <Flex
+        direction={{ base: "column", xl: "row" }}
+        alignItems={{ base: "center" }}
+      >
+        <Box
+          boxShadow="lg"
+          // w="35%"
+          w={{ base: "100%", lg: "35%" }}
+          mb={{ base: "2rem" }}
+          h="auto"
+        >
           <Text
             mt="2rem"
             fontWeight="100"
             // color="black"
             fontSize="24px"
             textAlign="center"
-            color='gray'
+            color="gray"
           >
             Fully Managed Communities By
           </Text>
@@ -150,42 +171,77 @@ const BodySection_HomePage = () => {
 
         <Box
           // border="1px solid blue"
-          w="65%"
+          w={{ base: "100%", lg: "65%" }}
+          // w="65%"
           h="auto"
-          ml="2rem"
+          ml={{ base: "auto", lg: "2rem" }}
+          // ml="2rem"
         >
           <Grid
-            templateRows="repeat(3, auto)"
-            templateColumns="repeat(4, 1fr)"
+            templateRows={{ base: "repeat(12, auto)", lg: "repeat(3, auto)" }}
+            // templateRows="repeat(3, auto)"
+            templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
+            // templateColumns="repeat(4, 1fr)"
             gap={6}
           >
             {bodySection.map((sec) => {
               return (
-                <GridItem sx={basicBoxStyles} w="100%" h="150px">
+                <GridItem
+                  m={{ base: "auto" }}
+                  sx={basicBoxStyles}
+                  w="100%"
+                  h="150px"
+                >
                   <Image
                     filter="auto"
                     brightness="50%"
                     src={sec.img}
                     alt="image"
-                    w="100%"
+                    w={{ base: "80%", lg: "100%" }}
+                    // w="100%"
                     h="150px"
+                    // display={{base: "block", lg: ""}}
+                    // m={{base: "auto", lg: ""}}
                   ></Image>
-                  <Flex direction="column">
+                  <Flex
+                    direction="column"
+                    fontSize={{ base: "10px", md: "10px", lg: "8px" }}
+                    justifyContent="center"
+                    alignItems="center"
+                    alignContent="center"
+                    // fontSize="10px"
+                  >
                     <Text
-                      fontSize="16px"
+                      textAlign="center"
+                      // fontSize="16px"
                       fontWeight="700"
                       position="relative"
                       color="white"
-                      ml="-12rem"
+                      ml={{
+                        base: "-18rem",
+                        md: "-32rem",
+                        lg: "-8rem",
+                        xl: "-10rem",
+                        "2xl": "-12rem",
+                      }}
+                      // ml="-12rem"
                     >
                       {sec.name}
                     </Text>
                     <Text
-                      fontSize="16px"
+                      textAlign="center"
+                      // fontSize="16px"
                       fontWeight="400"
                       position="relative"
                       color="whitesmoke"
-                      ml="-12rem"
+                      ml={{
+                        base: "-18rem",
+                        md: "-32rem",
+                        lg: "-8rem",
+                        xl: "-10rem",
+                        "2xl": "-12rem",
+                      }}
+                      // ml="-12rem"
                     >
                       {sec.location}
                     </Text>
@@ -197,11 +253,19 @@ const BodySection_HomePage = () => {
         </Box>
       </Flex>
 
-      <Flex mt="4rem" mb="2rem" justifyContent="space-between">
+      <Flex
+        direction={{ base: "column", lg: "row" }}
+        mb={{ base: "2rem", lg: "2rem" }}
+        mt="4rem"
+        // mb="2rem"
+        justifyContent="space-between"
+      >
         <Box
           boxShadow="lg"
-          w="48%"
-          h="280px"
+          // w="48%"
+          mb={{ base: "2rem", lg: "2rem" }}
+          w={{ base: "100%", lg: "48%" }}
+          h="auto"
           // border="1px solid red"
         >
           <Text fontSize="24px" fontWeight="200" textAlign="center">
@@ -292,8 +356,9 @@ const BodySection_HomePage = () => {
 
         <Box
           boxShadow="lg"
-          w="48%"
-          h="280px"
+          w={{ base: "100%", lg: "48%" }}
+          // w="48%"
+          h="auto"
           // border="1px solid red"
         >
           <Text fontSize="24px" fontWeight="200" textAlign="center">

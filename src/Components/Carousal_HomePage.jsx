@@ -61,6 +61,14 @@ function SampleNextArrow(props) {
 const Carousal_HomePage = () => {
   const [topDest, setTopDest] = useState([]);
 
+  const breakpoints = {
+    sm: "320px",
+    md: "768px",
+    lg: "960px",
+    xl: "1100px",
+    "2xl": "1536px",
+  };
+
   const basicBoxStyles = {
     display: "flex",
     alignItems: "center",
@@ -85,12 +93,21 @@ const Carousal_HomePage = () => {
     prevArrow: <SamplePrevArrow />,
     responsive: [
       {
+        breakpoint: 1281,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          // dots: true,
+        },
+      },
+      {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          dots: true,
+          // dots: true,
         },
       },
       {
@@ -122,7 +139,8 @@ const Carousal_HomePage = () => {
       w="94%"
       // border="1px solid black"
       m="auto"
-      pl="2rem"
+      pl={{ base: "5rem", lg: "2rem" }}
+      // pl="2rem"
       justifyContent="space-between"
       gap="40px"
       mb="5.4rem"
@@ -140,7 +158,7 @@ const Carousal_HomePage = () => {
               <Image
                 filter="auto"
                 brightness="70%"
-                w="100%"
+                w="90%"
                 h="150px"
                 src={dest.img}
                 alt="img"
@@ -154,7 +172,12 @@ const Carousal_HomePage = () => {
               >
                 {dest.location}
               </Text>
-              <Text fontSize='14px' fontWeight="400" position="relative" color="whitesmoke">
+              <Text
+                fontSize="14px"
+                fontWeight="400"
+                position="relative"
+                color="whitesmoke"
+              >
                 {dest.text}
               </Text>
             </Box>
