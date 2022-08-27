@@ -1,8 +1,8 @@
 
 
-import { Stack, Textarea, Image, Box, Heading } from "@chakra-ui/react";
+import { Stack, Textarea, Image, Box, Heading,AlertTitle,AlertDescription } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import React from "react";
+import React, { useState } from "react";
 // import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import style from "./checkout.module.css";
 
@@ -17,6 +17,7 @@ import {
 } from "react-icons/ai";
 
 const Checkout = () => {
+  const [alrt,setalrt]=useState(false)
   return (
     <>
       <Navbar></Navbar>
@@ -216,7 +217,7 @@ const Checkout = () => {
                 <br></br><br></br>
                 <div style={{backgroundColor:"lightgray"}}>By clicking 'Agree & Continue', you are agreeing to our Terms & Conditions, Privacy Policy, Booking policies like cancellation policies, house rules.</div>
                 <br></br>
-                <div className={style.agree1}><button>Agree {"&"} Continue</button></div>
+                <div className={style.agree1}><button onClick={()=>alert("Booking Confirm")}>Agree {"&"} Continue</button></div>
               </FormControl>
               <br></br>
             </div>
