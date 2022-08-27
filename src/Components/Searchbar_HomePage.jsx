@@ -40,8 +40,7 @@ const Searchbar_HomePage = () => {
   // };
 
   const bgImg = {
-
-    filter: "blur(0.2px)",
+    filter: "blur(0.1px)",
     WebkitFilter: "blur(0.1px)",
     height: "520px",
     backgroundPosition: "center",
@@ -49,19 +48,12 @@ const Searchbar_HomePage = () => {
     backgroundSize: "cover",
     borderRadius: "0px",
     cursor: "pointer",
+    brightness: "30%",
   };
 
   const hotelImg = {
-    filter: "auto",
-    brightness: "40%",
     blurImg:
       "url(https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg) center/cover no-repeat",
-  };
-
-  //   Remove down arrow of select option
-
-  const dropDown = {
-    WebkitFilter: "none",
   };
 
   if (!isLoaded) {
@@ -69,40 +61,40 @@ const Searchbar_HomePage = () => {
   }
 
   const basicBoxStyles = {
-    // display: "flex",
-    // alignItems: "center",
-    // justifyContent: "center",
-    // textAlign: "center",
     color: "white",
     textShadow: "0 0 20px black",
     fontWeight: "bold",
     fontSize: "20px",
     color: "white",
+    height: "520px",
+    // background:
+    //   "url(https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg) center/cover no-repeat",
   };
 
   return (
     <Box>
       <Box
- 
-        style={bgImg}
-        background={hotelImg.blurImg}
+        // style={bgImg}
+        sx={basicBoxStyles}
+        // background={hotelImg.blurImg}
       >
-        {/* <Image
-        src='https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg'
-        w='100%'
-        h='520px'
-        maxW='100%'
-        blur='sm'
-        ></Image> */}
-        <Flex justifyContent="center">
+        <Image
+          src="https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg"
+          w="100%"
+          h="520px"
+          maxW="100%"
+          filter="auto"
+          brightness="40%"
+        ></Image>
+        <Flex justifyContent="center" brightness="100%">
           <Box
-            mt="10rem"
             // border="1px solid red"
             minW="884px"
             h="auto"
             color="white"
             fontWeight="600"
             position="relative"
+            mt="-22rem"
           >
             <Text fontSize="26px">
               Book
@@ -269,15 +261,6 @@ const Searchbar_HomePage = () => {
                   <option value="option49">49 guests</option>
                   <option value="option50">50 guests</option>
                 </Select>
-                {/* <InputRightElement
-                    webkitAppearance="none"
-                    paddingRight="20px"
-                    backgroundPosition="100% 50%"
-                    backgroundRepeat="no-repeat"
-                    backgroundImage="url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A)"
-                  ></InputRightElement> */}
-                {/* </InputGroup> */}
-
                 <Button borderRadius="none" w="60%" colorScheme="blue">
                   Search
                 </Button>
