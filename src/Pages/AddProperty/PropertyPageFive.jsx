@@ -2,6 +2,7 @@ import { Box, Input, Image, useToast, Flex, Button } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import Navbar from "../../Components/Navbar";
 
 const PropertyPageFive = () => {
   const location = useLocation();
@@ -62,56 +63,59 @@ const PropertyPageFive = () => {
     }
   };
   return (
-    <Box
-      width="80%"
-      boxShadow="md"
-      margin="2rem auto"
-      padding="2rem"
-      //   height="50vh"
-      display="flex"
-      flexDirection="column"
-      justifyContent="space-evenly"
-    >
-      <Box>
-        <label htmlFor="file">External/Common Area/Amenities Photos</label>
-        <Input multiple type="file" onChange={handleOuterImageChange} />
-        <Flex flexWrap={"wrap"}>
-          {outerImages.length > 0 &&
-            outerImages.map((img, i) => (
-              <Image
-                display="inline"
-                margin="1rem"
-                width="220px"
-                height="200px"
-                key={i}
-                src={img}
-                alt="..."
-              />
-            ))}
-        </Flex>
+    <>
+      <Navbar />
+      <Box
+        width="80%"
+        boxShadow="md"
+        margin="2rem auto"
+        padding="2rem"
+        //   height="50vh"
+        display="flex"
+        flexDirection="column"
+        justifyContent="space-evenly"
+      >
+        <Box>
+          <label htmlFor="file">External/Common Area/Amenities Photos</label>
+          <Input multiple type="file" onChange={handleOuterImageChange} />
+          <Flex flexWrap={"wrap"}>
+            {outerImages.length > 0 &&
+              outerImages.map((img, i) => (
+                <Image
+                  display="inline"
+                  margin="1rem"
+                  width="220px"
+                  height="200px"
+                  key={i}
+                  src={img}
+                  alt="..."
+                />
+              ))}
+          </Flex>
+        </Box>
+        <Box>
+          <label htmlFor="file">Internal Photos</label>
+          <Input multiple type="file" onChange={handleInnerImageChange} />
+          <Flex flexWrap="wrap">
+            {innerImages.length > 0 &&
+              innerImages.map((img, i) => (
+                <Image
+                  display="inline"
+                  margin="1rem"
+                  width="220px"
+                  height="200px"
+                  key={i}
+                  src={img}
+                  alt="..."
+                />
+              ))}
+          </Flex>
+        </Box>
+        <Button onClick={addPictures} variant="outline" colorScheme="whatsapp">
+          Add
+        </Button>
       </Box>
-      <Box>
-        <label htmlFor="file">Internal Photos</label>
-        <Input multiple type="file" onChange={handleInnerImageChange} />
-        <Flex flexWrap="wrap">
-          {innerImages.length > 0 &&
-            innerImages.map((img, i) => (
-              <Image
-                display="inline"
-                margin="1rem"
-                width="220px"
-                height="200px"
-                key={i}
-                src={img}
-                alt="..."
-              />
-            ))}
-        </Flex>
-      </Box>
-      <Button onClick={addPictures} variant="outline" colorScheme="whatsapp">
-        Add
-      </Button>
-    </Box>
+    </>
   );
 };
 

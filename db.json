@@ -1,56 +1,4 @@
 {
-  "vacationIdeas": [
-    {
-      "id": 1,
-      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/goa-11.f1c86735cec4.jpg",
-      "text": "Luxury Vacation in Goa"
-    },
-    {
-      "id": 2,
-      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/galle-27739.4e9874b7f375.jpg",
-      "text": "Top Homestays and resorts in Chikmagalur"
-    },
-    {
-      "id": 3,
-      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/phuket-72.9d6f9e3883be.jpg",
-      "text": "Phuket's Best Pool Villas"
-    },
-    {
-      "id": 4,
-      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/kandy-5144.2adb0839ea6a.jpg",
-      "text": "Coorg Homestays"
-    },
-    {
-      "id": 5,
-      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/koh-samui-5119.82e8a6c9cf8b.jpg",
-      "text": "Family Bungalow in Lonavala"
-    },
-    {
-      "id": 6,
-      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/lonavala-2293.ab3b797cddf6.jpg",
-      "text": "Lonavala Family Villas"
-    },
-    {
-      "id": 7,
-      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/kerala-18.c082ce41a521.jpg",
-      "text": "Kerala Homestays"
-    },
-    {
-      "id": 8,
-      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/himachal-pradesh-14.4910c5bade68.jpg",
-      "text": "Cottages in Himachal Pradesh"
-    },
-    {
-      "id": 9,
-      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/coorg-5464.83497c6367a3.jpg",
-      "text": "Bali Family Villas"
-    },
-    {
-      "id": 10,
-      "img": "https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/home-small/alibag-2129.fde4732b8d72.jpg",
-      "text": "Alibag - Rural Solitude and luxury combined"
-    }
-  ],
   "bodySection": [
     {
       "id": 1,
@@ -3389,69 +3337,9 @@
       "firstName": "Ashish",
       "lastName": "Kumar",
       "id": 1
-    },
-    {
-      "selectValue": "91",
-      "phone": "123456789",
-      "email": "john@gmail.com",
-      "password": "John@123",
-      "firstName": "John",
-      "lastName": "son",
-      "id": 2
-    },
-    {
-      "selectValue": "91",
-      "phone": "987654321",
-      "email": "peter@gmail.com",
-      "password": "Peter@123",
-      "firstName": "Peter",
-      "lastName": "son",
-      "id": 3
-    },
-    {
-      "selectValue": "91",
-      "phone": "121212",
-      "email": "asd@123gmail.com",
-      "password": "121212",
-      "firstName": "ak",
-      "lastName": "bk",
-      "id": 4
-    },
-    {
-      "selectValue": "91",
-      "phone": "8528356066",
-      "email": "bhaskarchaudhary3639@gmail.com",
-      "password": "Bhaskar@123",
-      "firstName": "Bhaskar",
-      "lastName": "Chaudhary",
-      "id": 5
-    },
-    {
-      "selectValue": "91",
-      "phone": "1212121",
-      "email": "sdasdasd",
-      "password": "asdsadasd",
-      "firstName": "asdasda",
-      "lastName": "sdasd",
-      "id": 6
-    },
-    {
-      "selectValue": "91",
-      "phone": "8528358989",
-      "email": "Bhaskar",
-      "password": "Bhaskar@123",
-      "firstName": "Ashish",
-      "lastName": "Chaudhary",
-      "id": 7
     }
   ],
   "form": [
-    {
-      "id": 1,
-      "country": "India",
-      "state": "Himachal Pradesh",
-      "city": "Shimla"
-    },
     {
       "country": "American Samoa",
       "city": "Bilaspur",
@@ -3487,34 +3375,6 @@
           "blob:http://localhost:3000/2c0e9dd8-aae5-4408-b4bf-8caddbf197d0",
           "blob:http://localhost:3000/a96d63c8-4691-4d58-8577-4d0f089e7d83",
           "blob:http://localhost:3000/1d127577-56d4-4292-8d68-8434553a9cba"
-        ]
-      }
-    },
-    {
-      "country": "Andorra",
-      "state": "Encamp",
-      "city": "Goa",
-      "id": 3,
-      "type": "Villa",
-      "brandname": "TRE",
-      "cabinFacilities": {
-        "cabins": 1,
-        "guestsAllowed": 1,
-        "beds": 1,
-        "bathrooms": 1,
-        "facilities": [
-          "Kitchen",
-          "Housekeeping",
-          "AC",
-          "TV",
-          "Sofa",
-          "Private Swimming Pool",
-          "Toiletries",
-          "Linen Provided",
-          "Fridge",
-          "Balcony",
-          "Bathtub",
-          "Induction Cooktop"
         ]
       }
     }

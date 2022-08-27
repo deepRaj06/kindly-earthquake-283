@@ -15,6 +15,7 @@ import {
 import axios from "axios";
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import Navbar from "../../Components/Navbar";
 
 const PropertyPageFour = () => {
   const location = useLocation();
@@ -94,6 +95,7 @@ const PropertyPageFour = () => {
   };
   return (
     <Box position="relative">
+      <Navbar/>
       <Box width="80vw" margin="2rem auto" boxShadow="base" padding="1rem">
         <Box>
           <Heading fontWeight="light">
