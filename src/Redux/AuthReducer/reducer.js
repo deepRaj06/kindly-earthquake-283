@@ -44,6 +44,25 @@ const reducer=(state=init,{type,payload})=>{
 
             }
         }
+        case types.GET_LOGIN_FAILURE:{
+            saveLocalData("login",payload)
+            return{
+                ...state,
+                isAuth:false,
+                login:""
+
+            }
+        }
+
+        case types.GET_LOGOUT_SUCCESS:{
+            saveLocalData("login",payload)
+            return{
+                ...state,
+                isAuth:false,
+                login:payload
+
+            }
+        }
         default:{
             return state
         }

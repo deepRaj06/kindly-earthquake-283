@@ -35,9 +35,9 @@ const Signup = () => {
 
     // notification success signup toast
     toast({
-      title: 'Account created.',
+      title: `Hi ${firstName} welcome`,
       position:'top',
-      description: "We've created your account for you.",
+      description: `We've created your account for you.`,
       status: 'success',
       duration: 9000,
       isClosable: true,
@@ -62,7 +62,7 @@ const Signup = () => {
               <hr style={{width:"90%",margin:"auto"}}/>
             <ModalBody>
                 <InputGroup>
-                    <select style={{border:"1px lightgray"}} onChange={(e)=>setSelectValue(e.target.value)}>
+                    <select style={{border:"1px solid lightgray",height:"40px", borderRadius:"5px"}} onChange={(e)=>setSelectValue(e.target.value)}>
                       <option value="91" >+91</option>
                       <option value="1">+1</option>
                       <option value="7">+7</option>
@@ -86,7 +86,7 @@ const Signup = () => {
                       <option value="49">+49</option>
                     </select>
                     <FormControl isInvalid={phoneError} ml="20px">
-                       <Input  type='tel' placeholder='Phone number' onChange={(e)=>setPhone(e.target.value)} mt="20px"/>
+                       <Input  type='tel' placeholder='Phone number' onChange={(e)=>setPhone(e.target.value)} />
                        {!phoneError ? "" : (
                           <FormErrorMessage>Phone number is required.</FormErrorMessage>
                         )}
@@ -134,9 +134,11 @@ const Signup = () => {
               <Button variant="outline" mr={3} onClick={onClose}>
                 CANCEL
               </Button>
-              <Button colorScheme='blue' mr={3} onClick={handlePostData} disabled={!phone || !password || !email || !firstName || !lastName}>
-                VERIFY WITH OTP
-              </Button>
+                <Button colorScheme='blue' mr={3} onClick={handlePostData} disabled={!phone || !password || !email || !firstName || !lastName}>
+              {/* <Link to="/PhoneOtp"> */}
+                  VERIFY WITH OTP
+              {/* </Link> */}
+                </Button>
              
             </ModalFooter>
           </ModalContent>
