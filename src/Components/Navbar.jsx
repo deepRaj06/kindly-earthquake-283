@@ -39,9 +39,12 @@ import {
 import { RiContactsFill } from "react-icons/ri";
 
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 
 const Navbar = () => {
+
+  const firstName=useSelector((store)=>store.authReducer.firstName)
   const { isOpen, onOpen, onClose } = useDisclosure();
   // console.log(onClose)
   const [placement, setPlacement] = React.useState("right");
@@ -98,10 +101,10 @@ const Navbar = () => {
           //   border="1px solid blue"
           h="60px"
           mr="1rem"
-        >
+        > 
           <Flex justifyContent="center" alignItems="center" h="60px">
             {/* <Image w="20%" h="80px" src={contact_icon}></Image> */}
-
+            <Text color="white">{firstName}</Text>
             <Popover placement="bottom">
               <PopoverTrigger>
                 <Button _hover={{background: 'none'}} bg='none' p='4px'>
@@ -134,8 +137,8 @@ const Navbar = () => {
               <PopoverContent borderRadius='none' w='200px' mr='8rem' p='1rem' pl='1rem'>
                 {/* <PopoverCloseButton /> */}
                 <PopoverBody w='100px'>
-                  <Text fontSize='14px' color='gray' _hover={{cursor: 'pointer',color: 'black'}} mb='1rem'>SIGN IN</Text>
-                  <Text fontSize='14px' color='gray' _hover={{cursor: 'pointer',color: 'black'}}>SIGN UP</Text>
+                  <Text fontSize='14px' color='gray' _hover={{cursor: 'pointer',color: 'black'}} mb='1rem'><Link to="/login">SIGN IN</Link></Text>
+                  <Text fontSize='14px' color='gray' _hover={{cursor: 'pointer',color: 'black'}}><Link to="/signup">SIGN UP</Link></Text>
                 </PopoverBody>
               </PopoverContent>
             </Popover>

@@ -1,9 +1,10 @@
-import { getLocalData, saveLocalData } from "../../utils/localStorage"
+import { firstNameLocalData, getLocalData, saveLocalData, saveLocalFirstName } from "../../utils/localStorage"
 import * as types from "./actionType"
 const init={
     signup:[],
     isAuth:getLocalData("login") ? true:false,
     login:getLocalData("login")||[],
+    firstName:firstNameLocalData("firstName")||[],
     isLoading:false,
     isError:false
 }
@@ -41,6 +42,14 @@ const reducer=(state=init,{type,payload})=>{
                 isError:false,
                 isAuth:true,
                 login:payload
+
+            }
+        }
+        case types.GET_FISTNAME_SUCCESS:{
+            saveLocalFirstName("firstName",payload)
+            return{
+                ...state,
+                firstName:payload
 
             }
         }
