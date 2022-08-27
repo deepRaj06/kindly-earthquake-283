@@ -1,11 +1,11 @@
 
 
-import { Stack, Textarea, Image, Box, Heading } from "@chakra-ui/react";
+import { Stack, Textarea, Image, Box, Heading,AlertTitle,AlertDescription } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import React from "react";
-// import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import style from "./checkout.module.css";
-
+import { useState,useEffect } from "react";
+import { useParams } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import { Alert, AlertIcon, Select } from "@chakra-ui/react";
 import { FormControl, FormLabel, Input } from "@chakra-ui/react";
@@ -17,6 +17,21 @@ import {
 } from "react-icons/ai";
 
 const Checkout = () => {
+  const [data, setData] = useState({});
+  const params = useParams();
+  console.log(params)
+  useEffect(() => {
+    fetch(`http://localhost:8000/results/${15323035}`)
+      .then((data) => data.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
+  console.log(data);
+
+
+
+  const [alrt,setalrt]=useState(false)
   return (
     <>
       <Navbar></Navbar>
@@ -128,6 +143,7 @@ const Checkout = () => {
                   <h4>Enter your contact information</h4>
                 </div>
                 <hr></hr>
+                <br></br>
                 <div className={style.useflx}>
                   <select style={{ border: "1px solid gray" }}>
                     <option>+91</option>
@@ -168,6 +184,7 @@ const Checkout = () => {
                   </h3>
                   <h4>Booking Option</h4>
                 </div>
+                <br></br>
                 <div>
                   <div className="card">
                     <div
@@ -216,7 +233,7 @@ const Checkout = () => {
                 <br></br><br></br>
                 <div style={{backgroundColor:"lightgray"}}>By clicking 'Agree & Continue', you are agreeing to our Terms & Conditions, Privacy Policy, Booking policies like cancellation policies, house rules.</div>
                 <br></br>
-                <div className={style.agree1}><button>Agree {"&"} Continue</button></div>
+                <div className={style.agree1}><button onClick={()=>alert("Booking Confirm")}>Agree {"&"} Continue</button></div>
               </FormControl>
               <br></br>
             </div>

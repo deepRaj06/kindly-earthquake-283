@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "vacationIdeas": [
     {
       "id": 1,
@@ -51,6 +52,8 @@
       "text": "Alibag - Rural Solitude and luxury combined"
     }
   ],
+=======
+>>>>>>> c0e5f90dfe150a14deaba7caefb091b7f0d31fc3
   "bodySection": [
     {
       "id": 1,
@@ -3410,12 +3413,6 @@
     }
   ],
   "form": [
-    {
-      "id": 1,
-      "country": "India",
-      "state": "Himachal Pradesh",
-      "city": "Shimla"
-    },
     {
       "country": "American Samoa",
       "city": "Bilaspur",
