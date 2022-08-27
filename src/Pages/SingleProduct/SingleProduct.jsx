@@ -13,6 +13,14 @@ const SingleProduct = () => {
   const [data, setData] = useState({});
   const params = useParams();
   console.log(params)
+  useEffect(() => {
+    fetch(`http://localhost:8000/results/${15323035}`)
+      .then((data) => data.json())
+      .then((data) => {
+        setData(data);
+      });
+  }, []);
+  console.log(data);
   return (
     <>
     <Navbar/>
