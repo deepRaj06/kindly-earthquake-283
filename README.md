@@ -46,7 +46,7 @@ This a collaborative project done within a 5 members team
 - gitHub:-
 
 - Ashish Chaudhary
-- gitHub:-
+- gitHub:- https://github.com/AshishChaudhary3639
 
 - Mohd Javed
 - gitHub:-
