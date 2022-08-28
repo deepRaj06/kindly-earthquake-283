@@ -55,6 +55,20 @@ export const reducer = (state = initState, { type, payload }) => {
       return {
         ...state,
       };
+    case types.DELETE_FORM_REQUEST:
+      return {
+        ...state,
+      };
+    case types.DELETE_FORM_SUCCESS:
+      // console.log(payload);
+      return {
+        ...state,propertyForms:{}
+        
+      };
+    case types.DELETE_FORM_FAILURE:
+      return {
+        ...state,
+      };
     default:
       return state;
   }

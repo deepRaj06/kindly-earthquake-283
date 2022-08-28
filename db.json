@@ -51,7 +51,6 @@
       "text": "Alibag - Rural Solitude and luxury combined"
     }
   ],
-
   "bodySection": [
     {
       "id": 1,
@@ -3492,6 +3491,57 @@
           "Sofa"
         ]
       }
+    },
+    {
+      "country": "Angola",
+      "city": "Kushair",
+      "id": 4
+    },
+    {
+      "country": "Angola",
+      "city": "Kushair",
+      "id": 5
+    },
+    {
+      "country": "Angola",
+      "city": "Kushair",
+      "id": 6
+    },
+    {
+      "country": "Andorra",
+      "city": "Kushair",
+      "state": "Les Escaldes",
+      "id": 7
+    },
+    {
+      "country": "Andorra",
+      "city": "Kushair",
+      "state": "Les Escaldes",
+      "id": 8
+    },
+    {
+      "country": "Andorra",
+      "city": "Kushair",
+      "state": "Les Escaldes",
+      "id": 9
+    },
+    {
+      "country": "Andorra",
+      "city": "Kushair",
+      "state": "Les Escaldes",
+      "id": 10
+    },
+    {
+      "country": "Andorra",
+      "city": "Kushair",
+      "state": "Les Escaldes",
+      "id": 11
+    },
+    {
+      "country": "Andorra",
+      "city": "Kushair",
+      "state": "Les Escaldes",
+      "id": 12
     }
   ]
 }

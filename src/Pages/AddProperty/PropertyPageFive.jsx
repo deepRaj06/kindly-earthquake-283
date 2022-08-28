@@ -1,13 +1,16 @@
 import { Box, Input, Image, useToast, Flex, Button } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
+import { deleteForm } from "../../Redux/AppReducer/action";
 
 const PropertyPageFive = () => {
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
   const navigate = useNavigate();
+  const dispatch =useDispatch();
   const [outerImages, setOuterImages] = useState([]);
   const [innerImages, setInnerImages] = useState([]);
   const toast = useToast();
@@ -62,6 +65,20 @@ const PropertyPageFive = () => {
         });
     }
   };
+  const deleteProduct = ()=>{
+    dispatch(deleteForm(location.state.id)).then((res)=>{
+      if (res.type="DELETE_FORM_SUCCESS") {
+        toast({
+          title: "Item deleted",
+          description: "Removed item from server",
+          status: "info",
+          duration: "1000",
+          isClosable: true,
+        });
+        navigate("/");
+      }
+    })
+  }
   return (
     <>
       <Navbar />
@@ -114,6 +131,15 @@ const PropertyPageFive = () => {
         <Button onClick={addPictures} variant="outline" colorScheme="whatsapp">
           Add
         </Button>
+        <Button
+            borderRadius="none"
+            colorScheme="red"
+            fontSize="10px"
+            margin="5px auto"
+            onClick={deleteProduct}
+          >
+            Remove item and go back
+          </Button>
       </Box>
     </>
   );

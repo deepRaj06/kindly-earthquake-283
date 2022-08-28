@@ -14,12 +14,15 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
+import { deleteForm } from "../../Redux/AppReducer/action";
 
 const PropertyPageFour = () => {
   const location = useLocation();
-  console.log(location);
+  const dispatch = useDispatch();
+  console.log(location.state);
   const navigate = useNavigate();
   const toast = useToast();
   const [cabinCount, setCabinCount] = useState(1);
@@ -69,11 +72,11 @@ const PropertyPageFour = () => {
     };
     if (cabinFacilities.length > 1) {
       axios
-        .patch(`http://localhost:8000/form/${location.state}`, {
+        .patch(`http://localhost:8000/form/${location.state.id}`, {
           cabinFacilities: payload,
         })
         .then((res) => {
-          console.log(res);
+          // console.log(res);
           if (res.status === 200) {
             toast({
               title: "Cabin added",
@@ -93,9 +96,24 @@ const PropertyPageFour = () => {
       });
     }
   };
+  const deleteProduct = () => {
+    dispatch(deleteForm(location.state.id)).then((res) => {
+      console.log(res);
+      if (res.type="DELETE_FORM_SUCCESS") {
+        toast({
+          title: "Item deleted",
+          description: "Removed item from server",
+          status: "info",
+          duration: "1000",
+          isClosable: true,
+        });
+        navigate("/");
+      }
+    });
+  };
   return (
     <Box position="relative">
-      <Navbar/>
+      <Navbar />
       <Box width="80vw" margin="2rem auto" boxShadow="base" padding="1rem">
         <Box>
           <Heading fontWeight="light">
@@ -180,9 +198,17 @@ const PropertyPageFour = () => {
             onClick={() => navigate(-1)}
             borderRadius="none"
             variant="outline"
-            colorScheme="lightgray"
+            colorScheme="blue"
           >
             PREVIOUS
+          </Button>
+          <Button
+            borderRadius="none"
+            colorScheme="orange"
+            fontSize="10px"
+            onClick={deleteProduct}
+          >
+            Remove item and go back
           </Button>
           <Button
             borderRadius="none"

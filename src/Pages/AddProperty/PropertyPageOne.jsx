@@ -6,13 +6,14 @@ import {
   FormLabel,
   Input,
   Select,
+  Flex,
 } from "@chakra-ui/react";
 import states from "../../utils/states.json";
 import countries from "../../utils/countries.json";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addForm, tempFormFn } from "../../Redux/AppReducer/action";
-import Navbar from "../../Components/Navbar"
+import Navbar from "../../Components/Navbar";
 import { useNavigate } from "react-router-dom";
 const PropertyPageOne = () => {
   const addPropertyForm = useSelector(
@@ -31,12 +32,14 @@ const PropertyPageOne = () => {
   const handleFormOne = (e) => {
     e.preventDefault();
     dispatch(addForm(details)).then((res) => {
-      navigate("/addproperty-form-2", { state: {id:res.payload.id,form:details} });
+      navigate("/addproperty-form-2", {
+        state: { id: res.payload.id, form: details },
+      });
     });
   };
   return (
     <>
-    <Navbar />
+      <Navbar />
       <Box position="relative" height={"85vh"}>
         <Box
           position="absolute"
@@ -45,7 +48,7 @@ const PropertyPageOne = () => {
           transform="translate(-50%,-50%)"
           border="2px solid gray"
           padding="1rem"
-          borderRadius="1rem"
+          borderRadius="none"
         >
           <form onSubmit={handleFormOne}>
             <FormControl>
@@ -95,11 +98,23 @@ const PropertyPageOne = () => {
                 type="text"
               />
             </FormControl>
-            <Box textAlign={"right"} m="1rem">
-              <Button type="submit" colorScheme="linkedin">
+            <Flex justify={"space-around"} m="1rem">
+              <Button
+                borderRadius={"none"}
+                colorScheme="orange"
+                onClick={() => navigate(-1)}
+              >
+                Go Back
+              </Button>
+             
+              <Button
+                borderRadius={"none"}
+                type="submit"
+                colorScheme="linkedin"
+              >
                 Next
               </Button>
-            </Box>
+            </Flex>
           </form>
         </Box>
       </Box>
