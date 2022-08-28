@@ -129,7 +129,7 @@ const Carousal_HomePage = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:8000/topDestinations").then((res) => {
+    axios.get("https://api-0231.herokuapp.com/topDestinations").then((res) => {
       setTopDest(res.data);
     });
   }, []);

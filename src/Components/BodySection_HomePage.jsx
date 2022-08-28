@@ -34,7 +34,7 @@ const BodySection_HomePage = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:8000/bodySection").then((res) => {
+    axios.get("https://api-0231.herokuapp.com/bodySection").then((res) => {
       setBodySection(res.data);
     });
   }, []);
