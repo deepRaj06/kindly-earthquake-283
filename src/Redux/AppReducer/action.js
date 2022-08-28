@@ -40,6 +40,22 @@ export const deleteForm = (id) => async (dispatch) => {
     return dispatch({ type: types.DELETE_FORM_FAILURE });
   }
 };
+
+
+export const getSingleproduct = (id) => async (dispatch) => {
+  dispatch({ type: types.SINGLE_PRODUCT_REQUEST });
+  try {
+    let res = await axios.get(`http://localhost:8000/results/${id}`);
+    return dispatch({
+      type: types.SINGLE_PRODUCT_SUCCESS,
+      payload: res.data,
+    });
+  } catch (err) {
+    return dispatch({ type: types.SINGLE_PRODUCT_FAILURE });
+  }
+};
+
 export const logoutFn = ()=>async(dispatch)=>{
   dispatch()
 }
+

@@ -28,7 +28,7 @@ const AllRoutes = () => {
       <Route path="/addproperty-form-3" element={<PropertyPageThree />} />
       <Route path="/addproperty-form-4" element={<PropertyPageFour />} />
       <Route path="/addproperty-form-5" element={<PropertyPageFive />} />
-      <Route path="/checkout" element={<Checkout />} />
+      <Route path="/checkout/:id" element={<Checkout />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/phoneOtp" element={<PhoneOtp/>} />
