@@ -129,7 +129,7 @@ const Carousal_Vacation_Homepage = () => {
   };
 
   useEffect(() => {
-    axios.get("http://localhost:8000/vacationIdeas").then((res) => {
+    axios.get("https://api-0231.herokuapp.com/vacationIdeas").then((res) => {
       setTopDest(res.data);
     });
   }, []);
