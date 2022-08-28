@@ -1,10 +1,17 @@
-
-
-import { Stack, Textarea, Image, Box, Heading,AlertTitle,AlertDescription } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import {
+  Stack,
+  Textarea,
+  Image,
+  Box,
+  Heading,
+  AlertTitle,
+  AlertDescription,
+  useToast,
+} from "@chakra-ui/react";
+import { Link, useNavigate } from "react-router-dom";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import style from "./checkout.module.css";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import Navbar from "../../Components/Navbar";
 import { Alert, AlertIcon, Select } from "@chakra-ui/react";
@@ -15,23 +22,33 @@ import {
   AiOutlineMessage,
   AiFillBook,
 } from "react-icons/ai";
-
+import { useDispatch ,useSelector} from "react-redux";
+import { getSingleproduct } from "../../Redux/AppReducer/action";
 const Checkout = () => {
+  const toast = useToast();
+  const statuses = "Booking success";
+
   const [data, setData] = useState({});
-  const params = useParams();
-  console.log(params)
-  useEffect(() => {
-    fetch(`http://localhost:8000/results/${15323035}`)
-      .then((data) => data.json())
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
-  console.log(data);
+  // const navigate = useNavigate();
+  const { id } = useParams();
+  console.log(id);
+  // useEffect(() => {
+  //   fetch(`http://localhost:8000/results/${id}`)
+  //     .then((data) => data.json())
+  //     .then((data) => {
+  //       setData(data);
+  //     });
+  // }, []);
+  // console.log(data);
+  const dispatch=useDispatch();
+  const product=useSelector((store)=>store.appReducer.singleProduct)
+  // console.log(product)
+useEffect(()=>{
+  dispatch(getSingleproduct(id)).then((res)=>setData(res.payload))
+},[id,dispatch])
 
-
-
-  const [alrt,setalrt]=useState(false)
+  const [alrt, setalrt] = useState(false);
+  // const navigate=useNavigate()
   return (
     <>
       <Navbar></Navbar>
@@ -41,7 +58,13 @@ const Checkout = () => {
         {/* Main */}
         <div className={style.devide}>
           <div className={style.one}>
-            <div className="card text-white bg-primary mb-1" style={{padding:"30px 40px 30px 40px",border:"3px solid blue"}}>
+            <div
+              className="card text-white bg-primary mb-1"
+              style={{
+                padding: "30px 40px 30px 40px",
+                border: "3px solid blue",
+              }}
+            >
               <div className="card-header">Book Tension Free</div>
               <div className="card-body">
                 <li className="card-title">
@@ -59,12 +82,12 @@ const Checkout = () => {
             </div>
             <div className={style.useflx}>
               <div style={{ width: "30%" }}>
-                <Image fallbackSrc="https://d2vcelvjdj7n25.cloudfront.net/media/property_photos/original/21459385/zebra-room-11.PNG" />
+              <Image src={data?.images_large?.length>0 && data?.images_large[0]}/>
               </div>
 
               <div style={{ width: "100%" }}>
-                <h5>Property Ref Id #21459385</h5>
-                <p>Amazingly Spacious Guest House- Porvorim</p>
+                <h5>Property Ref Id #{data.id}</h5>
+                <p>{data.title}- {data.city}</p>
                 <p>Porvorim, Goa, INDIA</p>
                 <p>
                   Resort | Accommodates max 20 guests | 4 Bedroom(s) | 4
@@ -82,10 +105,12 @@ const Checkout = () => {
               }}
               className={style.box}
             >
-              <div>check In</div>
-              <div>Check Out</div>
-              <div>Guests</div>
-              <div>Unit</div>
+              <div>check In
+                <p>02/05/2021</p>
+              </div>
+              <div>Check Out <p>09/05/2021</p></div>
+              <div>Guests 3</div>
+              <div>Unit {data.units}</div>
             </div>
             <br></br>
             <div className={style.useflx}>
@@ -201,7 +226,19 @@ const Checkout = () => {
                         to you. Pay using 100+ payment modes including
                         Credit/Debit cards, Netbanking, UPI, Wallets etc
                       </p>
-                      <button className="btn btn-danger">
+                      <button
+                        className="btn btn-danger"
+                        onClick={() =>
+                          toast({
+                            position: "bottom-center",
+                            render: () => (
+                              <Box color="black" p={10} bg="#bee3f8">
+                                Thank You For Chose this Method
+                              </Box>
+                            ),
+                          })
+                        }
+                      >
                         Chose This Method
                       </button>
                     </div>
@@ -214,7 +251,9 @@ const Checkout = () => {
                       className="card-body"
                       style={{ padding: "10px 40px 10px 40px" }}
                     >
-                      <h3 className="card-title">Put your credit/debit card on file.</h3>
+                      <h3 className="card-title">
+                        Put your credit/debit card on file.
+                      </h3>
                       <h6 className="card-subtitle mb-2 text-muted">
                         Pay the rest using a payment link only when home
                         owner/manager accepts the booking.
@@ -224,16 +263,48 @@ const Checkout = () => {
                         to you. Pay using 100+ payment modes including
                         Credit/Debit cards, Netbanking, UPI, Wallets etc
                       </p>
-                      <button className="btn btn-danger">
+                      <button
+                        className="btn btn-danger"
+                        onClick={() =>
+                          toast({
+                            position: "bottom-center",
+                            render: () => (
+                              <Box color="black" p={10} bg="#bee3f8">
+                                Thank You For Chose this Method
+                              </Box>
+                            ),
+                          })
+                        }
+                      >
                         Chose This Method
                       </button>
                     </div>
                   </div>
                 </div>
-                <br></br><br></br>
-                <div style={{backgroundColor:"lightgray"}}>By clicking 'Agree & Continue', you are agreeing to our Terms & Conditions, Privacy Policy, Booking policies like cancellation policies, house rules.</div>
                 <br></br>
-                <div className={style.agree1}><button onClick={()=>alert("Booking Confirm")}>Agree {"&"} Continue</button></div>
+                <br></br>
+                <div style={{ backgroundColor: "lightgray" }}>
+                  By clicking 'Agree & Continue', you are agreeing to our Terms
+                  & Conditions, Privacy Policy, Booking policies like
+                  cancellation policies, house rules.
+                </div>
+                <br></br>
+                <div className={style.agree1}>
+                  <button
+                    onClick={() =>
+                      toast({
+                        title: "Booking Successfull.",
+                        description:
+                          "We've Sending Mail & Text on your account for you.",
+                        status: "success",
+                        duration: 9000,
+                        isClosable: true,
+                      })
+                    }
+                  >
+                    Agree {"&"} Continue {statuses}
+                  </button>
+                </div>
               </FormControl>
               <br></br>
             </div>

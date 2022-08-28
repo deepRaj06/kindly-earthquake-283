@@ -7,6 +7,7 @@ const initState = {
   byType: [],
   addPropertyForm: {},
   propertyForms:[],
+  singleProduct:{},
 };
 export const reducer = (state = initState, { type, payload }) => {
   switch (type) {
@@ -69,6 +70,21 @@ export const reducer = (state = initState, { type, payload }) => {
       return {
         ...state,
       };
+      case types.SINGLE_PRODUCT_REQUEST:
+      return {
+        ...state,
+      };
+    case types.SINGLE_PRODUCT_SUCCESS:
+      // console.log(payload);
+      return {
+        ...state,singleProduct:payload
+        
+      };
+    case types.SINGLE_PRODUCT_FAILURE:
+      return {
+        ...state,
+      };
+    
     default:
       return state;
   }
