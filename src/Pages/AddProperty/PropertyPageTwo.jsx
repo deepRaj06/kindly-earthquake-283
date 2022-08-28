@@ -38,10 +38,10 @@ const PropertyPageTwo = () => {
     "Condo",
   ];
   const location = useLocation();
-  console.log(location.state.form)
+  console.log(location.state.form);
   const toast = useToast();
   const navigate = useNavigate();
-  const type= useSelector((store)=>store.appReducer);
+  const type = useSelector((store) => store.appReducer);
   const [value, setValue] = useState("");
   const nextForm = () => {
     if (value) {
@@ -133,13 +133,18 @@ const PropertyPageTwo = () => {
         <Flex justify={"space-evenly"}>
           <Button
             colorScheme={"linkedin"}
+            borderRadius="none"
             onClick={() => {
-              navigate(-1,{state:{form:location.state.form}});
+              navigate(-1, { state: { form: location.state.form } });
             }}
           >
             PREV
           </Button>
-          <Button colorScheme={"linkedin"} onClick={nextForm}>
+          <Button
+            colorScheme={"linkedin"}
+            borderRadius="none"
+            onClick={nextForm}
+          >
             {" "}
             NEXT
           </Button>
