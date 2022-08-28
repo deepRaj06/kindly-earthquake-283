@@ -60,7 +60,7 @@ const PropertyPageThree = () => {
               onClick={() => {
                 if (brandName) {
                   axios
-                    .patch(`http://localhost:8000/form/${location.state}`, {
+                    .patch(`https://api-0231.herokuapp.com/form/${location.state}`, {
                       brandname: brandName,
                     })
                     .then((res) => {
