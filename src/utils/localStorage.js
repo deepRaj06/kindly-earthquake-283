@@ -23,4 +23,5 @@ const saveLocalData=(key,value)=>{
     }
 }
 
+
 export {getLocalData,saveLocalData,firstNameLocalData,saveLocalFirstName}

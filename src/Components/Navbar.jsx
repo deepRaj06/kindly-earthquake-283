@@ -38,13 +38,15 @@ import {
 } from "@chakra-ui/react";
 import { RiContactsFill } from "react-icons/ri";
 
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import * as types from "../Redux/AuthReducer/actionType"
 
 
 const Navbar = () => {
 
   const firstName=useSelector((store)=>store.authReducer.firstName)
+  const isAuth=useSelector((store)=>store.authReducer.isAuth)
   const { isOpen, onOpen, onClose } = useDisclosure();
   // console.log(onClose)
   const [placement, setPlacement] = React.useState("right");
@@ -53,7 +55,9 @@ const Navbar = () => {
   const [currency, setCurrency] = useState("INR");
   const [isActive, setIsActive] = useState(true);
   const [isActiveBtn, setIsActiveBtn] = useState(true);
+  const dispatch=useDispatch()
 
+  const navigate=useNavigate()
   const handleCurrency = (e) => {
     // console.log(e.target.innerText)
     setCurrency(e.target.innerText);
@@ -73,6 +77,11 @@ const Navbar = () => {
     cursor: "pointer",
   };
 
+  const handleLogout=()=>{
+    dispatch({type:types.GET_LOGOUT_SUCCESS,payload:false})
+    navigate("/")
+
+  }
   return (
     <Box
       w="100%"
@@ -104,7 +113,7 @@ const Navbar = () => {
         > 
           <Flex justifyContent="center" alignItems="center" h="60px">
             {/* <Image w="20%" h="80px" src={contact_icon}></Image> */}
-            <Text color="white">{firstName}</Text>
+            <Text color="white">{firstName? firstName:""}</Text>
             <Popover placement="bottom">
               <PopoverTrigger>
                 <Button _hover={{background: 'none'}} bg='none' p='4px'>
@@ -136,10 +145,16 @@ const Navbar = () => {
               </PopoverTrigger>
               <PopoverContent borderRadius='none' w='200px' mr='8rem' p='1rem' pl='1rem'>
                 {/* <PopoverCloseButton /> */}
+
+                {isAuth ? 
+                <PopoverBody w='100px'>
+                  <Text onClick={handleLogout} fontSize='14px' color='gray' _hover={{cursor: 'pointer',color: 'black'}}><Link to="/">LOGOUT</Link></Text>
+                </PopoverBody> :
                 <PopoverBody w='100px'>
                   <Text fontSize='14px' color='gray' _hover={{cursor: 'pointer',color: 'black'}} mb='1rem'><Link to="/login">SIGN IN</Link></Text>
                   <Text fontSize='14px' color='gray' _hover={{cursor: 'pointer',color: 'black'}}><Link to="/signup">SIGN UP</Link></Text>
-                </PopoverBody>
+                </PopoverBody>}
+
               </PopoverContent>
             </Popover>
 
