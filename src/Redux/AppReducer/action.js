@@ -45,7 +45,7 @@ export const deleteForm = (id) => async (dispatch) => {
 export const getSingleproduct = (id) => async (dispatch) => {
   dispatch({ type: types.SINGLE_PRODUCT_REQUEST });
   try {
-    let res = await axios.get(`http://localhost:8000/results/${id}`);
+    let res = await axios.get(`https://api-0231.herokuapp.com/results/${id}`);
     return dispatch({
       type: types.SINGLE_PRODUCT_SUCCESS,
       payload: res.data,
@@ -55,7 +55,4 @@ export const getSingleproduct = (id) => async (dispatch) => {
   }
 };
 
-export const logoutFn = ()=>async(dispatch)=>{
-  dispatch()
-}
 
