@@ -13,6 +13,7 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function SamplePrevArrow(props) {
   const { className, style, onClick } = props;
@@ -60,7 +61,7 @@ function SampleNextArrow(props) {
 
 const Carousal_HomePage = () => {
   const [topDest, setTopDest] = useState([]);
-
+  const navigate = useNavigate();
   const breakpoints = {
     sm: "320px",
     md: "768px",
@@ -147,39 +148,44 @@ const Carousal_HomePage = () => {
     >
       {/* <h2> Responsive </h2> */}
       <Slider {...settings}>
-        {topDest.map((dest) => {
+        {topDest.map((dest, index) => {
           return (
             <Box
               maxW="250px"
               maxH="150px"
               // border="1px solid red"
               sx={basicBoxStyles}
+              key={index}
+              onClick={()=>{
+                navigate("/products",{state:`${dest.location}`})
+              }}
             >
-              <Image
-                filter="auto"
-                brightness="70%"
-                w="90%"
-                h="150px"
-                src={dest.img}
-                alt="img"
-              ></Image>
-              {/* {dest.text} */}
-              <Text
-                fontWeight="400"
-                position="relative"
-                color="white"
-                mt="-6rem"
-              >
-                {dest.location}
-              </Text>
-              <Text
-                fontSize="14px"
-                fontWeight="400"
-                position="relative"
-                color="whitesmoke"
-              >
-                {dest.text}
-              </Text>
+                <Image
+                  filter="auto"
+                  brightness="70%"
+                  w="90%"
+                  h="150px"
+                  src={dest.img}
+                  alt="img"
+                ></Image>
+                {/* {dest.text} */}
+                <Text
+                  fontWeight="400"
+                  position="relative"
+                  color="white"
+                  mt="-6rem"
+                >
+                  {dest.location}
+                </Text>
+                <Text
+                  fontSize="14px"
+                  fontWeight="400"
+                  position="relative"
+                  color="whitesmoke"
+                >
+                  {dest.text}
+                </Text>
+
             </Box>
           );
         })}
