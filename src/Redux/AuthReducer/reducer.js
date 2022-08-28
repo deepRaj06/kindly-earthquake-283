@@ -1,4 +1,5 @@
-import { firstNameLocalData, getLocalData, saveLocalData, saveLocalFirstName } from "../../utils/localStorage"
+
+import {getLocalData, saveLocalData,saveLocalFirstName,firstNameLocalData} from "../../utils/localStorage"
 import * as types from "./actionType"
 const init={
     signup:[],
@@ -64,11 +65,12 @@ const reducer=(state=init,{type,payload})=>{
         }
 
         case types.GET_LOGOUT_SUCCESS:{
-            saveLocalData("login",payload)
+            localStorage.removeItem("login")
+            localStorage.removeItem("firstName")
             return{
                 ...state,
                 isAuth:false,
-                login:payload
+                login:""
 
             }
         }
