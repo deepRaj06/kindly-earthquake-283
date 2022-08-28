@@ -43,7 +43,8 @@ import { useSelector } from "react-redux";
 
 
 const Navbar = () => {
-
+  const auth = useSelector((store)=>store.authReducer);
+  console.log(auth);
   const firstName=useSelector((store)=>store.authReducer.firstName)
   const { isOpen, onOpen, onClose } = useDisclosure();
   // console.log(onClose)

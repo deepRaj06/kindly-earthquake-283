@@ -49,7 +49,7 @@ const PropertyPageFive = () => {
     } else {
       console.log(innerImages.length, outerImages.length);
       axios
-        .patch(`http://localhost:8000/form/${location.state}`, {
+        .patch(`https://api-0231.herokuapp.com/form/${location.state}`, {
           images: payload,
         })
         .then((res) => {
