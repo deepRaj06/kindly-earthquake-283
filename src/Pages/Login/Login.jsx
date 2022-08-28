@@ -62,7 +62,7 @@ const Login = () => {
   }
 
   const getData=async()=>{
-    let res= await fetch(`http://localhost:8000/signupData`)
+    let res= await fetch(`https://api-0231.herokuapp.com/signupData`)
     let data = await res.json()
     setStoredData(data)
     
