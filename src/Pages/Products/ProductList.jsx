@@ -16,13 +16,16 @@ import {
 import Navbar from "../../Components/Navbar";
 import statesData from "../../utils/states.json";
 import types from "../../utils/types.json";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import CarousalComponent from "../../Components/Carousal";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getCities } from "../../Redux/AppReducer/action";
+import Searchbar_HomePage from "../../Components/Searchbar_HomePage";
 const ProductList = () => {
   const dispatch = useDispatch();
+  const location = useLocation();
+  console.log(location);
   const country_id = "101";
   const cities = statesData.filter((state) => state.country_id === country_id);
   const allProducts = useSelector((store) => store.appReducer.allProducts);
@@ -37,7 +40,7 @@ const ProductList = () => {
       </Box>
       {/* search  */}
       <Box textAlign="center" border="1px solid" mt="5px">
-        <Heading>Search bar component</Heading>
+        <Searchbar_HomePage />
       </Box>
       <Box margin="3rem" padding="1rem" boxShadow="md">
         {/* tabs  */}

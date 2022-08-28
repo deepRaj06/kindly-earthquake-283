@@ -20,8 +20,8 @@ const AllRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/products" element={<ReqAuth><ProductList /></ReqAuth>} />
-      <Route path="/products/:sortBy" element={<ProductListByCity />} />
+      <Route path="/products" element={<ProductList />} />
+      <Route path="/products/:sortBy" element={<ReqAuth><ProductListByCity /></ReqAuth>} />
       <Route path="/products/:id" element={<ReqAuth><SingleProduct /></ReqAuth>} />
       <Route path="/addproperty-form-1" element={<PropertyPageOne />} />
       <Route path="/addproperty-form-2" element={<PropertyPageTwo />} />

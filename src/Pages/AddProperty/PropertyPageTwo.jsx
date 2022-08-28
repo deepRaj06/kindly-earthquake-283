@@ -46,7 +46,7 @@ const PropertyPageTwo = () => {
   const nextForm = () => {
     if (value) {
       axios
-        .patch(`http://localhost:8000/form/${location.state.id}`, {
+        .patch(`https://api-0231.herokuapp.com/form/${location.state.id}`, {
           type: value,
         })
         .then((res) => {

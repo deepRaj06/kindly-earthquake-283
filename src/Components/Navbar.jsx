@@ -44,7 +44,8 @@ import * as types from "../Redux/AuthReducer/actionType"
 
 
 const Navbar = () => {
-
+  const auth = useSelector((store)=>store.authReducer);
+  console.log(auth);
   const firstName=useSelector((store)=>store.authReducer.firstName)
   const isAuth=useSelector((store)=>store.authReducer.isAuth)
   const { isOpen, onOpen, onClose } = useDisclosure();
