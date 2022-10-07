@@ -1,3 +1,9 @@
+/*  
+Author: Ashish Kumar Chaudhary
+EmailId: 
+Date: 23 Aug 2022
+WorkItem: Created store which contains all data can be accessed throughout your code         
+*/
 import {
   applyMiddleware,
   combineReducers,
@@ -7,7 +13,7 @@ import {
 import thunk from "redux-thunk";
 import { reducer as appReducer } from "./AppReducer/reducer";
 import { reducer as authReducer } from "./AuthReducer/reducer";
-const rootReducer = combineReducers({ appReducer,authReducer });
+const rootReducer = combineReducers({ appReducer, authReducer });
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 export const store = legacy_createStore(
   rootReducer,

@@ -1,52 +1,40 @@
+/*  
+Author: Deepak Rajput
+EmailId: deepak.onlinework13@gmail.com
+Date: 23 Aug 2022
+WorkItem: Created common Navbar for all pages
+*/
 import React, { useState } from "react";
 import {
   Box,
   Button,
   Divider,
   Flex,
-  Icon,
   IconButton,
   Image,
   Menu,
-  Select,
   Text,
-  useBoolean,
   useDisclosure,
 } from "@chakra-ui/react";
-import contact_icon from "../Images/contact_icon.png";
 import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 
 import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  PopoverHeader,
   PopoverBody,
-  PopoverFooter,
-  PopoverArrow,
-  PopoverCloseButton,
-  PopoverAnchor,
 } from "@chakra-ui/react";
-import {
-  Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-} from "@chakra-ui/react";
+import { DrawerBody, DrawerCloseButton } from "@chakra-ui/react";
 import { RiContactsFill } from "react-icons/ri";
 
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import * as types from "../Redux/AuthReducer/actionType"
-
+import * as types from "../Redux/AuthReducer/actionType";
 
 const Navbar = () => {
-  const auth = useSelector((store)=>store.authReducer);
-  const firstName=useSelector((store)=>store.authReducer.firstName)
-  const isAuth=useSelector((store)=>store.authReducer.isAuth)
+  const auth = useSelector((store) => store.authReducer);
+  const firstName = useSelector((store) => store.authReducer.firstName);
+  const isAuth = useSelector((store) => store.authReducer.isAuth);
   const { isOpen, onOpen, onClose } = useDisclosure();
   // console.log(onClose)
   const [placement, setPlacement] = React.useState("right");
@@ -55,11 +43,10 @@ const Navbar = () => {
   const [currency, setCurrency] = useState("INR");
   const [isActive, setIsActive] = useState(true);
   const [isActiveBtn, setIsActiveBtn] = useState(true);
-  const dispatch=useDispatch()
+  const dispatch = useDispatch();
 
-  const navigate=useNavigate()
+  const navigate = useNavigate();
   const handleCurrency = (e) => {
-    // console.log(e.target.innerText)
     setCurrency(e.target.innerText);
     setIsActive(false);
   };
@@ -68,20 +55,17 @@ const Navbar = () => {
     setIsActive(true);
   };
 
-  const handleSignUp = () => {
-
-  }
+  const handleSignUp = () => {};
 
   const hover = {
     textDecoration: "underline",
     cursor: "pointer",
   };
 
-  const handleLogout=()=>{
-    dispatch({type:types.GET_LOGOUT_SUCCESS,payload:false})
-    navigate("/")
-
-  }
+  const handleLogout = () => {
+    dispatch({ type: types.GET_LOGOUT_SUCCESS, payload: false });
+    navigate("/");
+  };
   return (
     <Box
       w="100%"
@@ -91,11 +75,7 @@ const Navbar = () => {
       margin="auto"
     >
       <Flex justifyContent="space-between">
-        <Box
-          //   border="1px solid red"
-          h="60px"
-          ml="1rem"
-        >
+        <Box h="60px" ml="1rem">
           <Image
             w="100%"
             h="26px"
@@ -106,59 +86,78 @@ const Navbar = () => {
             mt="1rem"
           ></Image>
         </Box>
-        <Box
-          //   border="1px solid blue"
-          h="60px"
-          mr="1rem"
-        > 
+        <Box h="60px" mr="1rem">
           <Flex justifyContent="center" alignItems="center" h="60px">
-            {/* <Image w="20%" h="80px" src={contact_icon}></Image> */}
-            <Text color="white">{firstName? firstName:""}</Text>
+            <Text color="white">{firstName ? firstName : ""}</Text>
             <Popover placement="bottom">
               <PopoverTrigger>
-                <Button _hover={{background: 'none'}} bg='none' p='4px'>
+                <Button _hover={{ background: "none" }} bg="none" p="4px">
                   <Box onClick={handleSignUp} _hover={{ cursor: "pointer" }}>
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-                data-svg="user"
-              >
-                <circle
-                  fill="none"
-                  stroke="#fff"
-                  stroke-width="1.1"
-                  cx="9.9"
-                  cy="6.4"
-                  r="4.4"
-                ></circle>
-                <path
-                  fill="none"
-                  stroke="#fff"
-                  stroke-width="1.1"
-                  d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"
-                ></path>
-              </svg>
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                      data-svg="user"
+                    >
+                      <circle
+                        fill="none"
+                        stroke="#fff"
+                        stroke-width="1.1"
+                        cx="9.9"
+                        cy="6.4"
+                        r="4.4"
+                      ></circle>
+                      <path
+                        fill="none"
+                        stroke="#fff"
+                        stroke-width="1.1"
+                        d="M1.5,19 C2.3,14.5 5.8,11.2 10,11.2 C14.2,11.2 17.7,14.6 18.5,19.2"
+                      ></path>
+                    </svg>
                   </Box>
                 </Button>
               </PopoverTrigger>
-              <PopoverContent borderRadius='none' w='200px' mr='8rem' p='1rem' pl='1rem'>
-                {/* <PopoverCloseButton /> */}
-
-                {isAuth ? 
-                <PopoverBody w='100px'>
-                  <Text onClick={handleLogout} fontSize='14px' color='gray' _hover={{cursor: 'pointer',color: 'black'}}><Link to="/">LOGOUT</Link></Text>
-                </PopoverBody> :
-                <PopoverBody w='100px'>
-                  <Text fontSize='14px' color='gray' _hover={{cursor: 'pointer',color: 'black'}} mb='1rem'><Link to="/login">SIGN IN</Link></Text>
-                  <Text fontSize='14px' color='gray' _hover={{cursor: 'pointer',color: 'black'}}><Link to="/signup">SIGN UP</Link></Text>
-                </PopoverBody>}
-
+              <PopoverContent
+                borderRadius="none"
+                w="200px"
+                mr="8rem"
+                p="1rem"
+                pl="1rem"
+              >
+                {isAuth ? (
+                  <PopoverBody w="100px">
+                    <Text
+                      onClick={handleLogout}
+                      fontSize="14px"
+                      color="gray"
+                      _hover={{ cursor: "pointer", color: "black" }}
+                    >
+                      <Link to="/">LOGOUT</Link>
+                    </Text>
+                  </PopoverBody>
+                ) : (
+                  <PopoverBody w="100px">
+                    <Text
+                      fontSize="14px"
+                      color="gray"
+                      _hover={{ cursor: "pointer", color: "black" }}
+                      mb="1rem"
+                    >
+                      <Link to="/login">SIGN IN</Link>
+                    </Text>
+                    <Text
+                      fontSize="14px"
+                      color="gray"
+                      _hover={{ cursor: "pointer", color: "black" }}
+                    >
+                      <Link to="/signup">SIGN UP</Link>
+                    </Text>
+                  </PopoverBody>
+                )}
               </PopoverContent>
             </Popover>
 
-            {/* <Icon color="white" w={6} h={10} as={RiContactsFill}></Icon> */}
             <Menu>
               <Popover placement="bottom">
                 <PopoverTrigger>
@@ -175,12 +174,7 @@ const Navbar = () => {
                 {isActive ? (
                   <PopoverContent width="240px" mr="4rem" borderRadius="none">
                     <PopoverBody>
-                      <Box
-                        w="200px"
-                        h="auto"
-                        // border="1px solid black"
-                        color="#1e87f0"
-                      >
+                      <Box w="200px" h="auto" color="#1e87f0">
                         <Flex justifyContent="space-evenly">
                           <Text
                             _hover={hover}
@@ -375,8 +369,6 @@ const Navbar = () => {
               <DrawerOverlay />
               <DrawerContent backgroundColor="black">
                 <DrawerCloseButton color="white" />
-                {/* <DrawerHeader borderBottomWidth="1px">
-                </DrawerHeader> */}
                 <DrawerBody color="white" fontSize="14px" textAlign="center">
                   <Box mt="2rem">
                     <Text>ARE YOU A PROPERTY OWNER/MANAGER?</Text>

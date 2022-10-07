@@ -1,8 +1,13 @@
-import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
+/*  
+Author: Inder Pal
+EmailId: inder39811@gmail.com
+Date: 25 Aug 2022
+WorkItem: Created Carousal for Listing products section
+*/
+
+import { Box, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
-import { useState } from "react";
 import Carousel from "react-elastic-carousel";
-import { useSelector } from "react-redux";
 import { GoLocation } from "react-icons/go";
 import { useNavigate } from "react-router-dom";
 const breakPoints = [
@@ -12,16 +17,6 @@ const breakPoints = [
   { width: 1200, itemsToShow: 4 },
 ];
 const CarousalComponent = ({ allProducts }) => {
-  //   console.log(allProducts)
-
-  //   const addItem = () => {
-  //     const nextItem = Math.max(1, items.length + 1);
-  //     setItems([...items, nextItem]);
-  //   };
-  //   const removeItem = () => {
-  //     const endRange = Math.max(0, items.length - 1);
-  //     setItems(items.slice(0, endRange));
-  //   };
   return (
     <>
       <Carousel breakPoints={breakPoints}>

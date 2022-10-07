@@ -1,3 +1,10 @@
+/*  
+Author: Ashish Kumar Chaudhary
+EmailId: 
+Date: 23 Aug 2022
+WorkItem: Created reducer for 
+          getProducts, addProduct, addSingleProducts, deleteProduct
+*/
 import * as types from "./actionTypes";
 const initState = {
   allProducts: [],
@@ -6,8 +13,8 @@ const initState = {
   byCity: [],
   byType: [],
   addPropertyForm: {},
-  propertyForms:[],
-  singleProduct:{},
+  propertyForms: [],
+  singleProduct: {},
 };
 export const reducer = (state = initState, { type, payload }) => {
   switch (type) {
@@ -49,8 +56,8 @@ export const reducer = (state = initState, { type, payload }) => {
     case types.ADD_FORM_SUCCESS:
       // console.log(payload);
       return {
-        ...state,propertyForms:[...state.propertyForms,payload]
-        
+        ...state,
+        propertyForms: [...state.propertyForms, payload],
       };
     case types.ADD_FORM_FAILURE:
       return {
@@ -63,28 +70,28 @@ export const reducer = (state = initState, { type, payload }) => {
     case types.DELETE_FORM_SUCCESS:
       // console.log(payload);
       return {
-        ...state,propertyForms:{}
-        
+        ...state,
+        propertyForms: {},
       };
     case types.DELETE_FORM_FAILURE:
       return {
         ...state,
       };
-      case types.SINGLE_PRODUCT_REQUEST:
+    case types.SINGLE_PRODUCT_REQUEST:
       return {
         ...state,
       };
     case types.SINGLE_PRODUCT_SUCCESS:
       // console.log(payload);
       return {
-        ...state,singleProduct:payload
-        
+        ...state,
+        singleProduct: payload,
       };
     case types.SINGLE_PRODUCT_FAILURE:
       return {
         ...state,
       };
-    
+
     default:
       return state;
   }

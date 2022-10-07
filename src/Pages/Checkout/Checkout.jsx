@@ -1,3 +1,10 @@
+/*  
+Author: Mohammad Javed
+EmailId:
+Date: 23 Aug 2022
+WorkItem: Created static checkout page for final checkout of hotel room 
+*/
+
 import {
   Stack,
   Textarea,

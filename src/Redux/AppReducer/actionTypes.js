@@ -1,3 +1,10 @@
+/*  
+Author: Inder Pal
+EmailId: inder39811@gmail.com
+Date: 23 Aug 2022
+WorkItem: Created action types for 
+          getProducts, addProduct, addSingleProducts, deleteProduct
+*/
 export const GET_ALL_PRODUCTS_REQUEST = "GET_ALL_PRODUCTS_REQUEST";
 export const GET_ALL_PRODUCTS_SUCCESS = "GET_ALL_PRODUCTS_SUCCESS";
 export const GET_ALL_PRODUCTS_FAILURE = "GET_ALL_PRODUCTS_FAILURE";

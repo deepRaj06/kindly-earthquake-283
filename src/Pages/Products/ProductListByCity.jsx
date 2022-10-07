@@ -1,5 +1,11 @@
+/*  
+Author: Inder Pal
+EmailId: inder39811@gmail.com
+Date: 23 Aug 2022
+WorkItem: Listing all products by city
+*/
 import React from "react";
-import { Link, useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useState } from "react";
 import {
   Box,
@@ -39,18 +45,15 @@ const ProductListByCity = () => {
   const products = useSelector((store) => store.appReducer.allProducts);
 
   const handleTypeSort = (type) => {
-    console.log(type)
+    console.log(type);
   };
-  // ===============
+
   useEffect(() => {
     dispatch(getCities()).then((res) => {
       let result = res.payload.filter(
         (item) => item.state === sortBy.toLowerCase()
       );
       setSorted(result);
-      // setSorted(
-      //   res.payload.filter((item) => item.state === sortBy.toLowerCase())
-      // );
     });
   }, []);
   return (

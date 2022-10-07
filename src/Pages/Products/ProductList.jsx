@@ -1,3 +1,11 @@
+/*  
+Author: Inder Pal
+EmailId: inder39811@gmail.com
+Date: 24 Aug 2022
+WorkItem: Created page for listing all products
+          containing info like cities, types, FAQS etc
+*/
+
 import React, { useState } from "react";
 import {
   Box,

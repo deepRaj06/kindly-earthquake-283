@@ -1,3 +1,9 @@
+/*  
+Author: Inder Pal
+EmailId: inder39811@gmail.com
+Date: 23 Aug 2022
+WorkItem: Created page for single product(i.e. single hotel room)
+*/
 import {
   Center,
   Image,
@@ -13,7 +19,7 @@ import {
   TabPanel,
 } from "@chakra-ui/react";
 import React from "react";
-import { useNavigate, useParams ,Link} from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "../../Components/Navbar";
@@ -27,31 +33,18 @@ import {
   BsBlockquoteRight,
   BsStar,
 } from "react-icons/bs";
-import { DragHandleIcon } from "@chakra-ui/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { getSingleproduct } from "../../Redux/AppReducer/action";
 
 const SingleProduct = () => {
   const [data, setData] = useState({});
   const { id } = useParams();
-  console.log(id);
-  // useEffect(() => {
-  //   fetch(`http://localhost:8000/results/${id}`)
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       setData(res);
-  //       console.log(res)
-  //     });
-  // }, [id]);
-  const dispatch=useDispatch();
-  const product=useSelector((store)=>store.appReducer.singleProduct)
-  // console.log(product)
-useEffect(()=>{
-  dispatch(getSingleproduct(id)).then((res)=>setData(res.payload))
-},[id,dispatch])
+  const dispatch = useDispatch();
+  const product = useSelector((store) => store.appReducer.singleProduct);
+  useEffect(() => {
+    dispatch(getSingleproduct(id)).then((res) => setData(res.payload));
+  }, [id, dispatch]);
 
-  // const random=Math.floor(Math.random() * 5);
-  console.log(data);
   return (
     <>
       <Navbar />
@@ -62,12 +55,18 @@ useEffect(()=>{
             <hr></hr>
             <br></br>
             <div>
-              <Image src={data?.images_large?.length>0 && data?.images_large[0]} width="80%" />
-              
+              <Image
+                src={data?.images_large?.length > 0 && data?.images_large[0]}
+                width="80%"
+              />
             </div>
             <div className={style.image}>
-              <Image src={data?.images_large?.length>0 && data?.images_large[1]} />
-              <Image src={data?.images_large?.length>0 && data?.images_large[2]} />
+              <Image
+                src={data?.images_large?.length > 0 && data?.images_large[1]}
+              />
+              <Image
+                src={data?.images_large?.length > 0 && data?.images_large[2]}
+              />
             </div>
           </div>
           <div className={style.details}>
@@ -138,7 +137,7 @@ useEffect(()=>{
               className={style.repflex}
               style={{ border: "1px solid black" }}
             >
-              <input type="date" placeholder="Check In" required/>
+              <input type="date" placeholder="Check In" required />
               <input type="date" placeholder="Check Out" />
             </div>
             <br></br>
@@ -157,9 +156,9 @@ useEffect(()=>{
             </div>
             <br></br>
             <div className={style.book}>
-              <Link to={`/checkout/${id}`}><button>
-                REQUEST TO BOOK
-              </button></Link>
+              <Link to={`/checkout/${id}`}>
+                <button>REQUEST TO BOOK</button>
+              </Link>
             </div>
           </div>
         </div>{" "}

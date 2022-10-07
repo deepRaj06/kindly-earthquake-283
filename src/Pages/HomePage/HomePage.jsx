@@ -1,9 +1,13 @@
+/*  
+Author: Deepak Rajput
+EmailId: deepak.onlinework13@gmail.com
+Date: 23 Aug 2022
+WorkItem: Created Home Page containing all sections
+*/
 import React from "react";
 import Carousal_HomePage from "../../Components/Carousal_HomePage";
 import Navbar from "../../Components/Navbar";
 import Searchbar_HomePage from "../../Components/Searchbar_HomePage";
-// Import css files
-// import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import BodySection_HomePage from "../../Components/BodySection_HomePage";
 import { Text } from "@chakra-ui/react";
@@ -21,11 +25,13 @@ const HomePage = () => {
 
   return (
     <div>
+      {/* ===============NAVBAR COMPONENT================= */}
       <Navbar />
+      {/* ===============SEARCHBAR COMPONENT================= */}
+
       <Searchbar_HomePage />
       <Text
         ml={{ base: "0rem", lg: "4.8rem" }}
-        // ml="4.8rem"
         fontSize="24px"
         color="black"
         fontWeight="300"
@@ -35,11 +41,14 @@ const HomePage = () => {
       >
         Top Destinations
       </Text>
+      {/* ===============CAROUSAL COMPONENT================= */}
+
       <Carousal_HomePage />
+      {/* ===============BODY-SECTION COMPONENT================= */}
+
       <BodySection_HomePage />
       <Text
         ml={{ base: "0rem", lg: "4.8rem" }}
-        // ml="4.8rem"
         fontSize="24px"
         color="black"
         fontWeight="300"
@@ -49,20 +58,14 @@ const HomePage = () => {
       >
         Vacation Ideas
       </Text>
+      {/* ===============CAROUSAL-VACATION COMPONENT================= */}
+
       <Carousal_Vacation_Homepage />
-      <Text
-        ml="4.8rem"
-        fontSize="14px"
-        fontWeight="300"
-        // mt="1rem"
-        mb="4rem"
-        color="blue"
-      >
+      <Text ml="4.8rem" fontSize="14px" fontWeight="300" mb="4rem" color="blue">
         SHOW ALL IDEAS
       </Text>
 
       <Text
-        // ml="4.8rem"
         fontSize="24px"
         color="black"
         fontWeight="200"
@@ -73,6 +76,8 @@ const HomePage = () => {
       >
         Holiday Homes Across The Globe
       </Text>
+      {/* ===============FOOTER COMPONENT================= */}
+
       <FooterTabSection_HomePage />
     </div>
   );

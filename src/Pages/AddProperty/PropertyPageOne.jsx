@@ -1,3 +1,10 @@
+/*  
+Author: Inder Pal
+EmailId: inder39811@gmail.com
+Date: 24 Aug 2022
+WorkItem: Created First form page in Listing New Property
+*/
+
 import React from "react";
 import {
   Box,
@@ -19,7 +26,6 @@ const PropertyPageOne = () => {
   const addPropertyForm = useSelector(
     (store) => store.appReducer.addPropertyForm
   );
-  // console.log(addPropertyForm)
   const dispatch = useDispatch();
   const [countryCode, setCountryCode] = useState("");
   const [details, setDetails] = useState({});
@@ -106,7 +112,7 @@ const PropertyPageOne = () => {
               >
                 Go Back
               </Button>
-             
+
               <Button
                 borderRadius={"none"}
                 type="submit"

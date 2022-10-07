@@ -1,6 +1,11 @@
+/*  
+Author: Inder Pal
+EmailId: inder39811@gmail.com
+Date: 24 Aug 2022
+WorkItem: Created Second form page in Listing New Property
+*/
 import {
   Box,
-  Checkbox,
   Heading,
   Text,
   VStack,
@@ -11,7 +16,7 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useToast } from "@chakra-ui/react";
 import Navbar from "../../Components/Navbar";
 import { useSelector } from "react-redux";

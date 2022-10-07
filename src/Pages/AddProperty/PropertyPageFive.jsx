@@ -1,3 +1,10 @@
+/*  
+Author: Inder Pal
+EmailId: inder39811@gmail.com
+Date: 23 Aug 2022
+WorkItem: Created Fifth form page in Listing New Property
+*/
+
 import { Box, Input, Image, useToast, Flex, Button } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
@@ -8,9 +15,8 @@ import { deleteForm } from "../../Redux/AppReducer/action";
 
 const PropertyPageFive = () => {
   const location = useLocation();
-  // console.log(location);
   const navigate = useNavigate();
-  const dispatch =useDispatch();
+  const dispatch = useDispatch();
   const [outerImages, setOuterImages] = useState([]);
   const [innerImages, setInnerImages] = useState([]);
   const toast = useToast();
@@ -65,9 +71,9 @@ const PropertyPageFive = () => {
         });
     }
   };
-  const deleteProduct = ()=>{
-    dispatch(deleteForm(location.state.id)).then((res)=>{
-      if (res.type="DELETE_FORM_SUCCESS") {
+  const deleteProduct = () => {
+    dispatch(deleteForm(location.state.id)).then((res) => {
+      if ((res.type = "DELETE_FORM_SUCCESS")) {
         toast({
           title: "Item deleted",
           description: "Removed item from server",
@@ -77,8 +83,8 @@ const PropertyPageFive = () => {
         });
         navigate("/");
       }
-    })
-  }
+    });
+  };
   return (
     <>
       <Navbar />
@@ -87,7 +93,6 @@ const PropertyPageFive = () => {
         boxShadow="md"
         margin="2rem auto"
         padding="2rem"
-        //   height="50vh"
         display="flex"
         flexDirection="column"
         justifyContent="space-evenly"
@@ -132,14 +137,14 @@ const PropertyPageFive = () => {
           Add
         </Button>
         <Button
-            borderRadius="none"
-            colorScheme="red"
-            fontSize="10px"
-            margin="5px auto"
-            onClick={deleteProduct}
-          >
-            Remove item and go back
-          </Button>
+          borderRadius="none"
+          colorScheme="red"
+          fontSize="10px"
+          margin="5px auto"
+          onClick={deleteProduct}
+        >
+          Remove item and go back
+        </Button>
       </Box>
     </>
   );

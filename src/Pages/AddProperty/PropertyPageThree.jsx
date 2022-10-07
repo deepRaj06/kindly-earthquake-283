@@ -1,3 +1,9 @@
+/*  
+Author: Inder Pal
+EmailId: inder39811@gmail.com
+Date: 24 Aug 2022
+WorkItem: Created Third form page in Listing New Property
+*/
 import { Box, Button, Flex, Heading, Input, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React, { useState } from "react";
@@ -12,7 +18,7 @@ const PropertyPageThree = () => {
   const [brandName, setBrandName] = useState("");
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <Box position="relative" height="85vh" weight="100vh">
         <Box
           position="absolute"
@@ -60,9 +66,12 @@ const PropertyPageThree = () => {
               onClick={() => {
                 if (brandName) {
                   axios
-                    .patch(`https://api-0231.herokuapp.com/form/${location.state}`, {
-                      brandname: brandName,
-                    })
+                    .patch(
+                      `https://api-0231.herokuapp.com/form/${location.state}`,
+                      {
+                        brandname: brandName,
+                      }
+                    )
                     .then((res) => {
                       if (res.status === 200) {
                         navigate("/addproperty-form-4", {

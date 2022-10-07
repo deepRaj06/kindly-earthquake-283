@@ -1,6 +1,11 @@
+/*  
+Author: Deepak Rajput
+EmailId: deepak.onlinework13@gmail.com
+Date: 23 Aug 2022
+WorkItem: Created Footer Tab section in Home Page
+*/
 import {
   Box,
-  Divider,
   Flex,
   Tab,
   TabList,
@@ -26,15 +31,8 @@ const FooterTabSection_HomePage = () => {
   };
 
   return (
-    <Box
-      w="90%"
-      h="auto"
-      // border="1px solid black"
-      m="auto"
-      mb="4rem"
-    >
+    <Box w="90%" h="auto" m="auto" mb="4rem">
       <Tabs flexDirection={{ base: "column", lg: "row" }}>
-        {/* <Flex direction={{base: "column", lg: 'row'}}> */}
         <TabList flexDirection={{ base: "column", lg: "row" }}>
           <Tab
             _selected={{ borderColor: "blue" }}
@@ -85,22 +83,14 @@ const FooterTabSection_HomePage = () => {
             OCEANIA
           </Tab>
         </TabList>
-        {/* </Flex> */}
-        {/* <Divider/> */}
         <TabPanels>
           <TabPanel p="0px">
-            <Box
-              // border="1px solid blue"
-              w="100%"
-              mt="3.4rem"
-            >
+            <Box w="100%" mt="3.4rem">
               <Flex
                 direction={{ base: "column", lg: "row" }}
                 justifyContent="space-between"
               >
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">India</Text>
@@ -129,9 +119,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Thailand</Text>
@@ -160,9 +148,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Sri Lanka</Text>
@@ -185,9 +171,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Indonesia</Text>
@@ -237,9 +221,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">United Arab Emirates</Text>
@@ -266,18 +248,12 @@ const FooterTabSection_HomePage = () => {
           </TabPanel>
 
           <TabPanel p="0px">
-            <Box
-              // border="1px solid blue"
-              w="100%"
-              mt="3.4rem"
-            >
+            <Box w="100%" mt="3.4rem">
               <Flex
                 direction={{ base: "column", lg: "row" }}
                 justifyContent="space-between"
               >
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Croatia</Text>
@@ -318,9 +294,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Denmark</Text>
@@ -361,9 +335,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Italy</Text>
@@ -404,9 +376,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Spain</Text>
@@ -447,9 +417,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">France</Text>
@@ -492,9 +460,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Switzerland</Text>
@@ -541,18 +507,12 @@ const FooterTabSection_HomePage = () => {
           </TabPanel>
 
           <TabPanel p="0px">
-            <Box
-              // border="1px solid blue"
-              w="100%"
-              mt="3.4rem"
-            >
+            <Box w="100%" mt="3.4rem">
               <Flex
                 direction={{ base: "column", lg: "row" }}
                 justifyContent="space-between"
               >
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">United States Of America</Text>
@@ -575,9 +535,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Mexico</Text>
@@ -600,9 +558,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Dominican Republic</Text>
@@ -619,9 +575,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Cuba</Text>
@@ -638,9 +592,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Canada</Text>
@@ -657,9 +609,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Costa Rica</Text>
@@ -680,18 +630,12 @@ const FooterTabSection_HomePage = () => {
           </TabPanel>
 
           <TabPanel p="0px">
-            <Box
-              // border="1px solid blue"
-              w="100%"
-              mt="3.4rem"
-            >
+            <Box w="100%" mt="3.4rem">
               <Flex
                 direction={{ base: "column", lg: "row" }}
                 justifyContent="space-between"
               >
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Colombia</Text>
@@ -702,9 +646,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Chile</Text>
@@ -715,9 +657,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Brazil</Text>
@@ -728,9 +668,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Argentina</Text>
@@ -741,9 +679,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Peru</Text>
@@ -754,9 +690,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Ecuador</Text>
@@ -771,18 +705,12 @@ const FooterTabSection_HomePage = () => {
           </TabPanel>
 
           <TabPanel p="0px">
-            <Box
-              // border="1px solid blue"
-              w="100%"
-              mt="3.4rem"
-            >
+            <Box w="100%" mt="3.4rem">
               <Flex
                 direction={{ base: "column", lg: "row" }}
                 justifyContent="space-between"
               >
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Kenya</Text>
@@ -799,9 +727,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">South Africa</Text>
@@ -818,9 +744,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Morocco</Text>
@@ -856,9 +780,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Mauritius</Text>
@@ -875,9 +797,7 @@ const FooterTabSection_HomePage = () => {
                   </Flex>
                 </Box>
 
-                <Box
-                // border="1px solid red"
-                >
+                <Box>
                   <Flex direction="column">
                     <Box mb="1rem" _hover={hover}>
                       <Text fontWeight="360">Tanzania</Text>
@@ -903,10 +823,7 @@ const FooterTabSection_HomePage = () => {
               justifyContent="flex-start"
               mt="3.4rem"
             >
-              <Box
-                // border="1px solid red"
-                mr="8rem"
-              >
+              <Box mr="8rem">
                 <Flex direction="column">
                   <Box mb="1rem" _hover={hover}>
                     <Text fontWeight="360">Australia</Text>
@@ -917,10 +834,7 @@ const FooterTabSection_HomePage = () => {
                 </Flex>
               </Box>
 
-              <Box
-                // border="1px solid red"
-                mr="8rem"
-              >
+              <Box mr="8rem">
                 <Flex direction="column">
                   <Box mb="1rem" _hover={hover}>
                     <Text fontWeight="360">New Zealand</Text>
@@ -931,9 +845,7 @@ const FooterTabSection_HomePage = () => {
                 </Flex>
               </Box>
 
-              <Box
-              // border="1px solid red"
-              >
+              <Box>
                 <Flex direction="column">
                   <Box mb="1rem" _hover={hover}>
                     <Text fontWeight="360">French Polynesia</Text>

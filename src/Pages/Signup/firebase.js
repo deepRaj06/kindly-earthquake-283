@@ -1,6 +1,12 @@
+/*  
+Author: Ashish Kumar Chaudhary
+EmailId: 
+Date: 23 Aug 2022
+WorkItem: Not implemented
+*/
 import { initializeApp } from "firebase/app";
-import {getAuth} from "firebase/auth"
-import {getFirestore} from "firebase/firestore"
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -11,11 +17,11 @@ const firebaseApp = initializeApp({
   projectId: "otp-auth-tripvillas",
   storageBucket: "otp-auth-tripvillas.appspot.com",
   messagingSenderId: "414923381919",
-  appId: "1:414923381919:web:87f80e7757ed3c47f0d6aa"
+  appId: "1:414923381919:web:87f80e7757ed3c47f0d6aa",
 });
 
 // Initialize Firebase
 const auth = getAuth(firebaseApp);
-const db= getFirestore(firebaseApp)
+const db = getFirestore(firebaseApp);
 
-export default db
+export default db;

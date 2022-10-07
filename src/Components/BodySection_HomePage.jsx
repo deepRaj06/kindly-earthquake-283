@@ -1,3 +1,9 @@
+/*  
+Author: Deepak Rajput
+EmailId: deepak.onlinework13@gmail.com
+Date: 23 Aug 2022
+WorkItem: Created BodySection in Home Page
+*/
 import {
   Box,
   Button,
@@ -40,20 +46,13 @@ const BodySection_HomePage = () => {
   }, []);
 
   return (
-    <Box
-      w="90%"
-      h="auto"
-      // border="1px solid black"
-      mt="6rem"
-      m="auto"
-    >
+    <Box w="90%" h="auto" mt="6rem" m="auto">
       <Flex
         direction={{ base: "column", xl: "row" }}
         alignItems={{ base: "center" }}
       >
         <Box
           boxShadow="lg"
-          // w="35%"
           w={{ base: "100%", lg: "35%" }}
           mb={{ base: "2rem" }}
           h="auto"
@@ -61,7 +60,6 @@ const BodySection_HomePage = () => {
           <Text
             mt="2rem"
             fontWeight="100"
-            // color="black"
             fontSize="24px"
             textAlign="center"
             color="gray"
@@ -77,19 +75,9 @@ const BodySection_HomePage = () => {
           >
             Tripvillas
           </Text>
-          <Box
-            m="auto"
-            h="240px"
-            w="94%"
-            // border="1px solid black"
-            mt="2rem"
-          >
+          <Box m="auto" h="240px" w="94%" mt="2rem">
             <Flex>
-              <Box
-                // border="1px solid red"
-                w="50%"
-                h="100px"
-              >
+              <Box w="50%" h="100px">
                 <Flex direction="column">
                   <Image
                     display="block"
@@ -104,11 +92,7 @@ const BodySection_HomePage = () => {
                   </Text>
                 </Flex>
               </Box>
-              <Box
-                // border="1px solid red"
-                w="50%"
-                h="100px"
-              >
+              <Box w="50%" h="100px">
                 <Flex direction="column">
                   <Image
                     display="block"
@@ -125,11 +109,7 @@ const BodySection_HomePage = () => {
               </Box>
             </Flex>
             <Flex>
-              <Box
-                // border="1px solid red"
-                w="50%"
-                h="100px"
-              >
+              <Box w="50%" h="100px">
                 <Flex direction="column">
                   <Image
                     display="block"
@@ -145,11 +125,7 @@ const BodySection_HomePage = () => {
                   </Text>
                 </Flex>
               </Box>
-              <Box
-                // border="1px solid red"
-                w="50%"
-                h="100px"
-              >
+              <Box w="50%" h="100px">
                 <Flex direction="column">
                   <Image
                     display="block"
@@ -170,18 +146,13 @@ const BodySection_HomePage = () => {
         </Box>
 
         <Box
-          // border="1px solid blue"
           w={{ base: "100%", lg: "65%" }}
-          // w="65%"
           h="auto"
           ml={{ base: "auto", lg: "2rem" }}
-          // ml="2rem"
         >
           <Grid
             templateRows={{ base: "repeat(12, auto)", lg: "repeat(3, auto)" }}
-            // templateRows="repeat(3, auto)"
             templateColumns={{ base: "repeat(1, 1fr)", lg: "repeat(4, 1fr)" }}
-            // templateColumns="repeat(4, 1fr)"
             gap={6}
           >
             {bodySection.map((sec) => {
@@ -198,10 +169,7 @@ const BodySection_HomePage = () => {
                     src={sec.img}
                     alt="image"
                     w={{ base: "80%", lg: "100%" }}
-                    // w="100%"
                     h="150px"
-                    // display={{base: "block", lg: ""}}
-                    // m={{base: "auto", lg: ""}}
                   ></Image>
                   <Flex
                     direction="column"
@@ -209,11 +177,9 @@ const BodySection_HomePage = () => {
                     justifyContent="center"
                     alignItems="center"
                     alignContent="center"
-                    // fontSize="10px"
                   >
                     <Text
                       textAlign="center"
-                      // fontSize="16px"
                       fontWeight="700"
                       position="relative"
                       color="white"
@@ -224,13 +190,11 @@ const BodySection_HomePage = () => {
                         xl: "-10rem",
                         "2xl": "-12rem",
                       }}
-                      // ml="-12rem"
                     >
                       {sec.name}
                     </Text>
                     <Text
                       textAlign="center"
-                      // fontSize="16px"
                       fontWeight="400"
                       position="relative"
                       color="whitesmoke"
@@ -241,7 +205,6 @@ const BodySection_HomePage = () => {
                         xl: "-10rem",
                         "2xl": "-12rem",
                       }}
-                      // ml="-12rem"
                     >
                       {sec.location}
                     </Text>
@@ -257,16 +220,13 @@ const BodySection_HomePage = () => {
         direction={{ base: "column", lg: "row" }}
         mb={{ base: "2rem", lg: "2rem" }}
         mt="4rem"
-        // mb="2rem"
         justifyContent="space-between"
       >
         <Box
           boxShadow="lg"
-          // w="48%"
           mb={{ base: "2rem", lg: "2rem" }}
           w={{ base: "100%", lg: "48%" }}
           h="auto"
-          // border="1px solid red"
         >
           <Text fontSize="24px" fontWeight="200" textAlign="center">
             Holiday Home Investment Opportunities
@@ -354,13 +314,7 @@ const BodySection_HomePage = () => {
           </Button>
         </Box>
 
-        <Box
-          boxShadow="lg"
-          w={{ base: "100%", lg: "48%" }}
-          // w="48%"
-          h="auto"
-          // border="1px solid red"
-        >
+        <Box boxShadow="lg" w={{ base: "100%", lg: "48%" }} h="auto">
           <Text fontSize="24px" fontWeight="200" textAlign="center">
             Are You A Holiday Home Owner/Manager?
           </Text>

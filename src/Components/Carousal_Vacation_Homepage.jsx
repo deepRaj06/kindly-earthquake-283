@@ -1,12 +1,10 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  IconButton,
-  Image,
-  Spacer,
-  Text,
-} from "@chakra-ui/react";
+/*  
+Author: Deepak Rajput
+EmailId: deepak.onlinework13@gmail.com
+Date: 23 Aug 2022
+WorkItem: Created Carousal_Vacation in bottom section in Home Page
+*/
+import { Box, Image, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -82,7 +80,6 @@ const Carousal_Vacation_Homepage = () => {
   };
 
   var settings = {
-    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
@@ -97,7 +94,6 @@ const Carousal_Vacation_Homepage = () => {
           slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
-          // dots: true,
         },
       },
       {
@@ -106,7 +102,6 @@ const Carousal_Vacation_Homepage = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          // dots: true,
         },
       },
       {
@@ -137,10 +132,8 @@ const Carousal_Vacation_Homepage = () => {
   return (
     <Box
       w="94%"
-      // border="1px solid black"
       m="auto"
       pl={{ base: "5rem", lg: "2rem" }}
-      // pl="2rem"
       justifyContent="space-between"
       gap="40px"
       mb="2rem"
@@ -149,12 +142,7 @@ const Carousal_Vacation_Homepage = () => {
       <Slider {...settings}>
         {topDest.map((dest) => {
           return (
-            <Box
-              maxW="250px"
-              maxH="150px"
-              // border="1px solid red"
-              sx={basicBoxStyles}
-            >
+            <Box maxW="250px" maxH="150px" sx={basicBoxStyles}>
               <Image
                 filter="auto"
                 brightness="70%"
@@ -163,7 +151,6 @@ const Carousal_Vacation_Homepage = () => {
                 src={dest.img}
                 alt="img"
               ></Image>
-              {/* {dest.text} */}
               <Text
                 maxW="90%"
                 textAlign="center"
@@ -182,9 +169,6 @@ const Carousal_Vacation_Homepage = () => {
               >
                 {dest.text}
               </Text>
-              {/* <Text fontWeight="400" position="relative" color="whitesmoke">
-                  {dest.text}
-                </Text> */}
             </Box>
           );
         })}

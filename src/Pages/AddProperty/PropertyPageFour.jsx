@@ -1,7 +1,11 @@
+/*  
+Author: Inder Pal
+EmailId: inder39811@gmail.com
+Date: 23 Aug 2022
+WorkItem: Created Fourth form page in Listing New Property
+*/
+
 import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
   Box,
   Button,
   Checkbox,
@@ -76,7 +80,6 @@ const PropertyPageFour = () => {
           cabinFacilities: payload,
         })
         .then((res) => {
-          // console.log(res);
           if (res.status === 200) {
             toast({
               title: "Cabin added",
@@ -99,7 +102,7 @@ const PropertyPageFour = () => {
   const deleteProduct = () => {
     dispatch(deleteForm(location.state.id)).then((res) => {
       console.log(res);
-      if (res.type="DELETE_FORM_SUCCESS") {
+      if ((res.type = "DELETE_FORM_SUCCESS")) {
         toast({
           title: "Item deleted",
           description: "Removed item from server",

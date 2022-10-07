@@ -1,15 +1,12 @@
-import {
-  Box,
-  Flex,
-  HStack,
-  IconButton,
-  Image,
-  Spacer,
-  Text,
-} from "@chakra-ui/react";
+/*  
+Author: Deepak Rajput
+EmailId: deepak.onlinework13@gmail.com
+Date: 23 Aug 2022
+WorkItem: Created Carousal in top section in Home Page
+*/
+import { Box, Image, Text } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import axios from "axios";
@@ -84,7 +81,6 @@ const Carousal_HomePage = () => {
   };
 
   var settings = {
-    // dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
@@ -99,7 +95,6 @@ const Carousal_HomePage = () => {
           slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
-          // dots: true,
         },
       },
       {
@@ -108,7 +103,6 @@ const Carousal_HomePage = () => {
           slidesToShow: 3,
           slidesToScroll: 1,
           infinite: true,
-          // dots: true,
         },
       },
       {
@@ -138,10 +132,8 @@ const Carousal_HomePage = () => {
   return (
     <Box
       w="94%"
-      // border="1px solid black"
       m="auto"
       pl={{ base: "5rem", lg: "2rem" }}
-      // pl="2rem"
       justifyContent="space-between"
       gap="40px"
       mb="5.4rem"
@@ -153,39 +145,36 @@ const Carousal_HomePage = () => {
             <Box
               maxW="250px"
               maxH="150px"
-              // border="1px solid red"
               sx={basicBoxStyles}
               key={index}
-              onClick={()=>{
-                navigate("/products",{state:`${dest.location}`})
+              onClick={() => {
+                navigate("/products", { state: `${dest.location}` });
               }}
             >
-                <Image
-                  filter="auto"
-                  brightness="70%"
-                  w="90%"
-                  h="150px"
-                  src={dest.img}
-                  alt="img"
-                ></Image>
-                {/* {dest.text} */}
-                <Text
-                  fontWeight="400"
-                  position="relative"
-                  color="white"
-                  mt="-6rem"
-                >
-                  {dest.location}
-                </Text>
-                <Text
-                  fontSize="14px"
-                  fontWeight="400"
-                  position="relative"
-                  color="whitesmoke"
-                >
-                  {dest.text}
-                </Text>
-
+              <Image
+                filter="auto"
+                brightness="70%"
+                w="90%"
+                h="150px"
+                src={dest.img}
+                alt="img"
+              ></Image>
+              <Text
+                fontWeight="400"
+                position="relative"
+                color="white"
+                mt="-6rem"
+              >
+                {dest.location}
+              </Text>
+              <Text
+                fontSize="14px"
+                fontWeight="400"
+                position="relative"
+                color="whitesmoke"
+              >
+                {dest.text}
+              </Text>
             </Box>
           );
         })}

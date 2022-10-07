@@ -1,3 +1,10 @@
+/*  
+Author: Inder Pal
+EmailId: inder39811@gmail.com
+Date: 23 Aug 2022
+WorkItem: Error page created to show error if any page is down
+          Also having home page button
+*/
 import { Box, Button, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 import { useNavigate } from "react-router-dom";

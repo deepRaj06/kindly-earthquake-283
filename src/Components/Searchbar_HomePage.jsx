@@ -1,3 +1,9 @@
+/*  
+Author: Deepak Rajput
+EmailId: deepak.onlinework13@gmail.com
+Date: 23 Aug 2022
+WorkItem: Created Searchbar_HomePage component in Home Page
+*/
 import {
   Box,
   Button,
@@ -11,7 +17,6 @@ import {
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { SearchIcon } from "@chakra-ui/icons";
-import placeholder from "../Images/placeholder.png";
 
 const Searchbar_HomePage = () => {
   // For search location
@@ -74,17 +79,11 @@ const Searchbar_HomePage = () => {
     fontSize: "20px",
     color: "white",
     height: "520px",
-    // background:
-    //   "url(https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg) center/cover no-repeat",
   };
 
   return (
     <Box>
-      <Box
-        // style={bgImg}
-        sx={basicBoxStyles}
-        // background={hotelImg.blurImg}
-      >
+      <Box sx={basicBoxStyles}>
         <Image
           src="https://d2v8elt324ukrb.cloudfront.net/static/new_template/media/Pimal2-1.2d5d237dbd32.jpg"
           w="100%"
@@ -93,15 +92,10 @@ const Searchbar_HomePage = () => {
           filter="auto"
           brightness="40%"
         ></Image>
-        <Flex 
-          // direction={{ base: "column", xl: "row" }}
-        justifyContent="center" brightness="100%">
+        <Flex justifyContent="center" brightness="100%">
           <Box
-            // border="1px solid red"
             minW={{ base: "90%", lg: "884px" }}
             maxW={{ base: "90%" }}
-            // minW="884px"
-            // pb={{base: '0rem', lg: '2rem'}}
             h="auto"
             color="white"
             fontWeight="600"
@@ -127,8 +121,7 @@ const Searchbar_HomePage = () => {
               justifyContent="center"
               alignItems="center"
               alignContent="center"
-              pb={{base: '0rem', lg: '1rem'}}
-
+              pb={{ base: "0rem", lg: "1rem" }}
             >
               <Flex
                 justifyContent="center"
@@ -139,12 +132,8 @@ const Searchbar_HomePage = () => {
                 pr="0.6rem"
                 color="black"
                 direction={{ base: "column", xl: "row" }}
-
               >
-                {/* <Box> */}
-                {/* Location Input */}
                 <Flex
-                  // mb='-8.5rem'
                   direction="column"
                   h="auto"
                   overflowY="hidden"
@@ -170,36 +159,12 @@ const Searchbar_HomePage = () => {
                       }}
                     ></Input>
                   </InputGroup>
-                  {/* <Box>
-                  {listPlace.slice(0, 4).map((item) => {
-                    return (
-                      <Box 
-                      // mb='1rem'
-                      bg='white' 
-                      key={item?.place_id} 
-                      overflowy='hidden'>
-                        <Flex direction='column'>
-                          <Flex>
-                          <Image
-                            src={placeholder}
-                            alt="Placeholder"
-                            style={{ width: '18px', height: '18px' }}
-                          />
-                          <Text fontSize='13px'>{item?.display_name}</Text>
-                          </Flex>
-                          <Divider/>
-                        </Flex>
-                      </Box>
-                    );
-                  })}
-                  </Box> */}
                 </Flex>
 
                 <InputGroup>
                   <InputLeftElement
                     pointerEvents="none"
                     children={
-                      // <SearchIcon color="gray.400" />
                       <svg
                         width="20"
                         height="20"
@@ -220,7 +185,6 @@ const Searchbar_HomePage = () => {
                   />
                   <Input
                     borderRadius="none"
-                    // maxW="100%"
                     w="100%"
                     type="date"
                     placeholder="Check In"
@@ -230,7 +194,6 @@ const Searchbar_HomePage = () => {
                   <InputLeftElement
                     pointerEvents="none"
                     children={
-                      // <SearchIcon color="gray.400" />
                       <svg
                         width="20"
                         height="20"
@@ -257,15 +220,12 @@ const Searchbar_HomePage = () => {
                     onfocus="(this.type='date')"
                   ></Input>
                 </InputGroup>
-                {/* <InputGroup> */}
                 <Select
                   placeholder="Select Guests"
                   borderRadius="none"
                   w="100%"
                   color="gray.600"
                   p="0"
-                  // pb='1rem'
-                  //   backgroundImage='url(data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2224%22%20height%3D%2216%22%20viewBox%3D%220%200%2024%2016%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%201%209%206%2015%206%22%20%2F%3E%0A%20%20%20%20%3Cpolygon%20fill%3D%22%23666%22%20points%3D%2212%2013%209%208%2015%208%22%20%2F%3E%0A%3C%2Fsvg%3E%0A)'
                 >
                   <option value="option1">1 guest</option>
                   <option value="option2">2 guests</option>
@@ -322,7 +282,6 @@ const Searchbar_HomePage = () => {
                 <Button borderRadius="none" w="60%" colorScheme="blue">
                   Search
                 </Button>
-                {/* </Box> */}
               </Flex>
             </Box>
           </Box>
