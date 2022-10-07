@@ -9,6 +9,9 @@ import {
   Box,
   Button,
   Divider,
+  Drawer,
+  DrawerContent,
+  DrawerOverlay,
   Flex,
   IconButton,
   Image,
@@ -27,7 +30,7 @@ import {
 import { DrawerBody, DrawerCloseButton } from "@chakra-ui/react";
 import { RiContactsFill } from "react-icons/ri";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import * as types from "../Redux/AuthReducer/actionType";
 
