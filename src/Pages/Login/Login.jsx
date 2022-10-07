@@ -23,7 +23,7 @@ const Login = () => {
 
 
   const loginHandle=()=>{
-
+    console.log(storedData)
 
     // console.log("beore",storedData)
     let fname="";
