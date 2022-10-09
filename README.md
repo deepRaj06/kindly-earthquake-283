@@ -54,3 +54,10 @@ This a collaborative project done within a 4 members team
 
 - Mohd Javed
 - gitHub:- https://github.com/MJaved9
+
+## Steps to run this Clone:
+- Create a new folder on your system.
+- Open the same folder with VS Code.
+- In terminal, type command: git clone https://github.com/deepRaj06/kindly-earthquake-283.git
+- npm install( to install all dependencies )
+- npm start
